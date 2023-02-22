@@ -1,0 +1,98 @@
+/************************************************
+	FILE	:	core.css
+	AUTHOR	:	#559
+
+	DESC	:
+	core stylesheet including debug testing
+	and base styles for all themes and layouts.
+	imports global styles.
+
+	this file called in base CSS file for
+	theme/layout.
+
+	GITHUB	:
+	@import url("https://biwhaleshark.github.io/CSShiny/core/core.css");
+************************************************/
+
+/** Imported Stylesheets ***************/
+@import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
+@import url("https://biwhaleshark.github.io/CSShiny/core/responsiveSettings.css");
+
+html {
+	--testing: 2px dashed red;
+	font-size: var(--base-font-size);
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+body {
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-size: 1rem;
+	line-height: 1;
+	font-weight: 300;
+	font-family: var(--text-font);
+	text-rendering: optimizeLegibility;
+}
+
+/* testing */
+.test {
+	border: var(--testing);
+}
+
+/* images */
+#bodyi,
+#topbanneri,
+#titleimg,
+.trans {
+	display: var(--image-display);
+}
+
+#content,
+.sf-menu ul,
+.ui-widget-header {
+	background-image: var(--bg-image-display);
+}
+
+#topbanner,
+.sf-menu,
+#menu_holder,
+#footer {
+	display: var(--default-content);
+}
+
+.highlight_me, .highlight_me td {
+	background: transparent !important;
+}
+
+/* remove borders */
+#cattery_infobox .add_small_margins,
+#cattery_menu li,
+.ui-widget-content,
+.ui-widget-header,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+.mweorbox table tbody tr td div,
+.tborder,
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    border-color: transparent !important;
+}
+
+/* set background color */
+html,
+body {
+    background-color: white;
+}
