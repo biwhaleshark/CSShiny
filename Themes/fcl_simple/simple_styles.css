@@ -120,8 +120,9 @@ button_tall:hover {
 
 /** Navigation *********************************/
 .navigation {
-	display: flex;
-	justify-content: space-evenly;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 1rem;
 }
 
 .navigation a {
@@ -129,9 +130,10 @@ button_tall:hover {
 	font-size: 22px;
 	font-weight: normal !important;
 	background: var(--bgColor);
-	margin: 15px 4px 15px;
+	margin: 15px 0;
 	padding: 12px;
 	border-radius: 20px;
+	text-align: center;
 }
 
 .navigation a:hover {
@@ -144,6 +146,10 @@ button_tall:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#contentholder > .add_small_margins .trans {
+	display: initial !important;
 }
 
 #contentholder > .add_small_margins::after {
