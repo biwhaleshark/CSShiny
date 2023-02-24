@@ -16,7 +16,7 @@
 
 /** Imported Stylesheets ***************/
 @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
-@import url("https://biwhaleshark.github.io/CSShiny/core/responsiveSettings.css");
+@import url("https://biwhaleshark.github.io/CSShiny/core/responsive_settings.css");
 
 html {
 	--testing: 2px dashed red;
