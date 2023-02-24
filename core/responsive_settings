@@ -1,0 +1,54 @@
+/************************************************
+	FILE:	settings_responsive.css
+	BY: 	#559
+
+	makes cattery settings box responsive 
+	on page resize & customizable
+************************************************/
+
+#contentholder form center .tborder {
+	background: var(--descbox-bg-color);
+	display: flex;
+}
+
+#contentholder form center .tborder tbody {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.theader {
+	background-color: var(--settings-bg-color) !important;
+	display: flex;
+	justify-content: center;
+}
+
+.theader td {
+	color: var(--settings-text-color);
+}
+
+.trow1 {
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+}
+
+.trow1 td {
+	color: var(--text-dark);
+}
+
+.trow1 td:nth-child(even) {
+	width: 80%;
+	text-align: left;
+}
+
+.trow1 td:nth-child(odd) {
+	width: 20%;
+	text-align: left;
+}
+
+input[type="text"],
+textarea {
+	width: 95%;
+	float: left;
+}
