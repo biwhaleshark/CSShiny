@@ -49,6 +49,10 @@
 	width: 11%;
 }
 
+.trow1:nth-child(9) td:nth-child(2n+1) {
+	align-self: flex-start;
+}
+
 input[type="text"],
 textarea {
 	width: 95%;
