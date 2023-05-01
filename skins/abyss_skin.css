@@ -1,0 +1,379 @@
+/*************************************************************
+	Abyss Skin Mweor Theme
+	last updated 01/21/22
+	created by #559
+*************************************************************
+
+**********************************************
+	Variables
+*********************************************/
+
+/**	Font Imports **************/
+
+/**	Variables    **************/
+:root {
+    --white: #ffffff;
+    --grey0: #c8c9ca;
+    --grey20: #3f4248;
+    --grey40: #2f3136;
+    --grey60: #282A2E;
+    --grey80: #1d1d1d;
+    --grey100: #202020;
+    --black: #000000;
+    --transBlack: #00000045;
+    --blue: #293573;
+
+    --bgColor: var(--grey80);
+    --bgGradient: linear-gradient(180deg, var(--blue) 0%, var(--grey80) 40%);
+
+    --font:	'Arial';
+    --fontSize: 14px;
+    --lineHeight: 16px;
+    --txtDefault: var(--grey0);
+}
+
+/*********************************************
+	General Resets
+**********************************************/
+#topbanneri, #bodyi, #bottombanneri, .titlebar {
+    display: none !important;
+}
+html * {
+    font-family: var(--font) !important;
+    font-size: var(--fontSize);
+    line-height: var(--lineHeight);
+}
+body {
+    background: var(--bgGradient);
+    background-color: var(--bgColor);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -7px;
+}
+#content {
+    background: var(--grey40);
+    width: 950px;
+    border-left: 3px solid var(--black);
+    border-right: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+    border-radius: 0px 0px 8px 8px;
+    color: var(--grey0);
+}
+#contentholder {
+    width: 100%;
+    left: 0px;
+}
+.titlebar {
+    width: auto;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+}
+#titleimg {
+    width: 930px;
+    filter: brightness(2);
+    height: auto;
+}
+#titletxt {
+    color: var(--grey0);
+    left: 80px;
+}
+img {
+    border-color: transparent !important;
+}
+.button, .button_tall {
+    background: var(--blue) !important;
+    color: var(--white) !important;
+}
+footer {
+    color: var(--txtDefault);
+}
+
+/**********************************************
+	Header
+**********************************************/
+#topbanner {
+    width: 85%;
+    height: auto;
+    margin-top: 50px;
+    background: transparent;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+#layoutuinfo, 
+#gametime {
+    color: var(--grey0);
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+#layoutuinfo {
+    background: var(--grey100);
+    padding: 15px 0px 15px 50px;
+    width: 970px;
+    border-radius: 35px;
+    border: 3px solid var(--Black);
+}
+#gametime {
+    padding: 5px;
+    background: var(--transBlack);
+    width: 940px;
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+}
+#addbookmark {
+    right: 33px;
+    top: 35px;
+    filter: brightness(100);
+}
+
+/**********************************************
+	Navigation
+**********************************************/
+.sf-menu {
+    right: 130px;
+    top: 105px;
+    left: unset;
+}
+.sf-menu a,
+.sf-menu a:link, 
+.sf-menu a:visited {
+    color: var(--grey0) !important;
+}
+.sf-menu a:hover,
+.sf-menu li a:hover,
+.sf-menu li.sfHover,
+.sf-menu a:focus,
+.sf-menu a:active {
+    color: var(--white) !important;
+}
+.sf-menu ul,
+.sf-menu li li {
+    background: var(--grey80) !important;
+}
+.sf-menu li li:hover, .sf-menu li li.sfHover {
+    background: var(--grey40) !important;
+    color: var(--white) !important;
+}
+.ui-state-focus {
+    color: var(--grey0) !important;
+    background: var(--grey60) !important;
+}
+.ui-icon, .ui-widget-content .ui-icon {
+    filter: invert(1) !important;
+}
+/**********************************************
+	Forums
+**********************************************/
+.trow1 a img.trans,
+.trow2 a img.trans {
+    border-radius: 0px;
+    width: initial;
+    height: auto;
+}
+.trow1,
+.trow1 table,
+.trow1 tr,
+.trow1 td {
+    background: var(--grey20);
+    color: var(--grey0);
+}
+.trow2,
+.trow2 table,
+.trow2 tr,
+.trow2 td {
+    background: var(--grey60);
+    color: var(--grey0);
+}
+.gradbkg {
+    border: 0px solid transparent !important;
+    background-color: var(--grey40);
+}
+.trans {
+    filter: invert(1);
+}
+
+/**********************************************
+	Cattery
+**********************************************/
+#cattery_infobox {
+    background: transparent;
+    color: var(--grey0);
+}
+.ui-widget-content {
+    background: var(--grey40);
+}
+#cattery_infobox .add_small_margins,
+#cattery_infobox .add_small_margins img {
+    border: 0px solid transparent !important;
+}
+#cattery_descbox {
+    width: 80%;
+    background: transparent;
+    color: var(--grey0);
+}
+.tab_paging {
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    border-color: var(--white);
+}
+.mweorbox .text_medium.add_small_margins {
+    word-break: break-all;
+}
+.mweorbox,
+.mweorbox.tall {
+    height: 185px;
+}
+.ui-widget-header {
+    background: var(--grey60) !important;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: var(--grey40) !important;
+
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: var(--grey80);
+    border: 0px solid transparent;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited,
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: var(--white);
+}
+.ui-widget-content {
+    border: 0px solid transparent;
+}
+
+/**********************************************
+	Shop
+**********************************************/
+#purchases form center,
+#purchases center i {
+    color: var(--txtDefault);
+}
+
+/**********************************************
+	Inventory
+**********************************************/
+.ui-widget-content {
+    color: white !important;
+}
+.ui-widget-content .ui-widget-header {
+    color: var(--txtDefault) !important;
+}
+.item_dialog.popupi {
+    border-color: transparent !important;
+    color: var(--txtDefault) !important;
+    background: var(--grey20) !important;
+}
+
+/**********************************************
+	Notifications
+**********************************************/
+#contentholder > .spacer:nth-child(1) + div {
+    left: 0px !important;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#contentholder > .spacer:nth-child(1) + div .trans {
+    filter: invert(0) !important 
+}
+#eventtxt {
+    background: var(--grey40);
+    height: auto;
+}
+#eventtxt tbody div {
+    color: var(--grey0) !important;
+}
+
+/**********************************************
+	Misc
+**********************************************/
+.ci_notice, #notice {
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+}
+.formholder {
+    background: var(--grey40);
+    border-color: transparent !important;
+}
+.tborder {
+    border-color: transparent;
+    width: 85%;
+}
+.theader, table.info_table tr {
+    background: var(--grey80);
+}
+table.info_table th {
+    color: var(--grey0);
+}
+table.info_table td, table.info_table th {
+    border: 2px solid var(--grey20);
+}
+table, tr, td {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Arial", sans-serif;
+}
+a {
+    color: var(--grey0);
+}
+.trow3, .trow3 table, .trow3 tr, .trow3 td {
+    background: var(--grey40);
+    color: var(--grey0);
+}
+div[style="text-align: center;"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#newscontainer {
+    width: 90%;
+    left: 0px;
+    margin: auto;
+}
+.good {
+    color: var(--white);
+}
+#directory {
+    left: 201px !important;
+    top: 200px !important;
+    background-color: var(--grey40) !important;
+    color: var(--white);
+}
+.side_link_holder {
+    background: transparent;
+}
+.modbox_content {
+    width: 75%;
+}
+.modbox_content .info_table {
+    width: 100% !important;
+}
+.commentbox {
+    background: var(--grey60);
+    border-color: var(--blue);
+}
+
+/* Friends List */
+.gradbkg {
+    left: 0px !important;
+    width: 31% !important;
+    height: 140px !important;
+}
+.gradbkg > div {
+    height: 100% !important;
+}
+
+/* Input */
+input[type="text"], input[type="password"], select, textarea{
+    color: var(--txtDefault) !important;
+    background: var(--grey20) !important;
+}
