@@ -153,4 +153,62 @@ textarea {
 	width: 95%;
 	float: left;
 }
-/***********************************************/
+
+/************************************************
+	Cattery On/Off Button Styles
+************************************************/
+:root:has(#on:checked) #mpopup {
+	background: var(--descbox-img);
+	color: transparent;
+	margin: auto;
+	left: unset !important;
+}
+
+:root:has(#on:checked) #popupclose {
+	color: var(--link-light);
+}
+
+:root:has(#on:checked) #mpopup .theader {
+  background: var(--ltteal);
+  color: var(--text-dark) !important;
+}
+
+:root:has(#on:checked) .trow2,
+:root:has(#on:checked) .trow2 table,
+:root:has(#on:checked) .trow2 tr,
+:root:has(#on:checked) .trow2 td {
+  background: var(--ltteal);
+}
+
+:root:has(#on:checked) input[type="text"],
+:root:has(#on:checked) textarea {
+	font-family: var(--font-family-2) !important;
+}
+
+.layout-toggle {
+    background: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px 0 0 0px;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+}
+:root:has(#on:checked) .layout-toggle label[for=off] {
+      display: none;
+}
+
+:root:has(#off:checked) .layout-toggle label[for=on] {
+      display: none;
+}
+
+:root:has(#off:checked) .main-wrap .header .nav,
+:root:has(#off:checked) .masthead-wrap .utilities,
+:root:has(#off:checked) .main-wrap .cattery-name {
+display: none;
+}
