@@ -40,8 +40,8 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-/* testing */
-.test {
+/* Dev Testing */
+.dev {
 	border: var(--testing);
 }
 
