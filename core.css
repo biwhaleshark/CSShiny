@@ -5,18 +5,16 @@
 	DESC	:
 	core stylesheet including debug testing
 	and base styles for all themes and layouts.
-	imports global styles.
 
 	this file called in base CSS file for
 	theme/layout.
 
 	GITHUB	:
-	@import url("https://biwhaleshark.github.io/CSShiny/core/core.css");
+	@import url("https://biwhaleshark.github.io/CSShiny/core.css");
 ************************************************/
 
 /** Imported Stylesheets ***************/
 @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
-@import url("https://biwhaleshark.github.io/CSShiny/core/responsive_settings.css");
 
 html {
 	--testing: 2px dashed red;
@@ -96,3 +94,63 @@ html,
 body {
     background-color: white;
 }
+
+/************************************************
+	Responsive cattery settings box
+
+	makes cattery settings box responsive 
+	on page resize & customizable
+************************************************/
+#contentholder form center .tborder {
+	background: var(--descbox-bg-color);
+	display: flex;
+}
+
+#contentholder form center .tborder tbody {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.theader {
+	background-color: var(--settings-bg-color) !important;
+	display: flex;
+	justify-content: center;
+}
+
+.theader td {
+	color: var(--settings-text-color);
+}
+
+.trow1 {
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+}
+
+.trow1 td {
+	color: var(--text-dark);
+}
+
+.trow1 td:nth-child(even) {
+	width: 80%;
+	text-align: left;
+}
+
+.trow1 td:nth-child(odd) {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	width: 11%;
+}
+
+.trow1:nth-child(9) td:nth-child(2n+1) {
+	align-self: flex-start;
+}
+
+input[type="text"],
+textarea {
+	width: 95%;
+	float: left;
+}
+/***********************************************/
