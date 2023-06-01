@@ -277,6 +277,9 @@ a:visited:hover {
 /************************************************
 	Element display
 ************************************************/
+body .sf-menu {
+    display: none;
+}
 body #bodyi {
     display: none;
 }
