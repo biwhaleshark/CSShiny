@@ -279,16 +279,13 @@ a:visited:hover {
 body #bodyi {
     display: none;
 }
-body #holder #topbanner #topbanneri {
-    display: none;
-}
-body #holder #topbanner #addbookmark {
+body #holder #topbanner {
     display: none;
 }
 body #holder #content #contentholder .spacer, body #holder #content #contentholder .clearer {
     display: none;
 }
-body #holder #content #contentholder .titlebar #titleimg {
+body #holder #content #contentholder .titlebar {
     display: none;
 }
 body #holder #content #contentholder #cattery_infobox {
@@ -303,7 +300,6 @@ body #holder #bottombanner {
 body #holder #footer {
     display: none;
 }
-
 
 /************************************************
 	Styles
