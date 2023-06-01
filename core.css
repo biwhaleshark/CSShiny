@@ -44,27 +44,6 @@ body {
 	border: 2px dashed red;
 }
 
-/* images */
-#bodyi,
-#topbanneri,
-#titleimg,
-.trans {
-	display: var(--image-display);
-}
-
-#content,
-.sf-menu ul,
-.ui-widget-header {
-	background-image: var(--bg-image-display);
-}
-
-#topbanner,
-.sf-menu,
-#menu_holder,
-#footer {
-	display: var(--default-content);
-}
-
 .highlight_me, .highlight_me td {
 	background: transparent !important;
 }
