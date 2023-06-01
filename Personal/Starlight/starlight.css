@@ -75,11 +75,6 @@
 	--holder-margin: 0;
 	--descbox-margin: 1rem 0;
 	--descbox-padding: 0;
-	
-	/* core variables */
-	--image-display: none;
-	--bg-image-display: none;
-	--default-content: none;
 }
 
 /************************************************
@@ -128,8 +123,7 @@ body,
 	box-shadow: 5px 5px 8px #001e27;
 	border-radius: var(--border-radius-big);
 	outline: var(--border);
-	background-color: var(--descbox-bg);
-	background: var(--bg-vertical) no-repeat fixed left center;
+	background: var(--descbox-bg) var(--bg-vertical) no-repeat fixed left center;
 	background-size: cover;
 }
 
