@@ -1,8 +1,11 @@
 /************************************************
-	FILE:	Starlight_styles.css
-	THEME:	Starlight
-	FOR:	#559
-	BY:	#559
+	FILE	:	starlight.css
+	THEME	:	Starlight
+	AUTHOR	:	#559
+	FOR		:	#559
+
+    GITHUB:
+    @import url("https://biwhaleshark.github.io/CSShiny/Personal/Starlight/starlight.css");
 ************************************************/
 
 /************************************************
@@ -18,20 +21,17 @@
 	Variables
 ************************************************/
 :root {
-	--dkteal: #003b43;
+    --dkteal: #003b43;
 	--ltteal: #cfd3d4;
 
-	/* Text */
-	--font-family-1: "Poiret One", cursive;
+    --font-family-1: "Poiret One", cursive;
 	--font-family-2: "Arial", sans-serif;
 
-	--text-dark: var(--black);
-	--text-light: var(--white);
+    --text-dark: #000;
+	--text-light: #fff;
 
 	--link-dark: var(--text-dark);
 	--link-light: var(--text-light);
-	--header-dark: var(--text-dark);
-	--header-light: var(--text-light);
 
 	--border: 1px solid #ffffff75;
 
@@ -47,13 +47,11 @@
 		#441416d1 80%,
 		transparent 80%
 	);
-	--bg-repeat: null;
-	--bg-size: null;
 	--bg-attachment: fixed;
 
 	--contentholder-bg: transparent;
 	--descbox-bg: var(--white);
-	--descbox-img: url("https://cdn.discordapp.com/attachments/933495595858022420/973424363695140864/insp17.jpg");
+	--descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
 
 	/* Corners */
 	--corner-gradient: 
@@ -80,41 +78,20 @@
 
 	--image-display: none;
 	--bg-image-display: none;
+	
+	/* core variables */
+	--image-display: none;
+	--bg-image-display: none;
+	--default-content: none;
 }
 
 /************************************************
 	Resets
 ************************************************/
 
-/** Optional Hidden ***********/
-.titlebar,
-#titletxt,
-.add_small_margins,
-#reportplayer,
-#cattery_infobox,
-#cattery_menu,
-#cattery_descbox i:last-child,
-form .add_marigns,
-.breed_count {
-	display: none;
-}
-
 body {
-	background-color: var(--bg-color) !important;
-	background: var(--bg-image);
-	background-repeat: var(--bg-repeat);
-	background-size: var(--bg-size);
-	font-size: 16px !important;
-	background-attachment: var(--bg-attachment);
-}
-
-body,
-#holder {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	overflow-x: hidden;
+	background: var(--bg-color) var(--bg-image) no-repeat fixed !important;
+    font-size: 1rem !important;
 }
 
 #holder {
@@ -123,8 +100,15 @@ body,
 	width: 100%;
 }
 
+body,
+#holder {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
 #content {
-	background: var(--contentholder-bg);
+	background: var(--contentholder-bg-color);
 	padding: 0;
 	margin: var(--holder-margin);
 	width: var(--holder-width);
@@ -144,15 +128,11 @@ body,
 	right: unset;
 	padding: var(--descbox-padding);
 	margin: var(--descbox-margin);
-	background-color: var(--descbox-bg) !important;
 	box-shadow: 5px 5px 8px #001e27;
 	border-radius: var(--border-radius-big);
 	outline: var(--border);
-	background: var(--descbox-img);
+	background: var(--descbox-bg) var(--descbox-img) no-repeat fixed left center;
 	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-attachment: fixed;
 }
 
 #cattery_infobox {
@@ -198,8 +178,8 @@ a:visited:hover {
 	color: var(--link-light);
 	border-color: var(--link-light);
 }
-	
 
+/* Mweor Tabs */
 /* Mweor Tabs */
 #mweor_tabs {
 	border-radius: 15px;
@@ -293,10 +273,10 @@ a:visited:hover {
 	width: 100% !important;
 }
 
+
 /************************************************
 	Styles
 ************************************************/
-
 /* masthead */
 .masthead {
 	width: 40%;
