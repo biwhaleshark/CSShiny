@@ -1,5 +1,5 @@
 /************************************************
-	FILE	:	CSS_starter.css
+	FILE	:	styles.css
 	THEME	:	STARTER
 	AUTHOR	:	#559
 	FOR		:	USERID/TOPICID
@@ -18,28 +18,55 @@
 	- core file
 	- css componment files for layout
 ************************************************/
-
-/** Imported Stylesheets ***************/
-@import url("https://biwhaleshark.github.io/CSShiny/core/core.css");
-
 /************************************************
-	Settings
+	Imported Styles
+************************************************/
+@import url("https://biwhaleshark.github.io/CSShiny/core.css");
+/* Fonts */
+/************************************************
+	Variables
 ************************************************/
 :root {
-	--holder-width: 90%;
-	--descbox-width: 100%;
-	
-	--holder-margin: 3rem 0;
-	--descbox-margin: 1rem 0;
-	--descbox-padding: 1rem;
-	
-	/* core variables */
-	--setting-text-color: --button-text;
-	--base-font-size: 16px;
-	--settings-bg-color: --button-bg;
-
-	--image-display: none;
-	--bg-image-display: none;
+    --holder-width: 90%;
+    --descbox-width: 100%;
+    --holder-margin: 3rem 0;
+    --descbox-margin: 1rem 0;
+    --descbox-padding: 1rem;
+    /* core variables */
+    --settings-text-color: --button-text;
+    --settings-bg-color: --button-bg;
+    /*** user facing variables ***/
+    /* Base Colors */
+    --color1: #ffa7a7;
+    --color2: #C44D58;
+    --color3: #C7F464;
+    --color4: #4ECDC4;
+    --color5: #556270;
+    /* Fonts */
+    --text-font: "Arial", sans-serif;
+    --header-font: var(--text-font);
+    /* Text Colors */
+    --text-dark: var(--black);
+    --text-light: var(--white;);
+    --header-dark: var(--text-dark);
+    --header-light: var(--text-light);
+    /* Background Colors */
+    --descbox-bg-color: var(--white);
+    --contentholder-bg-color: transparent;
+    --body-bg-color: var(--black);
+    --bg-image: null;
+    --bg-repeat: null;
+    --bg-size: null;
+    /* Link Colors */
+    --link-dark: var(--text-dark);
+    --link-dark-hover: var(--link-dark);
+    --link-light: var(--text-light);
+    --link-light-hover: var(--link-light);
+    /* Button Colors */
+    --button-text: var(--black);
+    --button-text-hover: var(--white);
+    --button-bg: var(--white);
+    --button-bg-hover: var(--black);
 }
 
 /************************************************
@@ -60,6 +87,9 @@ body #holder #content #contentholder .spacer, body #holder #content #contenthold
 body #holder #content #contentholder .titlebar #titleimg {
     display: none;
 }
+body #holder #content #contentholder #cattery_infobox {
+    display: none;
+}
 body #holder #content #contentholder #cattery_descbox > i:last-of-type {
     display: none;
 }
@@ -69,113 +99,111 @@ body #holder #bottombanner {
 body #holder #footer {
     display: none;
 }
-
 /************************************************
 	Resets
 ************************************************/
-
 body {
-	background-color: var(--body-bg-color) !important;
-	background: var(--bg-image);
-	background-repeat: var(--bg-repeat);
-	background-size: var(--bg-size);
+    background-color: var(--body-bg-color) !important;
+    background: var(--bg-image);
+    background-repeat: var(--bg-repeat);
+    background-size: var(--bg-size);
 }
 
 #holder {
-	background: transparent;
-	position: relative;
-	width: 100%;
+    background: transparent;
+    position: relative;
+    width: 100%;
 }
 
 body,
 #holder {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #content {
-	background: var(--contentholder-bg-color);
-	padding: 0;
-	margin: var(--holder-margin);
-	width: var(--holder-width);
-	left: 0;
+    background: var(--contentholder-bg-color);
+    padding: 0;
+    margin: var(--holder-margin);
+    width: var(--holder-width);
+    left: 0;
 }
 
 #contentholder {
-	width: 100%;
-	margin: 0;
-	left: 0;
+    width: 100%;
+    margin: 0;
+    left: 0;
 }
 
 #cattery_descbox {
-	width: var(--descbox-width);
-	float: none;
-	right: unset;
-	padding: var(--descbox-padding);
-	margin: var(--descbox-margin);
-	background: var(--descbox-bg-color);
+    width: var(--descbox-width);
+    float: none;
+    right: unset;
+    padding: var(--descbox-padding);
+    margin: var(--descbox-margin);
+    background: var(--descbox-bg-color);
 }
 
 #cattery_infobox {
-	background: transparent;
-	padding: 0;
-	float: none;
-	left: 0;
+    background: transparent;
+    padding: 0;
+    float: none;
+    left: 0;
 }
 
 .titlebar {
-	width: 100%;
-	margin: 0;
+    width: 100%;
+    margin: 0;
 }
 
 #titletxt {
-	width: 100%;
-	height: auto;
-	top: 0;
-	left: 0;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
 }
 
 .add_small_margins {
-	margin: 0;
+    margin: 0;
 }
 
 /* Link Defaults */
 a,
 a:link,
 a:visited {
-	color: var(--link-dark-hover);
+    color: var(--link-dark-hover);
 }
 
 /* Mweor Tabs */
 .ui-widget-header {
-	background: transparent;
+    background: transparent;
 }
 
 .ui-state-default,
 .ui-widget-header .ui-state-default,
 .ui-widget-content .ui-state-default {
-	background: transparent;
+    background: transparent;
 }
 
 .button,
 .button_tall {
-	color: var(--button-text);
-	background: va(--button-bg);
-	background-color: unset !important;
+    color: var(--button-text);
+    background: va(--button-bg);
+    background-color: unset !important;
 }
 
 .button:hover,
 .button_tall:hover {
-	color: var(--button-text-hover);
-	background: va(--button-bg-hover);
-	background-color: unset !important;
+    color: var(--button-text-hover);
+    background: va(--button-bg-hover);
+    background-color: unset !important;
 }
 
 /* Cattery Setting Box */
 #contentholder form center .tborder {
-	width: 100% !important;
+    width: 100% !important;
 }
 
 /************************************************
