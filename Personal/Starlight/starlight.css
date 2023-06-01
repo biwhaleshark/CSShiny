@@ -7,459 +7,397 @@
     GITHUB:
     @import url("https://biwhaleshark.github.io/CSShiny/Personal/Starlight/starlight.css");
 ************************************************/
-
 /************************************************
 	Imported Styles
 ************************************************/
 @import url("https://biwhaleshark.github.io/CSShiny/core.css");
 @import url("https://biwhaleshark.github.io/CSShiny/components/carousel_slider.css");
-
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
-
 /************************************************
 	Variables
 ************************************************/
 :root {
     --dkteal: #003b43;
-	--ltteal: #cfd3d4;
-
+    --ltteal: #cfd3d4;
     --font-family-1: "Poiret One", cursive;
-	--font-family-2: "Arial", sans-serif;
-
+    --font-family-2: "Arial", sans-serif;
     --text-dark: #000;
-	--text-light: #fff;
-
-	--link-dark: var(--text-dark);
-	--link-light: var(--text-light);
-
-	--border: 1px solid #ffffff75;
-
-	/* Background */
-	--bg-color: var(--dkteal);
-	--bg-image: 
-		linear-gradient(
-		120deg,
-		transparent 60%,
-		#0010184d 60%,
-		#001018 75%,
-		#441416 75%,
-		#441416d1 80%,
-		transparent 80%
-	);
-	--bg-attachment: fixed;
-
-	--contentholder-bg: transparent;
-	--descbox-bg: #fff;
-	--descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
-
-	/* Corners */
-	--corner-gradient: 
-		linear-gradient(
-		135deg,
-		#00262f 0%,
-		#00262f 8%,
-		#681312 8%,
-		#681312 12%,
-		transparent 12%
-	);
-	--border-radius-small: 10px;
-	--border-radius-big: 15px;
-
-	--slider-height: 190px;
-	--slider-header-size: 2.5vw;
-	
-	--holder-width: 90%;
-	--descbox-width: 100%;
-	
-	--holder-margin: 3rem 0;
-	--descbox-margin: 1rem 0;
-	--descbox-padding: 1rem;
-
-	--image-display: none;
-	--bg-image-display: none;
-	
-	/* core variables */
-	--image-display: none;
-	--bg-image-display: none;
-	--default-content: none;
+    --text-light: #fff;
+    --link-dark: var(--text-dark);
+    --link-light: var(--text-light);
+    --border: 1px solid #ffffff75;
+    /* Background */
+    --bg-color: var(--dkteal);
+    --bg-image:
+    	linear-gradient(
+    	120deg,
+    	transparent 60%,
+    	#0010184d 60%,
+    	#001018 75%,
+    	#441416 75%,
+    	#441416d1 80%,
+    	transparent 80%
+    );
+    --bg-attachment: fixed;
+    --contentholder-bg: transparent;
+    --descbox-bg: #fff;
+    --descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
+    /* Corners */
+    --corner-gradient:
+    	linear-gradient(
+    	135deg,
+    	#00262f 0%,
+    	#00262f 8%,
+    	#681312 8%,
+    	#681312 12%,
+    	transparent 12%
+    );
+    --border-radius-small: 10px;
+    --border-radius-big: 15px;
+    --slider-height: 190px;
+    --slider-header-size: 2.5vw;
+    --holder-width: 90%;
+    --descbox-width: 100%;
+    --holder-margin: 3rem 0;
+    --descbox-margin: 1rem 0;
+    --descbox-padding: 1rem;
+    --image-display: none;
+    --bg-image-display: none;
+    /* core variables */
+    --image-display: none;
+    --bg-image-display: none;
+    --default-content: none;
 }
 
 /************************************************
 	Resets
 ************************************************/
-
-body {
-	background: var(--bg-color) var(--bg-image) no-repeat fixed !important;
+html:has(#on:checked) {
+    /* Link Defaults */
+    /* Buttons */
+    /* Mweor Tabs */
+    /* Mweor Tabs */
+    /* Cattery Setting Box */
+    /************************************************
+    	Element display
+    ************************************************/
+    /************************************************
+    	Styles
+    ************************************************/
+    /* masthead */
+    /* navigation */
+    /* badges */
+    /* dev testing */
+    /* messagebox */
+}
+html:has(#on:checked) body {
+    background: var(--bg-color) var(--bg-image) no-repeat fixed !important;
     font-size: 1rem !important;
 }
-
-#holder {
-	background: transparent;
-	position: relative;
-	width: 100%;
+html:has(#on:checked) #holder {
+    background: transparent;
+    position: relative;
+    width: 100%;
 }
-
-body,
-#holder {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+html:has(#on:checked) body,
+html:has(#on:checked) #holder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-
-#content {
-	background: var(--contentholder-bg-color);
-	padding: 0;
-	margin: var(--holder-margin);
-	width: var(--holder-width);
-	left: 0;
+html:has(#on:checked) #content {
+    background: var(--contentholder-bg-color);
+    padding: 0;
+    margin: var(--holder-margin);
+    width: var(--holder-width);
+    left: 0;
 }
-
-#contentholder {
-	width: 100%;
-	margin: 0;
-	left: 0;
+html:has(#on:checked) #contentholder {
+    width: 100%;
+    margin: 0;
+    left: 0;
 }
-
-#cattery_descbox {
-	width: var(--descbox-width);
-	height: fit-content !important;
-	float: none;
-	right: unset;
-	padding: var(--descbox-padding);
-	margin: var(--descbox-margin);
-	box-shadow: 5px 5px 8px #001e27;
-	border-radius: var(--border-radius-big);
-	outline: var(--border);
-	background-color: var(--descbox-bg);
-	background: var(--descbox-img) no-repeat fixed left center;
-	background-size: cover;
+html:has(#on:checked) #cattery_descbox {
+    width: var(--descbox-width);
+    height: fit-content !important;
+    float: none;
+    right: unset;
+    padding: var(--descbox-padding);
+    margin: var(--descbox-margin);
+    box-shadow: 5px 5px 8px #001e27;
+    border-radius: var(--border-radius-big);
+    outline: var(--border);
+    background-color: var(--descbox-bg);
+    background: var(--descbox-img) no-repeat fixed left center;
+    background-size: cover;
 }
-
-#cattery_infobox {
-	background: transparent;
-	padding: 0;
-	float: none;
-	left: 0;
+html:has(#on:checked) #cattery_infobox {
+    background: transparent;
+    padding: 0;
+    float: none;
+    left: 0;
 }
-
-.titlebar {
-	width: 100%;
-	margin: 0;
+html:has(#on:checked) .titlebar {
+    width: 100%;
+    margin: 0;
 }
-
-#titletxt {
-	width: 100%;
-	height: auto;
-	top: 0;
-	left: 0;
+html:has(#on:checked) #titletxt {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
 }
-
-.add_small_margins {
-	margin: 0;
+html:has(#on:checked) .add_small_margins {
+    margin: 0;
 }
-
-/* Link Defaults */
-a,
-a:link,
-a:visited {
-	color: var(--link-dark);
-	font-weight: bold;
+html:has(#on:checked) a,
+html:has(#on:checked) a:link,
+html:has(#on:checked) a:visited {
+    color: var(--link-dark);
+    font-weight: bold;
 }
-
-a:hover,
-a:link:hover,
-a:visited:hover {
-	text-decoration: underline;
-	color: var(--link-dark) !important;
+html:has(#on:checked) a:hover,
+html:has(#on:checked) a:link:hover,
+html:has(#on:checked) a:visited:hover {
+    text-decoration: underline;
+    color: var(--link-dark) !important;
 }
-
-/* Buttons */
-.button, .button_tall {
-	color: var(--link-light);
-	border-color: var(--link-light);
+html:has(#on:checked) .button, html:has(#on:checked) .button_tall {
+    color: var(--link-light);
+    border-color: var(--link-light);
 }
-
-/* Mweor Tabs */
-/* Mweor Tabs */
-#mweor_tabs {
-	border-radius: 15px;
+html:has(#on:checked) #mweor_tabs {
+    border-radius: 15px;
 }
-
-.tab_paging {
-	width: 100%;
-	margin: 0 10px 10px 0px;
+html:has(#on:checked) .tab_paging {
+    width: 100%;
+    margin: 0 10px 10px 0px;
 }
-
-.ui-tabs {
-	padding: 0;
+html:has(#on:checked) .ui-tabs {
+    padding: 0;
 }
-
-.ui-tabs .ui-tabs-nav li {
-	margin: 0px;
+html:has(#on:checked) .ui-tabs .ui-tabs-nav li {
+    margin: 0px;
 }
-
-.ui-state-default,
-.ui-widget-header .ui-state-default,
-.ui-widget-content .ui-state-default {
-	background: var(--ltteal);
-	border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
-	border: 2px solid transparent;
-	border-bottom-width: 0px;
+html:has(#on:checked) .ui-state-default,
+html:has(#on:checked) .ui-widget-header .ui-state-default,
+html:has(#on:checked) .ui-widget-content .ui-state-default {
+    background: var(--ltteal);
+    border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
+    border: 2px solid transparent;
+    border-bottom-width: 0px;
 }
-
-.ui-widget-content {
-	border: none;
-	outline: var(--border);
-	border-radius: var(--border-radius-big);
+html:has(#on:checked) .ui-widget-content {
+    border: none;
+    outline: var(--border);
+    border-radius: var(--border-radius-big);
 }
-
-.login_reward_box {
-	outline: var(--border);
-	border: 0px solid transparent;
-	background: var(--descbox-bg);
-	border-radius: var(--border-radius-big);
+html:has(#on:checked) .login_reward_box {
+    outline: var(--border);
+    border: 0px solid transparent;
+    background: var(--descbox-bg);
+    border-radius: var(--border-radius-big);
 }
-
-.login_rewards .active,
-.login_rewards .received {
-	background: var(--ltteal); 
+html:has(#on:checked) .login_rewards .active,
+html:has(#on:checked) .login_rewards .received {
+    background: var(--ltteal);
 }
-
-.login_rewards > div {
-	border: 0px solid transparent;
+html:has(#on:checked) .login_rewards > div {
+    border: 0px solid transparent;
 }
-
-.ui-widget-header {
-	background: url("https://cdn.discordapp.com/attachments/933495595858022420/982490399337754624/layout_horizontal.png");
-	background-size: cover !important;
-	background-position: center !important;
-	background-attachment: fixed;
-	border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
-	border: 0px solid transparent;
-	color: transparent;
+html:has(#on:checked) .ui-widget-header {
+    background: url("https://cdn.discordapp.com/attachments/933495595858022420/982490399337754624/layout_horizontal.png");
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed;
+    border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
+    border: 0px solid transparent;
+    color: transparent;
 }
-
-.ui-tabs .ui-tabs-nav {
-	padding: 0;
+html:has(#on:checked) .ui-tabs .ui-tabs-nav {
+    padding: 0;
 }
-
-.ui-tabs .ui-tabs-nav li.ui-tabs-active {
-	background: var(--descbox-bg) !important;
-	border-radius: 14px 14px 0 0;
+html:has(#on:checked) .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background: var(--descbox-bg) !important;
+    border-radius: 14px 14px 0 0;
 }
-
-.ui-tabs .ui-tabs-nav li a {
-	background: transparent;
+html:has(#on:checked) .ui-tabs .ui-tabs-nav li a {
+    background: transparent;
 }
-
-.text_medium {
-	display: initial !important;
+html:has(#on:checked) .text_medium {
+    display: initial !important;
 }
-
-.button,
-.button_tall {
-	background: #003b43 !important;
-	border-color: #003b43 !important;
+html:has(#on:checked) .button,
+html:has(#on:checked) .button_tall {
+    background: #003b43 !important;
+    border-color: #003b43 !important;
 }
-.button:hover,
-.button_tall:hover {
-	color: var(--link-light);
-	background: #001417 !important;
-	border-color: #001417 !important;
+html:has(#on:checked) .button:hover,
+html:has(#on:checked) .button_tall:hover {
+    color: var(--link-light);
+    background: #001417 !important;
+    border-color: #001417 !important;
 }
-
-/* Cattery Setting Box */
-#contentholder form center .tborder {
-	width: 100% !important;
+html:has(#on:checked) #contentholder form center .tborder {
+    width: 100% !important;
 }
-
-/************************************************
-	Element display
-************************************************/
-body .sf-menu {
+html:has(#on:checked) body .sf-menu {
     display: none;
 }
-body #bodyi {
+html:has(#on:checked) body #bodyi {
     display: none;
 }
-body #holder #topbanner {
+html:has(#on:checked) body #holder #topbanner {
     display: none;
 }
-body #holder #content #contentholder .spacer, body #holder #content #contentholder .clearer {
+html:has(#on:checked) body #holder #content #contentholder .spacer, html:has(#on:checked) body #holder #content #contentholder .clearer {
     display: none;
 }
-body #holder #content #contentholder .titlebar {
+html:has(#on:checked) body #holder #content #contentholder .titlebar {
     display: none;
 }
-body #holder #content #contentholder .add_small_margins {
+html:has(#on:checked) body #holder #content #contentholder .add_small_margins {
     display: none;
 }
-body #holder #content #contentholder #cattery_infobox {
+html:has(#on:checked) body #holder #content #contentholder #cattery_infobox {
     display: none;
 }
-body #holder #content #contentholder #cattery_descbox > i:last-of-type {
+html:has(#on:checked) body #holder #content #contentholder #cattery_descbox > i:last-of-type {
     display: none;
 }
-body #holder #bottombanner {
+html:has(#on:checked) body #holder #content #contentholder .breed_count {
     display: none;
 }
-body #holder #footer {
+html:has(#on:checked) body #holder #bottombanner {
     display: none;
 }
-
-/************************************************
-	Styles
-************************************************/
-/* masthead */
-.masthead {
-	width: 40%;
-	line-height: 0;
-	height: 100%;
-	display: inline-block;
+html:has(#on:checked) body #holder #footer {
+    display: none;
 }
-
-.masthead-wrap {
-	position: absolute;
-	top: 10%;
-	left: 16%;
-	width: 25%;
-	background: var(--descbox-bg);
-	border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+html:has(#on:checked) .masthead {
+    width: 40%;
+    line-height: 0;
+    height: 100%;
+    display: inline-block;
 }
-
-.masthead-wrap::before {
-	width: 100%;
-	height: 100%;
-	background: var(--corner-gradient);
-	position: absolute;
-	content: '';
-	outline: var(--border);
-	border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+html:has(#on:checked) .masthead-wrap {
+    position: absolute;
+    top: 10%;
+    left: 16%;
+    width: 25%;
+    background: var(--descbox-bg);
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }
-
-.profile-picture {
-	width: 100%;
-	padding: 10px;
+html:has(#on:checked) .masthead-wrap::before {
+    width: 100%;
+    height: 100%;
+    background: var(--corner-gradient);
+    position: absolute;
+    content: "";
+    outline: var(--border);
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }
-
-.utilities {
-	display: flex;
-	justify-content: space-evenly;
-	margin: 0 10%;
-	z-index: 1;
-	position: relative;
+html:has(#on:checked) .profile-picture {
+    width: 100%;
+    padding: 10px;
 }
-
-.utilities a,
-.utilities span {
-	  font-size: 2vw;
-	  padding: 0px 5px 10px 5px;
+html:has(#on:checked) .utilities {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 10%;
+    z-index: 1;
+    position: relative;
 }
-
-.utilities img {
-	width: auto;
-	height: 2.1vw;
-	padding: 0px 2px 2px 2px;
+html:has(#on:checked) .utilities a,
+html:has(#on:checked) .utilities span {
+    font-size: 2vw;
+    padding: 0px 5px 10px 5px;
 }
-
-/* navigation */
-.header {
- 	display: flex;
- 	justify-content: flex-end;
+html:has(#on:checked) .utilities img {
+    width: auto;
+    height: 2.1vw;
+    padding: 0px 2px 2px 2px;
 }
-.nav {
-	width: fit-content;
-	display: flex;
-	justify-content: space-evenly;
+html:has(#on:checked) .header {
+    display: flex;
+    justify-content: flex-end;
 }
-.nav a {
-	padding: 1vw 1.2vw;
-	font-family: var(--font-family-1);
-	font-weight: bold;
-	font-size: 2vw;
+html:has(#on:checked) .nav {
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
 }
-
-.cattery-name {
-	font-size: 5vw;
-	font-family: var(--font-family-1);
-	line-height: 5vw;
-	margin: 0.5rem 0;
-	font-weight: 900;
+html:has(#on:checked) .nav a {
+    padding: 1vw 1.2vw;
+    font-family: var(--font-family-1);
+    font-weight: bold;
+    font-size: 2vw;
 }
-
-.intro {
-	background: #001a1e30;
-	text-align: center;
-	width: 70%;
-	margin: auto !important;
-	padding: 10px !important;
-	border-bottom: 1.5px solid #001b21;
-	font-style: italic;
+html:has(#on:checked) .cattery-name {
+    font-size: 5vw;
+    font-family: var(--font-family-1);
+    line-height: 5vw;
+    margin: 0.5rem 0;
+    font-weight: 900;
 }
-
-.intro span {
-	font-size: 1rem;
-	font-weight: 100;
+html:has(#on:checked) .intro {
+    background: #001a1e30;
+    text-align: center;
+    width: 70%;
+    margin: auto !important;
+    padding: 10px !important;
+    border-bottom: 1.5px solid #001b21;
+    font-style: italic;
 }
-
-.main-wrap {
-	width: 60%;
-	height: fit-content;
-	float: right;
-	position: relative;
-	overflow-y: auto;
-	background-color: var(--descbox-bg);
+html:has(#on:checked) .intro span {
+    font-size: 1rem;
+    font-weight: 100;
 }
-
-.cattery-name,
-.main-wrap p {
-	margin: 0 50px;
-	padding: 10px 0 0;
+html:has(#on:checked) .main-wrap {
+    width: 60%;
+    height: fit-content;
+    float: right;
+    position: relative;
+    overflow-y: auto;
+    background-color: var(--descbox-bg);
 }
-
-/* badges */
-.item_box {
-	background: var(--corner-gradient);
-	background-color: var(--descbox-bg);
-	outline: var(--border);
-	border-radius: var(--border-radius-small);
-	margin: 32px 10px;
+html:has(#on:checked) .cattery-name,
+html:has(#on:checked) .main-wrap p {
+    margin: 0 50px;
+    padding: 10px 0 0;
 }
-
-/* dev testing */
-:root {
-	--holder-width: 90%;
-	--descbox-width: 100%;
-
-	--holder-margin: null;
-	--descbox-margin: 2rem 0 2rem 0;
-	--descbox-padding: 0;
-
+html:has(#on:checked) .item_box {
+    background: var(--corner-gradient);
+    background-color: var(--descbox-bg);
+    outline: var(--border);
+    border-radius: var(--border-radius-small);
+    margin: 32px 10px;
 }
-
-/* messagebox */
-#mpopup {
-	background: var(--descbox-img);
-	color: transparent;
-	margin: auto;
-	left: unset !important;
+html:has(#on:checked) :root {
+    --holder-width: 90%;
+    --descbox-width: 100%;
+    --holder-margin: null;
+    --descbox-margin: 2rem 0 2rem 0;
+    --descbox-padding: 0;
 }
-
-#popupclose {
-	color: var(--link-light);
+html:has(#on:checked) #mpopup {
+    background: var(--descbox-img);
+    color: transparent;
+    margin: auto;
+    left: unset !important;
 }
-
-#mpopup .theader {
-  background: var(--ltteal);
-  color: var(--text-dark) !important;
+html:has(#on:checked) #popupclose {
+    color: var(--link-light);
 }
-
-.trow2, .trow2 table, .trow2 tr, .trow2 td {
-  background: var(--ltteal);
+html:has(#on:checked) #mpopup .theader {
+    background: var(--ltteal);
+    color: var(--text-dark) !important;
 }
-
-input[type="text"],
-textarea {
-	font-family: var(--font-family-2) !important;
+html:has(#on:checked) .trow2, html:has(#on:checked) .trow2 table, html:has(#on:checked) .trow2 tr, html:has(#on:checked) .trow2 td {
+    background: var(--ltteal);
+}
+html:has(#on:checked) input[type=text],
+html:has(#on:checked) textarea {
+    font-family: var(--font-family-2) !important;
 }
