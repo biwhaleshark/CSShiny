@@ -43,6 +43,34 @@
 }
 
 /************************************************
+	Element display
+************************************************/
+body #bodyi {
+    display: none;
+}
+body #holder #topbanner #topbanneri {
+    display: none;
+}
+body #holder #topbanner #addbookmark {
+    display: none;
+}
+body #holder #content #contentholder .spacer, body #holder #content #contentholder .clearer {
+    display: none;
+}
+body #holder #content #contentholder .titlebar #titleimg {
+    display: none;
+}
+body #holder #content #contentholder #cattery_descbox > i:last-of-type {
+    display: none;
+}
+body #holder #bottombanner {
+    display: none;
+}
+body #holder #footer {
+    display: none;
+}
+
+/************************************************
 	Resets
 ************************************************/
 
