@@ -27,6 +27,14 @@ html {
 	box-sizing: inherit;
 }
 
+body,
+holder {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
 body {
 	overflow-x: hidden;
 	margin: 0;
