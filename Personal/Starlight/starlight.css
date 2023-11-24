@@ -252,6 +252,7 @@
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed;
+    border: var(--border);
 }
 :root:has(#on:checked) #modtools_holder {
     left: 10px !important;
@@ -440,6 +441,11 @@
 :root:has(#on:checked) #mpopup .theader {
     background: var(--ltteal);
     color: var(--text-dark) !important;
+}
+:root:has(#on:checked) #mpopup .theader td,
+:root:has(#on:checked) #mpopup .theader .popup_title {
+    --settings-text-color: var(--white);
+    color: var(--white);
 }
 :root:has(#on:checked) .trow2, :root:has(#on:checked) .trow2 table, :root:has(#on:checked) .trow2 tr, :root:has(#on:checked) .trow2 td {
     background: var(--ltteal);
