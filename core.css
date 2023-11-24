@@ -16,12 +16,12 @@
 @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
 :root:has(#on:checked) html {
     font-size: var(--base-font-size);
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 :root:has(#on:checked) *,
 :root:has(#on:checked) ::before,
 :root:has(#on:checked) ::after {
-    box-sizing: inherit;
+    box-sizing: border-box !important;
 }
 :root:has(#on:checked) body {
     overflow-x: hidden;
