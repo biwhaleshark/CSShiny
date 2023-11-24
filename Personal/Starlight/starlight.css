@@ -170,7 +170,6 @@
 :root:has(#on:checked) .button_tall {
     color: var(--link-light);
     background: #003b43 !important;
-    border-color: #003b43 !important;
     border: var(--border) !important;
 }
 :root:has(#on:checked) .button:hover, :root:has(#on:checked) .button:active, :root:has(#on:checked) .button:focus,
@@ -179,7 +178,7 @@
 :root:has(#on:checked) .button_tall:focus {
     color: var(--link-light);
     background: #001417 !important;
-    border-color: #001417 !important;
+    border: var(--border) !important;
 }
 :root:has(#on:checked) #mweor_tabs {
     border-radius: 15px;
@@ -248,6 +247,25 @@
 :root:has(#on:checked) #modtools_holder {
     left: 10px !important;
     right: unset !important;
+}
+:root:has(#on:checked) .credits-toggle {
+    padding: 10px;
+    border-radius: 10px 0 0 0;
+}
+:root:has(#on:checked) .credits-toggle:hover, :root:has(#on:checked) .credits-toggle:active, :root:has(#on:checked) .credits-toggle:focus {
+    background: var(--descbox-bg);
+}
+:root:has(#on:checked) .credits-toggle:hover .signature, :root:has(#on:checked) .credits-toggle:active .signature, :root:has(#on:checked) .credits-toggle:focus .signature {
+    color: var(--dkteal);
+}
+:root:has(#on:checked) .credits-toggle .signature {
+    color: var(--white);
+    font-size: 40px;
+    line-height: 1;
+    font-weight: bold;
+}
+:root:has(#on:checked) .credits-toggle p {
+    text-align: center;
 }
 
 :root:has(#on:checked) .masthead {
