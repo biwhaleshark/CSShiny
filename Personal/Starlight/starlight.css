@@ -1,5 +1,5 @@
 /************************************************
-	FILE:	Starlight_styles.css
+	FILE:	Starlight.css
 	THEME:	Starlight
 	FOR:	#559
 	BY:	#559
@@ -9,8 +9,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://biwhaleshark.github.io/CSShiny/components/carousel_slider.css");
 :root:has(#on:checked) {
-    --dkteal: #003b43;
-    --ltteal: #cfd3d4;
+    --dkteal:	#003b43;
+    --ltteal:	#cfd3d4;
+    --white:	#fff;
     --font-family-1: "Poiret One", cursive;
     --font-family-2: "Arial", sans-serif;
     --text-dark: var(--black);
@@ -55,6 +56,7 @@
     --descbox-padding: 1rem;
     --image-display: none;
     --bg-image-display: none;
+    --default-content: none;
 }
 
 :root:has(#on:checked) {
