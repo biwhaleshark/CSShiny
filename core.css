@@ -16,12 +16,12 @@
 @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
 :root:has(#on:checked) html {
     font-size: var(--base-font-size);
-    box-sizing: border-box !important;
+    box-sizing: border-box;
 }
 :root:has(#on:checked) *,
 :root:has(#on:checked) ::before,
 :root:has(#on:checked) ::after {
-    box-sizing: border-box !important;
+    box-sizing: inherit;
 }
 :root:has(#on:checked) body {
     overflow-x: hidden;
@@ -117,7 +117,7 @@
     float: left;
 }
 
-.layout-toggle {
+.credits-toggle {
     background: white;
     position: fixed;
     bottom: 0;
@@ -132,9 +132,16 @@
     border-top: 1px solid grey;
 }
 
-.layout-toggle label[for=off] {
+:root:has(#on:checked) .layout-toggle label[for=off] {
     display: none;
 }
-.layout-toggle label[for=on] {
+:root:has(#on:checked) .layout-toggle label[for=on] {
+    display: initial;
+}
+
+:root:has(#off:checked) .layout-toggle label[for=off] {
+    display: initial;
+}
+:root:has(#off:checked) .layout-toggle label[for=on] {
     display: none;
 }
