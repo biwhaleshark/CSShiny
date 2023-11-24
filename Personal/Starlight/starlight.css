@@ -280,6 +280,7 @@
 }
 
 :root:has(#on:checked) .masthead {
+    position: relative;
     width: 40%;
     line-height: 0;
     height: 100%;
@@ -288,7 +289,8 @@
 :root:has(#on:checked) .masthead-wrap {
     position: absolute;
     top: 10%;
-    left: 16%;
+    right: 0;
+    max-width: 250px;
     width: 25%;
     background: var(--descbox-bg);
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
