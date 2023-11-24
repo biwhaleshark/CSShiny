@@ -35,6 +35,7 @@
     --contentholder-bg: transparent;
     --descbox-bg: var(--white);
     --descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
+    --shadow: 5px 5px 8px #001e27;
     --border: 1px solid #ffffff75;
     --corner-gradient:
     	linear-gradient(
@@ -122,7 +123,7 @@
     padding: var(--descbox-padding);
     margin: var(--descbox-margin);
     background-color: var(--descbox-bg) !important;
-    box-shadow: 5px 5px 8px #001e27;
+    box-shadow: var(--shadow);
     border-radius: var(--border-radius-big);
     outline: var(--border);
     background: var(--descbox-img);
@@ -243,6 +244,12 @@
 }
 :root:has(#on:checked) #contentholder form center .tborder {
     width: 100% !important;
+    background: var(--descbox-img);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-big);
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed;
 }
 :root:has(#on:checked) #modtools_holder {
     left: 10px !important;
@@ -251,9 +258,13 @@
 :root:has(#on:checked) .credits-toggle {
     padding: 10px;
     border-radius: 10px 0 0 0;
+    max-width: 100px;
+    transition: all 0.5s ease;
+    z-index: 999;
 }
 :root:has(#on:checked) .credits-toggle:hover, :root:has(#on:checked) .credits-toggle:active, :root:has(#on:checked) .credits-toggle:focus {
     background: var(--descbox-bg);
+    transition: all 0.5s ease;
 }
 :root:has(#on:checked) .credits-toggle:hover .signature, :root:has(#on:checked) .credits-toggle:active .signature, :root:has(#on:checked) .credits-toggle:focus .signature {
     color: var(--dkteal);
