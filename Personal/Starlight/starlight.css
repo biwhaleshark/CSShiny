@@ -168,9 +168,10 @@
 }
 :root:has(#on:checked) .button,
 :root:has(#on:checked) .button_tall {
+    color: var(--link-light);
     background: #003b43 !important;
     border-color: #003b43 !important;
-    border: var(--border);
+    border: var(--border) !important;
 }
 :root:has(#on:checked) .button:hover, :root:has(#on:checked) .button:active, :root:has(#on:checked) .button:focus,
 :root:has(#on:checked) .button_tall:hover,
@@ -356,7 +357,7 @@
     font-weight: 900;
 }
 :root:has(#on:checked) .main-wrap .cattery-name,
-:root:has(#on:checked) .main-wrap .main-wrap p {
+:root:has(#on:checked) .main-wrap p {
     margin: 0 50px;
     padding: 10px 0 0;
 }
@@ -383,7 +384,7 @@
     text-align: center;
     padding-top: 10px;
     display: block;
-    font-weight: bold;
+    font-style: italic;
 }
 :root:has(#on:checked) .item_box {
     background: var(--corner-gradient);
