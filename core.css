@@ -79,7 +79,7 @@
     background-color: white;
 }
 :root:has(#on:checked) #contentholder form center .tborder {
-    background: var(--descbox-bg-color);
+    background-color: white;
     display: flex;
 }
 :root:has(#on:checked) #contentholder form center .tborder tbody {
@@ -99,9 +99,12 @@
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
+    color: black;
 }
 :root:has(#on:checked) .trow1 td {
     color: var(--text-dark);
+    background-color: white;
+    color: black;
 }
 :root:has(#on:checked) .trow1 td:nth-child(even) {
     width: 80%;
