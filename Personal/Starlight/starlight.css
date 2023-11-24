@@ -1,33 +1,25 @@
 /************************************************
-	FILE	:	starlight.css
-	THEME	:	Starlight
-	AUTHOR	:	#559
-	FOR		:	#559
-
-    GITHUB:
-    @import url("https://biwhaleshark.github.io/CSShiny/Personal/Starlight/starlight.css");
-************************************************/
-/************************************************
-	Imported Styles
+	FILE:	Starlight_styles.css
+	THEME:	Starlight
+	FOR:	#559
+	BY:	#559
+	DATE:	2023/11/24
 ************************************************/
 @import url("https://biwhaleshark.github.io/CSShiny/core.css");
-@import url("https://biwhaleshark.github.io/CSShiny/components/carousel_slider.css");
-/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
-/************************************************
-	Variables
-************************************************/
-:root {
+@import url("https://biwhaleshark.github.io/CSShiny/components/carousel_slider.css");
+:root:has(#on:checked) {
     --dkteal: #003b43;
     --ltteal: #cfd3d4;
     --font-family-1: "Poiret One", cursive;
     --font-family-2: "Arial", sans-serif;
-    --text-dark: #000;
-    --text-light: #fff;
+    --text-dark: var(--black);
+    --text-light: var(--white);
     --link-dark: var(--text-dark);
     --link-light: var(--text-light);
-    --border: 1px solid #ffffff75;
-    /* Background */
+    --header-dark: var(--text-dark);
+    --header-light: var(--text-light);
+    --base-font-size: 16px;
     --bg-color: var(--dkteal);
     --bg-image:
     	linear-gradient(
@@ -40,10 +32,9 @@
     	transparent 80%
     );
     --contentholder-bg: transparent;
-    --descbox-bg: #fff;
-    --bg-vertical: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
-    --bg-horizontal: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png");
-    /* Corners */
+    --descbox-bg: var(--white);
+    --descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
+    --border: 1px solid #ffffff75;
     --corner-gradient:
     	linear-gradient(
     	135deg,
@@ -59,147 +50,174 @@
     --slider-header-size: 2.5vw;
     --holder-width: 90%;
     --descbox-width: 100%;
-    --holder-margin: 0;
+    --holder-margin: 3rem 0;
     --descbox-margin: 1rem 0;
+    --descbox-padding: 1rem;
+    --image-display: none;
+    --bg-image-display: none;
+}
+
+:root:has(#on:checked) {
+    --holder-width: 90%;
+    --descbox-width: 100%;
+    --holder-margin: null;
+    --descbox-margin: 2rem 0 2rem 0;
     --descbox-padding: 0;
 }
 
-/************************************************
-	Resets
-************************************************/
-html:has(#on:checked) {
-    /* Link Defaults */
-    /* Buttons */
-    /* Mweor Tabs */
-    /* Mweor Tabs */
-    /* Cattery Setting Box */
-    /************************************************
-    	Element display
-    ************************************************/
-    /************************************************
-    	Styles
-    ************************************************/
-    /* masthead */
-    /* navigation */
-    /* badges */
-    /* dev testing */
-    /* messagebox */
+:root:has(#on:checked) html {
+    background-color: var(--dkteal);
 }
-html:has(#on:checked) body {
-    background: var(--bg-color) var(--bg-image) no-repeat fixed !important;
+:root:has(#on:checked) .titlebar,
+:root:has(#on:checked) #titletxt,
+:root:has(#on:checked) .add_small_margins,
+:root:has(#on:checked) #reportplayer,
+:root:has(#on:checked) #cattery_infobox,
+:root:has(#on:checked) #cattery_menu,
+:root:has(#on:checked) #cattery_descbox i:last-child,
+:root:has(#on:checked) form .add_marigns,
+:root:has(#on:checked) .breed_count {
+    display: none;
+}
+:root:has(#on:checked) body,
+:root:has(#on:checked) #holder {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+:root:has(#on:checked) body {
+    background-color: var(--bg-color) !important;
+    background: var(--bg-image);
+    background-repeat: none;
+    background-size: none;
+    background-attachment: fixed;
     font-size: 1rem !important;
 }
-html:has(#on:checked) #holder {
+:root:has(#on:checked) body #holder {
     background: transparent;
     position: relative;
     width: 100%;
 }
-html:has(#on:checked) body,
-html:has(#on:checked) #holder {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-html:has(#on:checked) #content {
-    background: var(--contentholder-bg-color);
+:root:has(#on:checked) body #holder #content {
+    background: var(--contentholder-bg);
     padding: 0;
     margin: var(--holder-margin);
     width: var(--holder-width);
     left: 0;
 }
-html:has(#on:checked) #contentholder {
+:root:has(#on:checked) body #holder #content #contentholder {
     width: 100%;
     margin: 0;
     left: 0;
 }
-html:has(#on:checked) #cattery_descbox {
+:root:has(#on:checked) body #holder #content #contentholder #cattery_descbox {
     width: var(--descbox-width);
     height: fit-content !important;
     float: none;
     right: unset;
     padding: var(--descbox-padding);
     margin: var(--descbox-margin);
+    background-color: var(--descbox-bg) !important;
     box-shadow: 5px 5px 8px #001e27;
     border-radius: var(--border-radius-big);
     outline: var(--border);
-    background: var(--descbox-bg) var(--bg-vertical) no-repeat fixed left center;
+    background: var(--descbox-img);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: fixed;
 }
-html:has(#on:checked) #cattery_infobox {
+:root:has(#on:checked) body #holder #content #contentholder #cattery_infobox {
     background: transparent;
     padding: 0;
     float: none;
     left: 0;
 }
-html:has(#on:checked) .titlebar {
+:root:has(#on:checked) .titlebar {
     width: 100%;
     margin: 0;
 }
-html:has(#on:checked) #titletxt {
+:root:has(#on:checked) #titletxt {
     width: 100%;
     height: auto;
     top: 0;
     left: 0;
 }
-html:has(#on:checked) .add_small_margins {
+:root:has(#on:checked) .add_small_margins {
     margin: 0;
 }
-html:has(#on:checked) a,
-html:has(#on:checked) a:link,
-html:has(#on:checked) a:visited {
+:root:has(#on:checked) a,
+:root:has(#on:checked) a:link,
+:root:has(#on:checked) a:visited {
     color: var(--link-dark);
     font-weight: bold;
 }
-html:has(#on:checked) a:hover,
-html:has(#on:checked) a:link:hover,
-html:has(#on:checked) a:visited:hover {
+:root:has(#on:checked) a:hover, :root:has(#on:checked) a:active, :root:has(#on:checked) a:focus,
+:root:has(#on:checked) a:link:hover,
+:root:has(#on:checked) a:link:active,
+:root:has(#on:checked) a:link:focus,
+:root:has(#on:checked) a:visited:hover,
+:root:has(#on:checked) a:visited:active,
+:root:has(#on:checked) a:visited:focus {
     text-decoration: underline;
     color: var(--link-dark) !important;
 }
-html:has(#on:checked) .button, html:has(#on:checked) .button_tall {
-    color: var(--link-light);
-    border-color: var(--link-light);
+:root:has(#on:checked) .button,
+:root:has(#on:checked) .button_tall {
+    background: #003b43 !important;
+    border-color: #003b43 !important;
+    border: var(--border);
 }
-html:has(#on:checked) #mweor_tabs {
+:root:has(#on:checked) .button:hover, :root:has(#on:checked) .button:active, :root:has(#on:checked) .button:focus,
+:root:has(#on:checked) .button_tall:hover,
+:root:has(#on:checked) .button_tall:active,
+:root:has(#on:checked) .button_tall:focus {
+    color: var(--link-light);
+    background: #001417 !important;
+    border-color: #001417 !important;
+}
+:root:has(#on:checked) #mweor_tabs {
     border-radius: 15px;
 }
-html:has(#on:checked) .tab_paging {
+:root:has(#on:checked) .tab_paging {
     width: 100%;
     margin: 0 10px 10px 0px;
 }
-html:has(#on:checked) .ui-tabs {
+:root:has(#on:checked) .ui-tabs {
     padding: 0;
 }
-html:has(#on:checked) .ui-tabs .ui-tabs-nav li {
+:root:has(#on:checked) .ui-tabs .ui-tabs-nav li {
     margin: 0px;
 }
-html:has(#on:checked) .ui-state-default,
-html:has(#on:checked) .ui-widget-header .ui-state-default,
-html:has(#on:checked) .ui-widget-content .ui-state-default {
+:root:has(#on:checked) .ui-state-default,
+:root:has(#on:checked) .ui-widget-header .ui-state-default,
+:root:has(#on:checked) .ui-widget-content .ui-state-default {
     background: var(--ltteal);
     border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
     border: 2px solid transparent;
     border-bottom-width: 0px;
 }
-html:has(#on:checked) .ui-widget-content {
+:root:has(#on:checked) .ui-widget-content {
     border: none;
     outline: var(--border);
     border-radius: var(--border-radius-big);
 }
-html:has(#on:checked) .login_reward_box {
+:root:has(#on:checked) .login_reward_box {
     outline: var(--border);
     border: 0px solid transparent;
     background: var(--descbox-bg);
     border-radius: var(--border-radius-big);
 }
-html:has(#on:checked) .login_rewards .active,
-html:has(#on:checked) .login_rewards .received {
+:root:has(#on:checked) .login_rewards .active,
+:root:has(#on:checked) .login_rewards .received {
     background: var(--ltteal);
 }
-html:has(#on:checked) .login_rewards > div {
+:root:has(#on:checked) .login_rewards > div {
     border: 0px solid transparent;
 }
-html:has(#on:checked) .ui-widget-header {
+:root:has(#on:checked) .ui-widget-header {
     background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png");
     background-size: cover !important;
     background-position: center !important;
@@ -208,73 +226,34 @@ html:has(#on:checked) .ui-widget-header {
     border: 0px solid transparent;
     color: transparent;
 }
-html:has(#on:checked) .ui-tabs .ui-tabs-nav {
+:root:has(#on:checked) .ui-tabs .ui-tabs-nav {
     padding: 0;
 }
-html:has(#on:checked) .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+:root:has(#on:checked) .ui-tabs .ui-tabs-nav li.ui-tabs-active {
     background: var(--descbox-bg) !important;
     border-radius: 14px 14px 0 0;
 }
-html:has(#on:checked) .ui-tabs .ui-tabs-nav li a {
+:root:has(#on:checked) .ui-tabs .ui-tabs-nav li a {
     background: transparent;
 }
-html:has(#on:checked) .text_medium {
+:root:has(#on:checked) .text_medium {
     display: initial !important;
 }
-html:has(#on:checked) .button,
-html:has(#on:checked) .button_tall {
-    background: #003b43 !important;
-    border-color: #003b43 !important;
-}
-html:has(#on:checked) .button:hover,
-html:has(#on:checked) .button_tall:hover {
-    color: var(--link-light);
-    background: #001417 !important;
-    border-color: #001417 !important;
-}
-html:has(#on:checked) #contentholder form center .tborder {
+:root:has(#on:checked) #contentholder form center .tborder {
     width: 100% !important;
 }
-html:has(#on:checked) body .sf-menu {
-    display: none;
+:root:has(#on:checked) #modtools_holder {
+    left: 10px !important;
+    right: unset !important;
 }
-html:has(#on:checked) body #bodyi {
-    display: none;
-}
-html:has(#on:checked) body #holder #topbanner {
-    display: none;
-}
-html:has(#on:checked) body #holder #content #contentholder .spacer, html:has(#on:checked) body #holder #content #contentholder .clearer {
-    display: none;
-}
-html:has(#on:checked) body #holder #content #contentholder .titlebar {
-    display: none;
-}
-html:has(#on:checked) body #holder #content #contentholder .add_small_margins {
-    display: none;
-}
-html:has(#on:checked) body #holder #content #contentholder #cattery_infobox {
-    display: none;
-}
-html:has(#on:checked) body #holder #content #contentholder #cattery_descbox > i:last-of-type {
-    display: none;
-}
-html:has(#on:checked) body #holder #content #contentholder .breed_count {
-    display: none;
-}
-html:has(#on:checked) body #holder #bottombanner {
-    display: none;
-}
-html:has(#on:checked) body #holder #footer {
-    display: none;
-}
-html:has(#on:checked) .masthead {
+
+:root:has(#on:checked) .masthead {
     width: 40%;
     line-height: 0;
     height: 100%;
     display: inline-block;
 }
-html:has(#on:checked) .masthead-wrap {
+:root:has(#on:checked) .masthead-wrap {
     position: absolute;
     top: 10%;
     left: 16%;
@@ -282,59 +261,104 @@ html:has(#on:checked) .masthead-wrap {
     background: var(--descbox-bg);
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }
-html:has(#on:checked) .masthead-wrap::before {
-    width: 100%;
-    height: 100%;
+:root:has(#on:checked) .masthead-wrap::before {
+    width: 250px;
+    height: 250px;
     background: var(--corner-gradient);
     position: absolute;
     content: "";
+    outline: none;
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+}
+:root:has(#on:checked) .masthead-wrap:hover .masthead-links {
+    height: 145px;
+}
+:root:has(#on:checked) .masthead-wrap .masthead-links {
+    display: flex;
+    height: calc(var(--slider-header-size) + 15px);
+    flex-direction: column;
+    border-top: 1.5px solid #001b21;
+    background: #001a1e30;
+    margin: 0 15px 10px;
+    padding: 5px 10px 18px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s ease;
+}
+:root:has(#on:checked) .masthead-wrap .masthead-links a,
+:root:has(#on:checked) .masthead-wrap .masthead-links a:link,
+:root:has(#on:checked) .masthead-wrap .masthead-links a:visited {
+    line-height: 1;
+    padding: 3px 0;
+}
+:root:has(#on:checked) .masthead-wrap .masthead-links .slider__caption {
+    margin: 2px 0 12px;
+    line-height: 1;
+}
+:root:has(#on:checked) .masthead-wrap .profile-picture {
+    width: 100%;
+    padding: 10px;
     outline: var(--border);
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }
-html:has(#on:checked) .profile-picture {
-    width: 100%;
-    padding: 10px;
-}
-html:has(#on:checked) .utilities {
+:root:has(#on:checked) .masthead-wrap .utilities {
     display: flex;
     justify-content: space-evenly;
     margin: 0 10%;
     z-index: 1;
     position: relative;
 }
-html:has(#on:checked) .utilities a,
-html:has(#on:checked) .utilities span {
+:root:has(#on:checked) .masthead-wrap .utilities a,
+:root:has(#on:checked) .masthead-wrap .utilities a:link,
+:root:has(#on:checked) .masthead-wrap .utilities a:visited,
+:root:has(#on:checked) .masthead-wrap .utilities span {
     font-size: 2vw;
     padding: 0px 5px 10px 5px;
 }
-html:has(#on:checked) .utilities img {
+:root:has(#on:checked) .masthead-wrap .utilities img {
     width: auto;
     height: 2.1vw;
     padding: 0px 2px 2px 2px;
 }
-html:has(#on:checked) .header {
+:root:has(#on:checked) .main-wrap {
+    width: 60%;
+    height: fit-content;
+    float: right;
+    position: relative;
+    overflow-y: auto;
+    background-color: var(--descbox-bg);
+}
+:root:has(#on:checked) .main-wrap .header {
     display: flex;
     justify-content: flex-end;
 }
-html:has(#on:checked) .nav {
+:root:has(#on:checked) .main-wrap .nav {
     width: fit-content;
     display: flex;
     justify-content: space-evenly;
 }
-html:has(#on:checked) .nav a {
+:root:has(#on:checked) .main-wrap .nav a,
+:root:has(#on:checked) .main-wrap .nav a:link,
+:root:has(#on:checked) .main-wrap .nav a:visited {
     padding: 1vw 1.2vw;
     font-family: var(--font-family-1);
     font-weight: bold;
     font-size: 2vw;
 }
-html:has(#on:checked) .cattery-name {
+:root:has(#on:checked) .main-wrap .cattery-name {
     font-size: 5vw;
     font-family: var(--font-family-1);
     line-height: 5vw;
     margin: 0.5rem 0;
     font-weight: 900;
 }
-html:has(#on:checked) .intro {
+:root:has(#on:checked) .main-wrap .cattery-name,
+:root:has(#on:checked) .main-wrap .main-wrap p {
+    margin: 0 50px;
+    padding: 10px 0 0;
+}
+:root:has(#on:checked) .main-wrap .intro {
     background: #001a1e30;
     text-align: center;
     width: 70%;
@@ -343,54 +367,46 @@ html:has(#on:checked) .intro {
     border-bottom: 1.5px solid #001b21;
     font-style: italic;
 }
-html:has(#on:checked) .intro span {
+:root:has(#on:checked) .main-wrap .intro span {
     font-size: 1rem;
     font-weight: 100;
 }
-html:has(#on:checked) .main-wrap {
-    width: 60%;
-    height: fit-content;
-    float: right;
-    position: relative;
-    overflow-y: auto;
-    background-color: var(--descbox-bg);
+:root:has(#on:checked) .main-wrap .sparring {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
 }
-html:has(#on:checked) .cattery-name,
-html:has(#on:checked) .main-wrap p {
-    margin: 0 50px;
-    padding: 10px 0 0;
+:root:has(#on:checked) .main-wrap .shoutout {
+    font-size: 1.6vw;
+    text-align: center;
+    padding-top: 10px;
+    display: block;
+    font-weight: bold;
 }
-html:has(#on:checked) .item_box {
+:root:has(#on:checked) .item_box {
     background: var(--corner-gradient);
     background-color: var(--descbox-bg);
     outline: var(--border);
     border-radius: var(--border-radius-small);
     margin: 32px 10px;
 }
-html:has(#on:checked) :root {
-    --holder-width: 90%;
-    --descbox-width: 100%;
-    --holder-margin: null;
-    --descbox-margin: 2rem 0 2rem 0;
-    --descbox-padding: 0;
-}
-html:has(#on:checked) #mpopup {
-    background: var(--bg-vertical);
+:root:has(#on:checked) #mpopup {
+    background: var(--descbox-img);
     color: transparent;
     margin: auto;
     left: unset !important;
 }
-html:has(#on:checked) #popupclose {
+:root:has(#on:checked) #popupclose {
     color: var(--link-light);
 }
-html:has(#on:checked) #mpopup .theader {
+:root:has(#on:checked) #mpopup .theader {
     background: var(--ltteal);
     color: var(--text-dark) !important;
 }
-html:has(#on:checked) .trow2, html:has(#on:checked) .trow2 table, html:has(#on:checked) .trow2 tr, html:has(#on:checked) .trow2 td {
+:root:has(#on:checked) .trow2, :root:has(#on:checked) .trow2 table, :root:has(#on:checked) .trow2 tr, :root:has(#on:checked) .trow2 td {
     background: var(--ltteal);
 }
-html:has(#on:checked) input[type=text],
-html:has(#on:checked) textarea {
+:root:has(#on:checked) input[type=text],
+:root:has(#on:checked) textarea {
     font-family: var(--font-family-2) !important;
 }
