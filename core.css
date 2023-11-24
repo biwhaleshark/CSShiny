@@ -1,6 +1,7 @@
 /************************************************
 	FILE	:	core.css
 	AUTHOR	:	#559
+	DATE	:	2023/11/24
 
 	DESC	:
 	core stylesheet including debug testing
@@ -12,160 +13,108 @@
 	GITHUB	:
 	@import url("https://biwhaleshark.github.io/CSShiny/core.css");
 ************************************************/
-
-/** Imported Stylesheets ***************/
 @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
-
-html {
-	font-size: 16px;
-	box-sizing: border-box;
+:root:has(#on:checked) html {
+    font-size: var(--base-font-size);
+    box-sizing: border-box;
 }
-
-*,
-::before,
-::after {
-	box-sizing: inherit;
+:root:has(#on:checked) *,
+:root:has(#on:checked) ::before,
+:root:has(#on:checked) ::after {
+    box-sizing: inherit;
 }
-
-body,
-holder {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	overflow-x: hidden;
+:root:has(#on:checked) body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 300;
+    font-family: var(--text-font);
+    text-rendering: optimizeLegibility;
 }
-
-body {
-	overflow-x: hidden;
-	margin: 0;
-	padding: 0;
-	color: black;
-	font-size: 1rem;
-	line-height: 1;
-	font-weight: 300;
-	font-family: var(--text-font);
-	text-rendering: optimizeLegibility;
+:root:has(#on:checked) .dev {
+    border: 2px dashed red !important;
 }
-
-/* Dev Testing */
-.dev {
-	border: 2px dashed red;
+:root:has(#on:checked) #bodyi,
+:root:has(#on:checked) #topbanneri,
+:root:has(#on:checked) #titleimg,
+:root:has(#on:checked) .trans {
+    display: var(--image-display);
 }
-
-.highlight_me, .highlight_me td {
-	background: transparent !important;
+:root:has(#on:checked) #content,
+:root:has(#on:checked) .sf-menu ul,
+:root:has(#on:checked) .ui-widget-header {
+    background-image: var(--bg-image-display);
 }
-
-/* remove borders */
-#cattery_infobox .add_small_margins,
-#cattery_menu li,
-.ui-widget-content,
-.ui-widget-header,
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-.mweorbox table tbody tr td div,
-.tborder,
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus {
+:root:has(#on:checked) #topbanner,
+:root:has(#on:checked) .sf-menu,
+:root:has(#on:checked) #menu_holder,
+:root:has(#on:checked) #footer {
+    display: var(--default-content);
+}
+:root:has(#on:checked) .highlight_me, :root:has(#on:checked) .highlight_me td {
+    background: transparent !important;
+}
+:root:has(#on:checked) #cattery_infobox .add_small_margins,
+:root:has(#on:checked) #cattery_menu li,
+:root:has(#on:checked) .ui-widget-content,
+:root:has(#on:checked) .ui-widget-header,
+:root:has(#on:checked) .ui-state-active,
+:root:has(#on:checked) .ui-widget-content .ui-state-active,
+:root:has(#on:checked) .ui-widget-header .ui-state-active,
+:root:has(#on:checked) .mweorbox table tbody tr td div,
+:root:has(#on:checked) .tborder,
+:root:has(#on:checked) .ui-state-hover,
+:root:has(#on:checked) .ui-widget-content .ui-state-hover,
+:root:has(#on:checked) .ui-widget-header .ui-state-hover,
+:root:has(#on:checked) .ui-state-focus,
+:root:has(#on:checked) .ui-widget-content .ui-state-focus,
+:root:has(#on:checked) .ui-widget-header .ui-state-focus {
     border-color: transparent !important;
 }
-
-/* Set default background color */
-html,
-body {
+:root:has(#on:checked) html,
+:root:has(#on:checked) body {
     background-color: white;
 }
-
-/************************************************
-	Responsive Cattery Settings
-************************************************/
-#contentholder form center .tborder {
-	background: var(--descbox-bg-color);
-	display: flex;
+:root:has(#on:checked) #contentholder form center .tborder {
+    background: var(--descbox-bg-color);
+    display: flex;
 }
-
-#contentholder form center .tborder tbody {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+:root:has(#on:checked) #contentholder form center .tborder tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
-
-.theader {
-	background-color: var(--settings-bg-color) !important;
-	display: flex;
-	justify-content: center;
+:root:has(#on:checked) .theader {
+    background-color: var(--settings-bg-color) !important;
+    display: flex;
+    justify-content: center;
 }
-
-.theader td {
-	color: var(--settings-text-color);
+:root:has(#on:checked) .theader td {
+    color: var(--settings-text-color);
 }
-
-.trow1 {
-	display: flex;
-	justify-content: left;
-	flex-wrap: wrap;
+:root:has(#on:checked) .trow1 {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
 }
-
-.trow1 td {
-	color: var(--text-dark);
+:root:has(#on:checked) .trow1 td {
+    color: var(--text-dark);
 }
-
-.trow1 td:nth-child(even) {
-	width: 80%;
-	text-align: left;
+:root:has(#on:checked) .trow1 td:nth-child(even) {
+    width: 80%;
+    text-align: left;
 }
-
-.trow1 td:nth-child(odd) {
-	display: flex;
-	justify-content: right;
-	align-items: center;
-	width: 11%;
+:root:has(#on:checked) .trow1 td:nth-child(odd) {
+    width: 20%;
+    text-align: left;
 }
-
-.trow1:nth-child(9) td:nth-child(2n+1) {
-	align-self: flex-start;
-}
-
-input[type="text"],
-textarea {
-	width: 95%;
-	float: left;
-}
-
-/************************************************
-	Cattery On/Off Button Styles
-************************************************/
-:root:has(#on:checked) #mpopup {
-	background: var(--descbox-img);
-	color: transparent;
-	margin: auto;
-	left: unset !important;
-}
-
-:root:has(#on:checked) #popupclose {
-	color: var(--link-light);
-}
-
-:root:has(#on:checked) #mpopup .theader {
-  background: var(--ltteal);
-  color: var(--text-dark) !important;
-}
-
-:root:has(#on:checked) .trow2,
-:root:has(#on:checked) .trow2 table,
-:root:has(#on:checked) .trow2 tr,
-:root:has(#on:checked) .trow2 td {
-  background: var(--ltteal);
-}
-
-:root:has(#on:checked) input[type="text"],
+:root:has(#on:checked) input[type=text],
 :root:has(#on:checked) textarea {
-	font-family: var(--font-family-2) !important;
+    width: 95%;
+    float: left;
 }
 
 .layout-toggle {
@@ -182,16 +131,10 @@ textarea {
     border-left: 1px solid grey;
     border-top: 1px solid grey;
 }
-:root:has(#on:checked) .layout-toggle label[for=off] {
-      display: none;
-}
 
-:root:has(#off:checked) .layout-toggle label[for=on] {
-      display: none;
+.layout-toggle label[for=off] {
+    display: none;
 }
-
-:root:has(#off:checked) .main-wrap .header .nav,
-:root:has(#off:checked) .masthead-wrap .utilities,
-:root:has(#off:checked) .main-wrap .cattery-name {
-display: none;
+.layout-toggle label[for=on] {
+    display: none;
 }
