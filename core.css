@@ -118,7 +118,6 @@
 }
 
 .credits-toggle {
-    background: white;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -126,22 +125,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    border-radius: 10px 0 0 0px;
-    border-left: 1px solid grey;
-    border-top: 1px solid grey;
 }
 
-:root:has(#on:checked) .layout-toggle label[for=off] {
+:root:has(#on:checked) .credits-toggle label[for=off] {
     display: none;
 }
-:root:has(#on:checked) .layout-toggle label[for=on] {
+:root:has(#on:checked) .credits-toggle label[for=on] {
     display: initial;
 }
 
-:root:has(#off:checked) .layout-toggle label[for=off] {
+:root:has(#off:checked) .credits-toggle label[for=off] {
     display: initial;
 }
-:root:has(#off:checked) .layout-toggle label[for=on] {
+:root:has(#off:checked) .credits-toggle label[for=on] {
     display: none;
 }
