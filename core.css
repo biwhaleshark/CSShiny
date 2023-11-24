@@ -115,9 +115,15 @@
     text-align: left;
 }
 :root:has(#on:checked) input[type=text],
-:root:has(#on:checked) textarea {
+:root:has(#on:checked) textarea,
+:root:has(#on:checked) textarea, :root:has(#on:checked) input[type=text], :root:has(#on:checked) input[type=password],
+:root:has(#on:checked) select,
+:root:has(#on:checked) input.pretty_dropdown_text,
+:root:has(#on:checked) .pretty_dropdown_options {
     width: 95%;
     float: left;
+    background: white;
+    color: black;
 }
 
 .credits-toggle {
