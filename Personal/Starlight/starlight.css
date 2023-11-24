@@ -109,6 +109,7 @@
     margin: var(--holder-margin);
     width: var(--holder-width);
     left: 0;
+    color: unset !important;
 }
 :root:has(#on:checked) body #holder #content #contentholder {
     width: 100%;
@@ -185,6 +186,7 @@
 :root:has(#on:checked) #mweor_tabs {
     border-radius: 15px;
     box-shadow: var(--shadow);
+    background: var(--white);
 }
 :root:has(#on:checked) .tab_paging {
     width: 100%;
@@ -208,6 +210,8 @@
     border: none;
     outline: var(--border);
     border-radius: var(--border-radius-big);
+    color: var(--black) !important;
+    background: white;
 }
 :root:has(#on:checked) .login_reward_box {
     outline: var(--border);
@@ -223,7 +227,7 @@
     border: 0px solid transparent;
 }
 :root:has(#on:checked) .ui-widget-header {
-    background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png");
+    background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png") !important;
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed;
@@ -276,7 +280,6 @@
     color: var(--white);
     font-size: 40px;
     line-height: 1;
-    font-weight: bold;
 }
 :root:has(#on:checked) .credits-toggle p {
     text-align: center;
