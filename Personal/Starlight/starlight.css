@@ -288,7 +288,6 @@
     z-index: 999;
 }
 :root:has(#on:checked) .credits-toggle:hover, :root:has(#on:checked) .credits-toggle:active, :root:has(#on:checked) .credits-toggle:focus {
-    background: var(--descbox-bg);
     transition: all 0.5s ease;
 }
 :root:has(#on:checked) .credits-toggle:hover .signature, :root:has(#on:checked) .credits-toggle:active .signature, :root:has(#on:checked) .credits-toggle:focus .signature {
