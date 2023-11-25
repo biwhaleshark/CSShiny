@@ -128,12 +128,15 @@
 
 .credits-toggle {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 152px;
+    right: -8px;
     width: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+}
+.credits-toggle:hover, .credits-toggle:active, .credits-toggle:focus {
+    bottom: 0px;
 }
 
 :root:has(#on:checked) .credits-toggle label[for=off] {
