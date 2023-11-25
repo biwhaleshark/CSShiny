@@ -291,7 +291,8 @@
     transition: all 0.5s ease;
 }
 :root:has(#on:checked) .credits-toggle:hover .signature, :root:has(#on:checked) .credits-toggle:active .signature, :root:has(#on:checked) .credits-toggle:focus .signature {
-    color: var(--dkteal);
+    color: var(--white);
+    text-shadow: var(--shadow), var(--shadow);
 }
 :root:has(#on:checked) .credits-toggle .signature {
     color: var(--white);
