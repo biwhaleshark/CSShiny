@@ -1,490 +1,154 @@
 /************************************************
-	FILE:	Starlight.css
-	THEME:	Starlight
-	FOR:	#559
-	BY:	#559
-	DATE:	2023/11/24
+	FILE	:	core.css
+	AUTHOR	:	#559
+	DATE	:	2023/11/24
+
+	DESC	:
+	core stylesheet including debug testing
+	and base styles for all themes and layouts.
+
+	this file called in base CSS file for
+	theme/layout.
+
+	GITHUB	:
+	@import url("https://biwhaleshark.github.io/CSShiny/core.css");
 ************************************************/
-@import url("https://biwhaleshark.github.io/CSShiny/core.css");
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
-@import url("https://biwhaleshark.github.io/CSShiny/components/carousel_slider.css");
-:root:has(#on:checked) {
-    --dkteal:	#003b43;
-    --ltteal:	#cfd3d4;
-    --white:	#fff;
-    --font-family-1: "Poiret One", cursive;
-    --font-family-2: "Arial", sans-serif;
-    --text-dark: var(--black);
-    --text-light: var(--white);
-    --link-dark: var(--text-dark);
-    --link-light: var(--text-light);
-    --header-dark: var(--text-dark);
-    --header-light: var(--text-light);
-    --base-font-size: 16px;
-    --bg-color: var(--dkteal);
-    --bg-image:
-    	linear-gradient(
-    	120deg,
-    	transparent 60%,
-    	#0010184d 60%,
-    	#001018 75%,
-    	#441416 75%,
-    	#441416d1 80%,
-    	transparent 80%
-    );
-    --contentholder-bg: transparent;
-    --descbox-bg: var(--white);
-    --descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
-    --shadow: 5px 5px 8px #001e27;
-    --border: 1px solid #ffffff75;
-    --corner-gradient:
-    	linear-gradient(
-    	135deg,
-    	#00262f 0%,
-    	#00262f 8%,
-    	#681312 8%,
-    	#681312 12%,
-    	transparent 12%
-    );
-    --border-radius-small: 10px;
-    --border-radius-big: 15px;
-    --slider-height: 190px;
-    --slider-header-size: 1.4rem;
-    --holder-width: 90%;
-    --descbox-width: 100%;
-    --holder-margin: 3rem 0;
-    --descbox-margin: 1rem 0;
-    --descbox-padding: 1rem;
-    --image-display: none;
-    --bg-image-display: none;
-    --default-content: none;
-}
-
-:root:has(#on:checked) {
-    --holder-width: 90%;
-    --descbox-width: 100%;
-    --holder-margin: null;
-    --descbox-margin: 2rem 0 2rem 0;
-    --descbox-padding: 0;
-}
-
+@import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
 :root:has(#on:checked) html {
-    background-color: var(--dkteal);
+    font-size: var(--base-font-size);
+    box-sizing: border-box !important;
 }
-:root:has(#on:checked) .titlebar,
-:root:has(#on:checked) #titletxt,
-:root:has(#on:checked) .add_small_margins,
-:root:has(#on:checked) #reportplayer,
-:root:has(#on:checked) #cattery_infobox,
-:root:has(#on:checked) #cattery_menu,
-:root:has(#on:checked) #cattery_descbox i:last-child,
-:root:has(#on:checked) form .add_marigns,
-:root:has(#on:checked) .breed_count {
-    display: none;
-}
-:root:has(#on:checked) body,
-:root:has(#on:checked) #holder {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    overflow-x: hidden;
+:root:has(#on:checked) *,
+:root:has(#on:checked) ::before,
+:root:has(#on:checked) ::after {
+    box-sizing: border-box !important;
 }
 :root:has(#on:checked) body {
-    background-color: var(--bg-color) !important;
-    background: var(--bg-image);
-    background-repeat: none;
-    background-size: none;
-    background-attachment: fixed;
-    font-size: 1rem !important;
-}
-:root:has(#on:checked) body #holder {
-    background: transparent;
-    position: relative;
-    width: 100%;
-}
-:root:has(#on:checked) body #holder #content {
-    background: var(--contentholder-bg);
-    padding: 0;
-    margin: var(--holder-margin);
-    width: var(--holder-width);
-    left: 0;
-    color: unset !important;
-}
-:root:has(#on:checked) body #holder #content #contentholder {
-    width: 100%;
+    overflow-x: hidden;
     margin: 0;
-    left: 0;
-}
-:root:has(#on:checked) body #holder #content #contentholder #cattery_descbox {
-    width: var(--descbox-width);
-    height: fit-content !important;
-    float: none;
-    right: unset;
-    padding: var(--descbox-padding);
-    margin: var(--descbox-margin);
-    background-color: var(--descbox-bg) !important;
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius-big);
-    outline: var(--border);
-    background: var(--descbox-img);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-attachment: fixed;
-}
-:root:has(#on:checked) body #holder #content #contentholder #cattery_infobox {
-    background: transparent;
     padding: 0;
-    float: none;
-    left: 0;
+    color: black;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 300;
+    font-family: var(--text-font);
+    text-rendering: optimizeLegibility;
 }
-:root:has(#on:checked) .titlebar {
-    width: 100%;
-    margin: 0;
+:root:has(#on:checked) .dev {
+    border: 2px dashed red !important;
 }
-:root:has(#on:checked) #titletxt {
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
+:root:has(#on:checked) #bodyi,
+:root:has(#on:checked) #topbanneri,
+:root:has(#on:checked) #titleimg,
+:root:has(#on:checked) .trans {
+    display: var(--image-display);
 }
-:root:has(#on:checked) .add_small_margins {
-    margin: 0;
-}
-:root:has(#on:checked) a,
-:root:has(#on:checked) a:link,
-:root:has(#on:checked) a:visited {
-    color: var(--link-dark);
-    font-weight: bold;
-}
-:root:has(#on:checked) a:hover, :root:has(#on:checked) a:active, :root:has(#on:checked) a:focus,
-:root:has(#on:checked) a:link:hover,
-:root:has(#on:checked) a:link:active,
-:root:has(#on:checked) a:link:focus,
-:root:has(#on:checked) a:visited:hover,
-:root:has(#on:checked) a:visited:active,
-:root:has(#on:checked) a:visited:focus {
-    text-decoration: underline;
-    color: var(--link-dark) !important;
-}
-:root:has(#on:checked) .button,
-:root:has(#on:checked) .button_tall {
-    color: var(--link-light);
-    background: #003b43 !important;
-    border: var(--border) !important;
-    box-shadow: var(--shadow);
-}
-:root:has(#on:checked) .button:hover, :root:has(#on:checked) .button:active, :root:has(#on:checked) .button:focus,
-:root:has(#on:checked) .button_tall:hover,
-:root:has(#on:checked) .button_tall:active,
-:root:has(#on:checked) .button_tall:focus {
-    color: var(--link-light) !important;
-    background: #001417 !important;
-    border: var(--border) !important;
-}
-:root:has(#on:checked) #mweor_tabs {
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    background: var(--white);
-}
-:root:has(#on:checked) .tab_paging {
-    width: 100%;
-    margin: 0 10px 10px 0px;
-}
-:root:has(#on:checked) .ui-tabs {
-    padding: 0;
-}
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav li {
-    margin: 0px;
-}
-:root:has(#on:checked) .ui-state-default,
-:root:has(#on:checked) .ui-widget-header .ui-state-default,
-:root:has(#on:checked) .ui-widget-content .ui-state-default {
-    background: var(--ltteal);
-    border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
-    border: 2px solid transparent;
-    border-bottom-width: 0px;
-}
-:root:has(#on:checked) .ui-widget-content {
-    border: none;
-    outline: var(--border);
-    border-radius: var(--border-radius-big);
-    color: var(--black) !important;
-    background: white;
-}
-:root:has(#on:checked) .login_reward_box {
-    outline: var(--border);
-    border: 0px solid transparent;
-    background: var(--descbox-bg);
-    border-radius: var(--border-radius-big);
-}
-:root:has(#on:checked) .login_rewards .active,
-:root:has(#on:checked) .login_rewards .received {
-    background: var(--ltteal);
-}
-:root:has(#on:checked) .login_rewards > div {
-    border: 0px solid transparent;
-}
+:root:has(#on:checked) #content,
+:root:has(#on:checked) .sf-menu ul,
 :root:has(#on:checked) .ui-widget-header {
-    background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed;
-    border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
-    border: 0px solid transparent;
-    color: transparent;
+    background-image: var(--bg-image-display);
 }
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav {
-    padding: 0;
+:root:has(#on:checked) #topbanner,
+:root:has(#on:checked) .sf-menu,
+:root:has(#on:checked) #menu_holder,
+:root:has(#on:checked) #footer {
+    display: var(--default-content);
 }
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav li.ui-tabs-active {
-    background: var(--descbox-bg) !important;
-    border-radius: 14px 14px 0 0;
+:root:has(#on:checked) .highlight_me, :root:has(#on:checked) .highlight_me td {
+    background: transparent !important;
 }
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav li a {
-    background: transparent;
+:root:has(#on:checked) #cattery_infobox .add_small_margins,
+:root:has(#on:checked) #cattery_menu li,
+:root:has(#on:checked) .ui-widget-content,
+:root:has(#on:checked) .ui-widget-header,
+:root:has(#on:checked) .ui-state-active,
+:root:has(#on:checked) .ui-widget-content .ui-state-active,
+:root:has(#on:checked) .ui-widget-header .ui-state-active,
+:root:has(#on:checked) .mweorbox table tbody tr td div,
+:root:has(#on:checked) .tborder,
+:root:has(#on:checked) .ui-state-hover,
+:root:has(#on:checked) .ui-widget-content .ui-state-hover,
+:root:has(#on:checked) .ui-widget-header .ui-state-hover,
+:root:has(#on:checked) .ui-state-focus,
+:root:has(#on:checked) .ui-widget-content .ui-state-focus,
+:root:has(#on:checked) .ui-widget-header .ui-state-focus {
+    border-color: transparent !important;
 }
-:root:has(#on:checked) .text_medium {
-    display: initial !important;
+:root:has(#on:checked) html,
+:root:has(#on:checked) body {
+    background-color: white;
 }
 :root:has(#on:checked) #contentholder form center .tborder {
-    width: 100% !important;
-    background: var(--descbox-img);
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius-big);
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed;
-    border: var(--border);
-}
-:root:has(#on:checked) #modtools_holder {
-    left: 10px !important;
-    right: unset !important;
-}
-:root:has(#on:checked) #contentholder > .spacer:first-of-type + div,
-:root:has(#on:checked) #contentholder > div:first-of-type {
-    left: unset !important;
+    background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0 0;
 }
-:root:has(#on:checked) #contentholder > .spacer:first-of-type + div div .trans {
-    display: initial !important;
-    filter: hue-rotate(305deg) brightness(0.4);
-}
-:root:has(#on:checked) #eventtxt {
-    background: var(--white);
-}
-:root:has(#on:checked) #eventtxt table tbody tr.theader {
-    background: var(--descbox-img);
-    background-color: white !important;
-}
-:root:has(#on:checked) .credits-toggle {
-    padding: 10px 10px 0 0;
-    max-width: 100px;
-    transition: all 0.5s ease;
-    z-index: 999;
-}
-:root:has(#on:checked) .credits-toggle:hover, :root:has(#on:checked) .credits-toggle:active, :root:has(#on:checked) .credits-toggle:focus {
-    transition: all 0.5s ease;
-}
-:root:has(#on:checked) .credits-toggle:hover .signature, :root:has(#on:checked) .credits-toggle:active .signature, :root:has(#on:checked) .credits-toggle:focus .signature {
-    color: var(--white);
-    text-shadow: var(--shadow), var(--shadow);
-}
-:root:has(#on:checked) .credits-toggle:hover .credits, :root:has(#on:checked) .credits-toggle:active .credits, :root:has(#on:checked) .credits-toggle:focus .credits {
-    box-shadow: -5px -5px 8px #001e2759;
-}
-:root:has(#on:checked) .credits-toggle .signature {
-    color: var(--white);
-    font-size: 40px;
-    line-height: 1;
-}
-:root:has(#on:checked) .credits-toggle p {
-    text-align: center;
-}
-:root:has(#on:checked) .credits-toggle .credits {
-    border-radius: 10px 0 0 0;
-    text-align: center;
-    background: white;
-    padding: 8px;
-}
-
-:root:has(#on:checked) .masthead {
-    position: relative;
-    width: 40%;
-    line-height: 0;
-    height: 100%;
-    display: inline-block;
-}
-:root:has(#on:checked) .masthead-wrap {
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 220px;
-    width: auto;
-    background: var(--descbox-bg);
-    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
-    margin: 30px 0 30px 100px;
-}
-:root:has(#on:checked) .masthead-wrap::before {
-    width: 250px;
-    height: 250px;
-    background: var(--corner-gradient);
-    position: absolute;
-    content: "";
-    outline: none;
-    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
-}
-:root:has(#on:checked) .masthead-wrap:hover .masthead-links {
-    height: 145px;
-}
-:root:has(#on:checked) .masthead-wrap .masthead-links {
+:root:has(#on:checked) #contentholder form center .tborder tbody {
     display: flex;
-    height: calc(var(--slider-header-size) + 15px);
     flex-direction: column;
-    border-top: 1.5px solid #001b21;
-    background: #001a1e30;
-    margin: 0 15px 10px;
-    padding: 5px 10px 18px;
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    transition: 0.8s ease;
-}
-:root:has(#on:checked) .masthead-wrap .masthead-links a,
-:root:has(#on:checked) .masthead-wrap .masthead-links a:link,
-:root:has(#on:checked) .masthead-wrap .masthead-links a:visited {
-    line-height: 1;
-    padding: 3px 0;
-}
-:root:has(#on:checked) .masthead-wrap .masthead-links .slider__caption {
-    margin: 2px 0 12px;
-    line-height: 1;
-}
-:root:has(#on:checked) .masthead-wrap .profile-picture {
     width: 100%;
-    padding: 10px;
-    outline: var(--border);
-    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }
-:root:has(#on:checked) .masthead-wrap .utilities {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 10%;
-    z-index: 1;
-    position: relative;
-}
-:root:has(#on:checked) .masthead-wrap .utilities a,
-:root:has(#on:checked) .masthead-wrap .utilities a:link,
-:root:has(#on:checked) .masthead-wrap .utilities a:visited,
-:root:has(#on:checked) .masthead-wrap .utilities span {
-    font-size: 2vw;
-    padding: 0px 5px 10px 5px;
-}
-:root:has(#on:checked) .masthead-wrap .utilities img {
-    width: auto;
-    height: 2.1vw;
-    padding: 0px 2px 2px 2px;
-}
-:root:has(#on:checked) .main-wrap {
-    width: 60%;
-    height: fit-content;
-    float: right;
-    position: relative;
-    overflow-y: auto;
-    background-color: var(--descbox-bg);
-}
-:root:has(#on:checked) .main-wrap .header {
-    display: flex;
-    justify-content: flex-end;
-}
-:root:has(#on:checked) .main-wrap .nav {
-    width: fit-content;
-    display: flex;
-    justify-content: space-evenly;
-}
-:root:has(#on:checked) .main-wrap .nav a,
-:root:has(#on:checked) .main-wrap .nav a:link,
-:root:has(#on:checked) .main-wrap .nav a:visited {
-    padding: 1vw 1.2vw;
-    font-family: var(--font-family-1);
-    font-weight: bold;
-    font-size: 2vw;
-}
-:root:has(#on:checked) .main-wrap .cattery-name {
-    font-size: 5vw;
-    font-family: var(--font-family-1);
-    line-height: 5vw;
-    margin: 0.5rem 0;
-    font-weight: 900;
-}
-:root:has(#on:checked) .main-wrap .cattery-name,
-:root:has(#on:checked) .main-wrap p {
-    margin: 0 50px;
-    padding: 10px 0 0;
-}
-:root:has(#on:checked) .main-wrap .intro {
-    background: #001a1e30;
-    text-align: center;
-    width: 70%;
-    margin: auto !important;
-    padding: 10px !important;
-    border-bottom: 1.5px solid #001b21;
-    font-style: italic;
-}
-:root:has(#on:checked) .main-wrap .intro span {
-    font-size: 1rem;
-    font-weight: 100;
-}
-:root:has(#on:checked) .main-wrap .sparring {
-    text-align: center;
-    font-weight: bold;
-    font-style: italic;
-}
-:root:has(#on:checked) .main-wrap .shoutout {
-    font-size: 1.6vw;
-    text-align: center;
-    padding-top: 10px;
-    display: block;
-    font-style: italic;
-}
-:root:has(#on:checked) .space_below {
+:root:has(#on:checked) .theader {
+    background-color: var(--settings-bg-color) !important;
     display: flex;
     justify-content: center;
 }
-:root:has(#on:checked) .item_box {
-    background: var(--corner-gradient);
-    background-color: var(--descbox-bg);
-    outline: var(--border);
-    border-radius: var(--border-radius-small);
-    margin: 32px 10px;
-    box-shadow: var(--shadow);
+:root:has(#on:checked) .theader td {
+    color: var(--settings-text-color);
 }
-:root:has(#on:checked) #mpopup {
-    background: var(--descbox-img);
-    color: transparent;
-    margin: auto;
-    left: unset !important;
+:root:has(#on:checked) .trow1 {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    color: black;
 }
-:root:has(#on:checked) #popupclose {
-    color: var(--link-light);
+:root:has(#on:checked) .trow1 td {
+    color: var(--text-dark);
+    background-color: white;
+    color: black;
 }
-:root:has(#on:checked) #mpopup .theader {
-    background: var(--ltteal);
-    color: var(--text-dark) !important;
+:root:has(#on:checked) .trow1 td:nth-child(even) {
+    width: 80%;
+    text-align: left;
 }
-:root:has(#on:checked) #mpopup .theader td,
-:root:has(#on:checked) #mpopup .theader .popup_title {
-    --settings-text-color: var(--white);
-    color: var(--white);
-}
-:root:has(#on:checked) .trow2, :root:has(#on:checked) .trow2 table, :root:has(#on:checked) .trow2 tr, :root:has(#on:checked) .trow2 td {
-    background: var(--ltteal);
+:root:has(#on:checked) .trow1 td:nth-child(odd) {
+    width: 20%;
+    text-align: left;
 }
 :root:has(#on:checked) input[type=text],
-:root:has(#on:checked) textarea {
-    font-family: var(--font-family-2) !important;
+:root:has(#on:checked) textarea,
+:root:has(#on:checked) textarea, :root:has(#on:checked) input[type=text], :root:has(#on:checked) input[type=password],
+:root:has(#on:checked) select,
+:root:has(#on:checked) input.pretty_dropdown_text,
+:root:has(#on:checked) .pretty_dropdown_options {
+    width: 95%;
+    float: left;
+    background: white;
+    color: black;
+}
+
+.credits-toggle {
+    position: fixed;
+    bottom: -171px;
+    right: -8px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.credits-toggle:hover, .credits-toggle:active, .credits-toggle:focus {
+    bottom: 0px;
+}
+
+:root:has(#on:checked) .credits-toggle label[for=off] {
+    display: none;
+}
+:root:has(#on:checked) .credits-toggle label[for=on] {
+    display: initial;
+}
+
+:root:has(#off:checked) .credits-toggle label[for=off] {
+    display: initial;
+}
+:root:has(#off:checked) .credits-toggle label[for=on] {
+    display: none;
 }
