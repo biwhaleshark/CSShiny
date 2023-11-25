@@ -128,7 +128,7 @@
 
 .credits-toggle {
     position: fixed;
-    bottom: 152px;
+    bottom: -152px;
     right: -8px;
     width: auto;
     display: flex;
