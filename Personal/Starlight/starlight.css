@@ -281,36 +281,6 @@
     background: var(--descbox-img);
     background-color: white !important;
 }
-:root:has(#on:checked) .credits-toggle {
-    padding: 10px 10px 0 0;
-    max-width: 100px;
-    transition: all 0.5s ease;
-    z-index: 999;
-}
-:root:has(#on:checked) .credits-toggle:hover, :root:has(#on:checked) .credits-toggle:active, :root:has(#on:checked) .credits-toggle:focus {
-    transition: all 0.5s ease;
-}
-:root:has(#on:checked) .credits-toggle:hover .signature, :root:has(#on:checked) .credits-toggle:active .signature, :root:has(#on:checked) .credits-toggle:focus .signature {
-    color: var(--white);
-    text-shadow: var(--shadow), var(--shadow);
-}
-:root:has(#on:checked) .credits-toggle:hover .credits, :root:has(#on:checked) .credits-toggle:active .credits, :root:has(#on:checked) .credits-toggle:focus .credits {
-    box-shadow: -5px -5px 8px #001e2759;
-}
-:root:has(#on:checked) .credits-toggle .signature {
-    color: var(--white);
-    font-size: 40px;
-    line-height: 1;
-}
-:root:has(#on:checked) .credits-toggle p {
-    text-align: center;
-}
-:root:has(#on:checked) .credits-toggle .credits {
-    border-radius: 10px 0 0 0;
-    text-align: center;
-    background: white;
-    padding: 8px;
-}
 
 :root:has(#on:checked) .masthead {
     position: relative;
@@ -487,4 +457,35 @@
 :root:has(#on:checked) input[type=text],
 :root:has(#on:checked) textarea {
     font-family: var(--font-family-2) !important;
+}
+
+.credits-toggle {
+    padding: 10px 10px 0 0;
+    max-width: 100px;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+.credits-toggle:hover, .credits-toggle:active, .credits-toggle:focus {
+    transition: all 0.5s ease;
+}
+.credits-toggle:hover .signature, .credits-toggle:active .signature, .credits-toggle:focus .signature {
+    color: var(--white);
+    text-shadow: var(--shadow), var(--shadow);
+}
+.credits-toggle:hover .credits, .credits-toggle:active .credits, .credits-toggle:focus .credits {
+    box-shadow: -5px -5px 8px #001e2759;
+}
+.credits-toggle .signature {
+    color: var(--white);
+    font-size: 40px;
+    line-height: 1;
+}
+.credits-toggle p {
+    text-align: center;
+}
+.credits-toggle .credits {
+    border-radius: 10px 0 0 0;
+    text-align: center;
+    background: white;
+    padding: 8px;
 }
