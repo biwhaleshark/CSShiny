@@ -179,7 +179,7 @@
 :root:has(#on:checked) .button_tall:hover,
 :root:has(#on:checked) .button_tall:active,
 :root:has(#on:checked) .button_tall:focus {
-    color: var(--link-light);
+    color: var(--link-light) !important;
     background: #001417 !important;
     border: var(--border) !important;
 }
@@ -261,6 +261,25 @@
 :root:has(#on:checked) #modtools_holder {
     left: 10px !important;
     right: unset !important;
+}
+:root:has(#on:checked) #contentholder > .spacer:first-of-type + div,
+:root:has(#on:checked) #contentholder > div:first-of-type {
+    left: unset !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 0;
+}
+:root:has(#on:checked) #contentholder > .spacer:first-of-type + div div .trans {
+    display: initial !important;
+    filter: hue-rotate(305deg) brightness(0.4);
+}
+:root:has(#on:checked) #eventtxt {
+    background: var(--white);
+}
+:root:has(#on:checked) #eventtxt table tbody tr.theader {
+    background: var(--descbox-img);
+    background-color: white !important;
 }
 :root:has(#on:checked) .credits-toggle {
     padding: 10px;
