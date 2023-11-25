@@ -424,13 +424,13 @@
 :root:has(#on:checked) .space_below {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 :root:has(#on:checked) .item_box {
     background: var(--corner-gradient);
     background-color: var(--descbox-bg);
     outline: var(--border);
     border-radius: var(--border-radius-small);
-    margin: 32px 10px;
     box-shadow: var(--shadow);
 }
 :root:has(#on:checked) #mpopup {
