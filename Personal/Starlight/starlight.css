@@ -294,6 +294,9 @@
     color: var(--white);
     text-shadow: var(--shadow), var(--shadow);
 }
+:root:has(#on:checked) .credits-toggle:hover .credits, :root:has(#on:checked) .credits-toggle:active .credits, :root:has(#on:checked) .credits-toggle:focus .credits {
+    box-shadow: -5px -5px 8px #001e2759;
+}
 :root:has(#on:checked) .credits-toggle .signature {
     color: var(--white);
     font-size: 40px;
@@ -306,6 +309,7 @@
     border-radius: 10px 0 0 0;
     text-align: center;
     background: white;
+    padding: 8px;
 }
 
 :root:has(#on:checked) .masthead {
