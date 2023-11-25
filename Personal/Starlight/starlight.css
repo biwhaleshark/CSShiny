@@ -282,8 +282,7 @@
     background-color: white !important;
 }
 :root:has(#on:checked) .credits-toggle {
-    padding: 10px;
-    border-radius: 10px 0 0 0;
+    padding: 10px 10px 0 0;
     max-width: 100px;
     transition: all 0.5s ease;
     z-index: 999;
@@ -302,6 +301,11 @@
 }
 :root:has(#on:checked) .credits-toggle p {
     text-align: center;
+}
+:root:has(#on:checked) .credits-toggle .credits {
+    border-radius: 10px 0 0 0;
+    text-align: center;
+    background: white;
 }
 
 :root:has(#on:checked) .masthead {
