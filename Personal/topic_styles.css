@@ -1,7 +1,9 @@
 #contentholder center table .trow3 {
     box-sizing: border-box;
-    width: min(400px, 100% - 4rem);
+    width: min(400px, 100% - 1rem);
     margin-inline: auto;
+    display: block;
+    height: auto;
     --font-size: 16px;
     font-size: var(--font-size);
     line-height: 1.4;
