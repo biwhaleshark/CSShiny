@@ -1,5 +1,7 @@
 #contentholder center table .trow3 {
     box-sizing: border-box;
+    width: min(400px, 100% - 4rem);
+    margin-inline: auto;
     --font-size: 16px;
     font-size: var(--font-size);
     line-height: 1.4;
@@ -27,4 +29,12 @@
 }
 #contentholder center table .trow3 h6 {
     font-size: var(--font-size);
+}
+#contentholder center table .trow3 .right {
+    text-align: right;
+    float: right;
+}
+#contentholder center table .trow3 .left {
+    text-align: left;
+    float: left;
 }
