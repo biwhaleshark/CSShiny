@@ -3,7 +3,7 @@
 	THEME:	Starlight
 	FOR:	#559
 	BY:	#559
-	DATE:	2023/11/24
+	DATE:	2024/02/08
 ************************************************/
 @import url("https://biwhaleshark.github.io/CSShiny/core.css");
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
@@ -230,7 +230,7 @@
     background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png") !important;
     background-size: cover !important;
     background-position: center !important;
-    background-attachment: fixed;
+    background-attachment: fixed !important;
     border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
     border: 0px solid transparent;
     color: transparent;
@@ -422,9 +422,9 @@
     font-style: italic;
 }
 :root:has(#on:checked) .space_below {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
 }
 :root:has(#on:checked) .item_box {
     background: var(--corner-gradient);
@@ -432,6 +432,11 @@
     outline: var(--border);
     border-radius: var(--border-radius-small);
     box-shadow: var(--shadow);
+    margin: 0px !important;
+    justify-self: center;
+}
+:root:has(#on:checked) .mweor_icon {
+    background-image: url("https://files.catbox.moe/mecmuc.png") !important;
 }
 :root:has(#on:checked) #mpopup {
     background: var(--descbox-img);
@@ -458,12 +463,16 @@
 :root:has(#on:checked) textarea {
     font-family: var(--font-family-2) !important;
 }
+:root:has(#on:checked) .credits-toggle {
+    bottom: -253px;
+}
 
 .credits-toggle {
     padding: 10px 10px 0 0;
     max-width: 100px;
     transition: all 0.5s ease;
     z-index: 999;
+    bottom: -211px;
 }
 .credits-toggle:hover, .credits-toggle:active, .credits-toggle:focus {
     transition: all 0.5s ease;
@@ -475,15 +484,15 @@
 .credits-toggle:hover .credits, .credits-toggle:active .credits, .credits-toggle:focus .credits {
     box-shadow: -5px -5px 8px #001e2759;
 }
-.credits-toggle .signature {
+.credits-toggle:hover .signature, .credits-toggle:active .signature, .credits-toggle:focus .signature {
     color: var(--white);
     font-size: 40px;
     line-height: 1;
 }
-.credits-toggle p {
+.credits-toggle:hover p, .credits-toggle:active p, .credits-toggle:focus p {
     text-align: center;
 }
-.credits-toggle .credits {
+.credits-toggle:hover .credits, .credits-toggle:active .credits, .credits-toggle:focus .credits {
     border-radius: 10px 0 0 0;
     text-align: center;
     background: white;
