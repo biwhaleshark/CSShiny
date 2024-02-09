@@ -467,6 +467,30 @@
     bottom: -253px;
 }
 
+:root:has(#off:checked) .masthead-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+:root:has(#off:checked) .masthead-wrap img {
+    max-width: 250px;
+}
+:root:has(#off:checked) .masthead-wrap .utilities,
+:root:has(#off:checked) .masthead-wrap .masthead-links {
+    display: none;
+}
+:root:has(#off:checked) .main-wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+:root:has(#off:checked) .main-wrap .header {
+    display: none;
+}
+:root:has(#off:checked) .main-wrap .slider {
+    height: 180px;
+}
+
 .credits-toggle {
     padding: 10px 10px 0 0;
     max-width: 100px;
