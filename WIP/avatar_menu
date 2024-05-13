@@ -1,0 +1,47 @@
+#cattery_infobox {
+width: 375px;
+display: flex;
+  justify-content: center;
+  flex-direction: column;
+overflow: hidden;
+background: transparent;
+}
+
+#cattery_infobox > .add_small_margins {
+border: none !important;
+width: 200px !important;
+height: auto !important;
+aspect-ratio: 1/1;
+z-index: 1;
+align-self: flex-end;
+left: unset !important;
+right: 3%;
+}
+
+#cattery_infobox > .add_small_margins img {
+width: 100%;
+height: 100%;
+border: 6px solid white;
+border-radius: 50% 0 0 0;
+background-color: white !important;
+}
+
+#cattery_infobox .plain_table {
+display: none;
+}
+
+#cattery_infobox #cattery_menu {
+position: absolute;
+visibility: hidden;
+width: 100%;
+margin: 0 !important;
+padding: 0 !important;
+}
+
+#cattery_infobox #cattery_menu li {
+border-radius: 5px;
+visibility: visible !important;
+background: orange;
+border: none;
+border-radius: 99999px 0 0 99999px;
+}
