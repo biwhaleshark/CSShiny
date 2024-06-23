@@ -1,7 +1,7 @@
-/************************************************
-	FILE	:	core.css
-	AUTHOR	:	#559
-	DATE	:	2023/11/24
+/******************************************************************
+	FILE	        :	core.css
+	AUTHOR	        :	#559
+	LAST UPDATED	:	2023/11/24
 
 	DESC	:
 	core stylesheet including debug testing
@@ -12,7 +12,7 @@
 
 	GITHUB	:
 	@import url("https://biwhaleshark.github.io/CSShiny/core.css");
-************************************************/
+******************************************************************/
 @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
 :root:has(#on:checked) html {
     font-size: var(--base-font-size);
@@ -81,6 +81,7 @@
 :root:has(#on:checked) #contentholder form center .tborder {
     background-color: white;
     display: flex;
+    width: 100% !important;
 }
 :root:has(#on:checked) #contentholder form center .tborder tbody {
     display: flex;
@@ -126,7 +127,7 @@
     color: black;
 }
 
-.credits-toggle {
+#layout-toggle {
     position: fixed;
     bottom: -171px;
     right: -8px;
@@ -135,20 +136,20 @@
     flex-direction: column;
     align-items: flex-end;
 }
-.credits-toggle:hover, .credits-toggle:active, .credits-toggle:focus {
+#layout-toggle:hover, #layout-toggle:active, #layout-toggle:focus {
     bottom: 0px;
 }
 
-:root:has(#on:checked) .credits-toggle label[for=off] {
+:root:has(#on:checked) #layout-toggle label[for=off] {
     display: none;
 }
-:root:has(#on:checked) .credits-toggle label[for=on] {
+:root:has(#on:checked) #layout-toggle label[for=on] {
     display: initial;
 }
 
-:root:has(#off:checked) .credits-toggle label[for=off] {
+:root:has(#off:checked) #layout-toggle label[for=off] {
     display: initial;
 }
-:root:has(#off:checked) .credits-toggle label[for=on] {
+:root:has(#off:checked) #layout-toggle label[for=on] {
     display: none;
 }
