@@ -66,10 +66,22 @@
 /************************************************
 	Element Display Toggles
 ************************************************/
+:root:has(#on:checked) body .sf-menu {
+    display: none;
+}
 :root:has(#on:checked) body #bodyi {
     display: none;
 }
+:root:has(#on:checked) body #holder #topbanner {
+    display: none;
+}
 :root:has(#on:checked) body #holder #topbanner #topbanneri {
+    display: none;
+}
+:root:has(#on:checked) body #holder #topbanner #layoutuinfo {
+    display: none;
+}
+:root:has(#on:checked) body #holder #topbanner #gametime {
     display: none;
 }
 :root:has(#on:checked) body #holder #topbanner #addbookmark {
@@ -86,6 +98,12 @@
     display: none;
 }
 :root:has(#on:checked) body #holder #content #contentholder #cattery_descbox > i:last-of-type {
+    display: none;
+}
+:root:has(#on:checked) body #holder #content #contentholder .titlebar {
+    display: none;
+}
+:root:has(#on:checked) body #holder #content #contentholder > .add_small_margins {
     display: none;
 }
 :root:has(#on:checked) body #holder #bottombanner {
