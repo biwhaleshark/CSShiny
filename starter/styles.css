@@ -121,6 +121,7 @@
     background: var(--bg-image);
     background-repeat: var(--bg-repeat);
     background-size: var(--bg-size);
+    font-size: 1rem;
 }
 :root:has(#on:checked) #holder {
     background: transparent;
