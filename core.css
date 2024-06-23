@@ -128,7 +128,7 @@
 }
 
 #layout-toggle {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     right: 0;
     width: auto;
@@ -137,11 +137,8 @@
     align-items: flex-end;
     background: var(--descbox-bg-color);
     padding: 1rem;
+    z-index: 99999;
 }
-#layout-toggle:hover, #layout-toggle:active, #layout-toggle:focus {
-    bottom: 0px;
-}
-
 :root:has(#on:checked) #layout-toggle label[for=off] {
     display: none;
 }
