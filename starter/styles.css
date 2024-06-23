@@ -49,7 +49,7 @@
     --header-light: var(--text-light);
     --descbox-bg-color: var(--white);
     --contentholder-bg-color: transparent;
-    --body-bg-color: var(--black);
+    --body-bg-color: var(--color4);
     --bg-image: null;
     --bg-repeat: null;
     --bg-size: null;
