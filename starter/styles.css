@@ -26,7 +26,7 @@
 /************************************************
 	Variables
 ************************************************/
-:root:has(#on:checked) {
+:root {
     --holder-width: 90%;
     --descbox-width: 100%;
     --holder-margin: 3rem 0;
