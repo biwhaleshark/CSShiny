@@ -129,12 +129,14 @@
 
 #layout-toggle {
     position: fixed;
-    bottom: -171px;
-    right: -8px;
+    top: 0;
+    right: 0;
     width: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    background: var(--descbox-bg-color);
+    padding: 1rem;
 }
 #layout-toggle:hover, #layout-toggle:active, #layout-toggle:focus {
     bottom: 0px;
