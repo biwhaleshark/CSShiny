@@ -26,7 +26,7 @@
 /************************************************
 	Variables
 ************************************************/
-:root {
+:root:has(#on:checked) {
     --holder-width: 90%;
     --descbox-width: 100%;
     --holder-margin: 3rem 0;
@@ -39,6 +39,8 @@
     --color3: #C7F464;
     --color4: #4ECDC4;
     --color5: #556270;
+    --white: white;
+    --black: black;
     --text-font: "Arial", sans-serif;
     --header-font: var(--text-font);
     --text-dark: var(--black);
@@ -64,74 +66,69 @@
 /************************************************
 	Element Display Toggles
 ************************************************/
-body #bodyi {
+:root:has(#on:checked) body #bodyi {
     display: none;
 }
-body #holder #topbanner #topbanneri {
+:root:has(#on:checked) body #holder #topbanner #topbanneri {
     display: none;
 }
-body #holder #topbanner #addbookmark {
+:root:has(#on:checked) body #holder #topbanner #addbookmark {
     display: none;
 }
-body #holder #content #contentholder .spacer,
-body #holder #content #contentholder .clearer {
+:root:has(#on:checked) body #holder #content #contentholder .spacer,
+:root:has(#on:checked) body #holder #content #contentholder .clearer {
     display: none;
 }
-body #holder #content #contentholder .titlebar #titleimg {
+:root:has(#on:checked) body #holder #content #contentholder .titlebar #titleimg {
     display: none;
 }
-body #holder #content #contentholder #cattery_infobox {
+:root:has(#on:checked) body #holder #content #contentholder #cattery_infobox {
     display: none;
 }
-body #holder #content #contentholder #cattery_descbox > i:last-of-type {
+:root:has(#on:checked) body #holder #content #contentholder #cattery_descbox > i:last-of-type {
     display: none;
 }
-body #holder #bottombanner {
+:root:has(#on:checked) body #holder #bottombanner {
     display: none;
 }
-body #holder #footer {
+:root:has(#on:checked) body #holder #footer {
     display: none;
 }
 
 /************************************************
 	Resets
 ************************************************/
-body {
+:root:has(#on:checked) body {
     background-color: var(--body-bg-color) !important;
     background: var(--bg-image);
     background-repeat: var(--bg-repeat);
     background-size: var(--bg-size);
 }
-
-#holder {
+:root:has(#on:checked) #holder {
     background: transparent;
     position: relative;
     width: 100%;
 }
-
-body,
-#holder {
+:root:has(#on:checked) body,
+:root:has(#on:checked) #holder {
     margin: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
-#content {
+:root:has(#on:checked) #content {
     background: var(--contentholder-bg-color);
     padding: 0;
     margin: var(--holder-margin);
     width: var(--holder-width);
     left: 0;
 }
-
-#contentholder {
+:root:has(#on:checked) #contentholder {
     width: 100%;
     margin: 0;
     left: 0;
 }
-
-#cattery_descbox {
+:root:has(#on:checked) #cattery_descbox {
     width: var(--descbox-width);
     float: none;
     right: unset;
@@ -139,59 +136,51 @@ body,
     margin: var(--descbox-margin);
     background: var(--descbox-bg-color);
 }
-
-#cattery_infobox {
+:root:has(#on:checked) #cattery_infobox {
     background: transparent;
     padding: 0;
     float: none;
     left: 0;
 }
-
-.titlebar {
+:root:has(#on:checked) .titlebar {
     width: 100%;
     margin: 0;
 }
-
-#titletxt {
+:root:has(#on:checked) #titletxt {
     width: 100%;
     height: auto;
     top: 0;
     left: 0;
 }
-
-.add_small_margins {
+:root:has(#on:checked) .add_small_margins {
     margin: 0;
 }
-
-a,
-a:link,
-a:visited {
+:root:has(#on:checked) a,
+:root:has(#on:checked) a:link,
+:root:has(#on:checked) a:visited {
     color: var(--link-dark-hover);
 }
-a:hover, a:active, a:focus,
-a:link:hover,
-a:link:active,
-a:link:focus,
-a:visited:hover,
-a:visited:active,
-a:visited:focus {
+:root:has(#on:checked) a:hover, :root:has(#on:checked) a:active, :root:has(#on:checked) a:focus,
+:root:has(#on:checked) a:link:hover,
+:root:has(#on:checked) a:link:active,
+:root:has(#on:checked) a:link:focus,
+:root:has(#on:checked) a:visited:hover,
+:root:has(#on:checked) a:visited:active,
+:root:has(#on:checked) a:visited:focus {
     color: var(--link-dark-hover);
 }
-
-.ui-tabs-nav {
+:root:has(#on:checked) .ui-tabs-nav {
     display: flex !important;
     flex-wrap: wrap !important;
 }
-
-.ui-tabs .ui-tabs-nav li {
+:root:has(#on:checked) .ui-tabs .ui-tabs-nav li {
     height: 35px;
     flex: 0 1 10%;
     padding: 6px 8px 6px 8px;
     white-space: break-spaces;
     float: none;
 }
-
-.ui-tabs .ui-tabs-nav li a {
+:root:has(#on:checked) .ui-tabs .ui-tabs-nav li a {
     height: 35px;
     width: 100%;
     padding: 0px;
@@ -199,34 +188,25 @@ a:visited:focus {
     align-items: center;
     justify-content: center;
 }
-
-.ui-widget-header {
+:root:has(#on:checked) .ui-widget-header {
     background: transparent;
 }
-
-.ui-state-default,
-.ui-widget-header .ui-state-default,
-.ui-widget-content .ui-state-default {
+:root:has(#on:checked) .ui-state-default,
+:root:has(#on:checked) .ui-widget-header .ui-state-default,
+:root:has(#on:checked) .ui-widget-content .ui-state-default {
     background: transparent;
 }
-
-.button,
-.button_tall {
+:root:has(#on:checked) .button,
+:root:has(#on:checked) .button_tall {
     color: var(--button-text);
     background: va(--button-bg);
     background-color: unset !important;
 }
-
-.button:hover,
-.button_tall:hover {
+:root:has(#on:checked) .button:hover,
+:root:has(#on:checked) .button_tall:hover {
     color: var(--button-text-hover);
     background: va(--button-bg-hover);
     background-color: unset !important;
-}
-
-/* Cattery Setting Box */
-#contentholder form center .tborder {
-    width: 100% !important;
 }
 
 /************************************************
