@@ -8,6 +8,7 @@
 @import url("https://biwhaleshark.github.io/CSShiny/core.css");
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://biwhaleshark.github.io/CSShiny/components/carousel_slider.css");
+@import url("https://biwhaleshark.github.io/CSShiny/components/mweorBox.css");
 :root:has(#layout-toggle:checked) {
     --dkteal:	#003b43;
     --ltteal:	#cfd3d4;
@@ -20,7 +21,7 @@
     --link-light: var(--text-light);
     --header-dark: var(--text-dark);
     --header-light: var(--text-light);
-    --base-font-size: 16px;
+    font-size: 16px;
     --bg-color: var(--dkteal);
     --bg-image:
     	linear-gradient(
@@ -396,6 +397,12 @@
 :root:has(#layout-toggle:checked) .main-wrap p {
     margin: 0 50px;
     padding: 10px 0 0;
+}
+
+:root:has(#layout-toggle:checked) .main-wrap p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.1;
 }
 :root:has(#layout-toggle:checked) .main-wrap .intro {
     background: #001a1e30;
