@@ -474,6 +474,7 @@
 
 :root:has(#layout-toggle:checked) .csshiny-credit input:checked + label {
     background: var(--dkteal);
+    border: var(--border);
 }
 
 :root:has(#layout-toggle:not(:checked)) .masthead-wrap {
