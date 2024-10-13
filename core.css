@@ -150,7 +150,7 @@
     bottom: 0;
     right: 0;
     padding: 10px;
-    font-size: 40px;
+    font-size: 2rem;
     line-height: 1;
     color: #fff;
 }
@@ -176,11 +176,20 @@
 .csshiny-credit:target {
     display: flex;
 }
+.csshiny-credit .csshiny-exit {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 14px;
+    transform: translateY(-40px);
+    font-size: 2rem;
+    line-height: 1;
+    color: #fff;
+    padding: 14px;
+}
 .csshiny-credit .csshiny-exit::before {
     content: "";
     font-family: FontAwesome;
-    font-size: 2rem;
-    color: #fff;
 }
 .csshiny-credit span {
     /* Full width and height */
