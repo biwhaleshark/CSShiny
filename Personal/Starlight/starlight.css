@@ -8,7 +8,7 @@
 @import url("https://biwhaleshark.github.io/CSShiny/core.css");
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://biwhaleshark.github.io/CSShiny/components/carousel_slider.css");
-:root:has(#on:checked) {
+:root:has(#layout-toggle:checked) {
     --dkteal:	#003b43;
     --ltteal:	#cfd3d4;
     --white:	#fff;
@@ -60,7 +60,7 @@
     --default-content: none;
 }
 
-:root:has(#on:checked) {
+:root:has(#layout-toggle:checked) {
     --holder-width: 90%;
     --descbox-width: 100%;
     --holder-margin: null;
@@ -68,29 +68,29 @@
     --descbox-padding: 0;
 }
 
-:root:has(#on:checked) html {
+:root:has(#layout-toggle:checked) html {
     background-color: var(--dkteal);
 }
-:root:has(#on:checked) .titlebar,
-:root:has(#on:checked) #titletxt,
-:root:has(#on:checked) .add_small_margins,
-:root:has(#on:checked) #reportplayer,
-:root:has(#on:checked) #cattery_infobox,
-:root:has(#on:checked) #cattery_menu,
-:root:has(#on:checked) #cattery_descbox i:last-child,
-:root:has(#on:checked) form .add_marigns,
-:root:has(#on:checked) .breed_count {
+:root:has(#layout-toggle:checked) .titlebar,
+:root:has(#layout-toggle:checked) #titletxt,
+:root:has(#layout-toggle:checked) .add_small_margins,
+:root:has(#layout-toggle:checked) #reportplayer,
+:root:has(#layout-toggle:checked) #cattery_infobox,
+:root:has(#layout-toggle:checked) #cattery_menu,
+:root:has(#layout-toggle:checked) #cattery_descbox i:last-child,
+:root:has(#layout-toggle:checked) form .add_marigns,
+:root:has(#layout-toggle:checked) .breed_count {
     display: none;
 }
-:root:has(#on:checked) body,
-:root:has(#on:checked) #holder {
+:root:has(#layout-toggle:checked) body,
+:root:has(#layout-toggle:checked) #holder {
     margin: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     overflow-x: hidden;
 }
-:root:has(#on:checked) body {
+:root:has(#layout-toggle:checked) body {
     background-color: var(--bg-color) !important;
     background: var(--bg-image);
     background-repeat: none;
@@ -98,12 +98,12 @@
     background-attachment: fixed;
     font-size: 1rem !important;
 }
-:root:has(#on:checked) body #holder {
+:root:has(#layout-toggle:checked) body #holder {
     background: transparent;
     position: relative;
     width: 100%;
 }
-:root:has(#on:checked) body #holder #content {
+:root:has(#layout-toggle:checked) body #holder #content {
     background: var(--contentholder-bg);
     padding: 0;
     margin: var(--holder-margin);
@@ -111,12 +111,12 @@
     left: 0;
     color: unset !important;
 }
-:root:has(#on:checked) body #holder #content #contentholder {
+:root:has(#layout-toggle:checked) body #holder #content #contentholder {
     width: 100%;
     margin: 0;
     left: 0;
 }
-:root:has(#on:checked) body #holder #content #contentholder #cattery_descbox {
+:root:has(#layout-toggle:checked) body #holder #content #contentholder #cattery_descbox {
     width: var(--descbox-width);
     height: fit-content !important;
     float: none;
@@ -133,100 +133,100 @@
     background-position: left center;
     background-attachment: fixed;
 }
-:root:has(#on:checked) body #holder #content #contentholder #cattery_infobox {
+:root:has(#layout-toggle:checked) body #holder #content #contentholder #cattery_infobox {
     background: transparent;
     padding: 0;
     float: none;
     left: 0;
 }
-:root:has(#on:checked) .titlebar {
+:root:has(#layout-toggle:checked) .titlebar {
     width: 100%;
     margin: 0;
 }
-:root:has(#on:checked) #titletxt {
+:root:has(#layout-toggle:checked) #titletxt {
     width: 100%;
     height: auto;
     top: 0;
     left: 0;
 }
-:root:has(#on:checked) .add_small_margins {
+:root:has(#layout-toggle:checked) .add_small_margins {
     margin: 0;
 }
-:root:has(#on:checked) a,
-:root:has(#on:checked) a:link,
-:root:has(#on:checked) a:visited {
+:root:has(#layout-toggle:checked) a,
+:root:has(#layout-toggle:checked) a:link,
+:root:has(#layout-toggle:checked) a:visited {
     color: var(--link-dark);
     font-weight: bold;
 }
-:root:has(#on:checked) a:hover, :root:has(#on:checked) a:active, :root:has(#on:checked) a:focus,
-:root:has(#on:checked) a:link:hover,
-:root:has(#on:checked) a:link:active,
-:root:has(#on:checked) a:link:focus,
-:root:has(#on:checked) a:visited:hover,
-:root:has(#on:checked) a:visited:active,
-:root:has(#on:checked) a:visited:focus {
+:root:has(#layout-toggle:checked) a:hover, :root:has(#layout-toggle:checked) a:active, :root:has(#layout-toggle:checked) a:focus,
+:root:has(#layout-toggle:checked) a:link:hover,
+:root:has(#layout-toggle:checked) a:link:active,
+:root:has(#layout-toggle:checked) a:link:focus,
+:root:has(#layout-toggle:checked) a:visited:hover,
+:root:has(#layout-toggle:checked) a:visited:active,
+:root:has(#layout-toggle:checked) a:visited:focus {
     text-decoration: underline;
     color: var(--link-dark) !important;
 }
-:root:has(#on:checked) .button,
-:root:has(#on:checked) .button_tall {
+:root:has(#layout-toggle:checked) .button,
+:root:has(#layout-toggle:checked) .button_tall {
     color: var(--link-light);
     background: #003b43 !important;
     border: var(--border) !important;
     box-shadow: var(--shadow);
 }
-:root:has(#on:checked) .button:hover, :root:has(#on:checked) .button:active, :root:has(#on:checked) .button:focus,
-:root:has(#on:checked) .button_tall:hover,
-:root:has(#on:checked) .button_tall:active,
-:root:has(#on:checked) .button_tall:focus {
+:root:has(#layout-toggle:checked) .button:hover, :root:has(#layout-toggle:checked) .button:active, :root:has(#layout-toggle:checked) .button:focus,
+:root:has(#layout-toggle:checked) .button_tall:hover,
+:root:has(#layout-toggle:checked) .button_tall:active,
+:root:has(#layout-toggle:checked) .button_tall:focus {
     color: var(--link-light) !important;
     background: #001417 !important;
     border: var(--border) !important;
 }
-:root:has(#on:checked) #mweor_tabs {
+:root:has(#layout-toggle:checked) #mweor_tabs {
     border-radius: 15px;
     box-shadow: var(--shadow);
     background: var(--white);
 }
-:root:has(#on:checked) .tab_paging {
+:root:has(#layout-toggle:checked) .tab_paging {
     width: 100%;
     margin: 0 10px 10px 0px;
 }
-:root:has(#on:checked) .ui-tabs {
+:root:has(#layout-toggle:checked) .ui-tabs {
     padding: 0;
 }
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav li {
+:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav li {
     margin: 0px;
 }
-:root:has(#on:checked) .ui-state-default,
-:root:has(#on:checked) .ui-widget-header .ui-state-default,
-:root:has(#on:checked) .ui-widget-content .ui-state-default {
+:root:has(#layout-toggle:checked) .ui-state-default,
+:root:has(#layout-toggle:checked) .ui-widget-header .ui-state-default,
+:root:has(#layout-toggle:checked) .ui-widget-content .ui-state-default {
     background: var(--ltteal);
     border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
     border: 2px solid transparent;
     border-bottom-width: 0px;
 }
-:root:has(#on:checked) .ui-widget-content {
+:root:has(#layout-toggle:checked) .ui-widget-content {
     border: none;
     outline: var(--border);
     border-radius: var(--border-radius-big);
     color: var(--black) !important;
     background: white;
 }
-:root:has(#on:checked) .login_reward_box {
+:root:has(#layout-toggle:checked) .login_reward_box {
     outline: var(--border);
     border: 0px solid transparent;
     background: var(--descbox-bg);
     border-radius: var(--border-radius-big);
 }
-:root:has(#on:checked) .login_rewards .active,
-:root:has(#on:checked) .login_rewards .received {
+:root:has(#layout-toggle:checked) .login_rewards .active,
+:root:has(#layout-toggle:checked) .login_rewards .received {
     background: var(--ltteal);
 }
-:root:has(#on:checked) .login_rewards > div {
+:root:has(#layout-toggle:checked) .login_rewards > div {
     border: 0px solid transparent;
 }
-:root:has(#on:checked) .ui-widget-header {
+:root:has(#layout-toggle:checked) .ui-widget-header {
     background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png") !important;
     background-size: cover !important;
     background-position: center !important;
@@ -235,20 +235,20 @@
     border: 0px solid transparent;
     color: transparent;
 }
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav {
+:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav {
     padding: 0;
 }
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav li.ui-tabs-active {
     background: var(--descbox-bg) !important;
     border-radius: 14px 14px 0 0;
 }
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav li a {
+:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav li a {
     background: transparent;
 }
-:root:has(#on:checked) .text_medium {
+:root:has(#layout-toggle:checked) .text_medium {
     display: initial !important;
 }
-:root:has(#on:checked) #contentholder form center .tborder {
+:root:has(#layout-toggle:checked) #contentholder form center .tborder {
     width: 100% !important;
     background: var(--descbox-img);
     box-shadow: var(--shadow);
@@ -258,38 +258,38 @@
     background-attachment: fixed;
     border: var(--border);
 }
-:root:has(#on:checked) #modtools_holder {
+:root:has(#layout-toggle:checked) #modtools_holder {
     left: 10px !important;
     right: unset !important;
 }
-:root:has(#on:checked) #contentholder > .spacer:first-of-type + div,
-:root:has(#on:checked) #contentholder > div:first-of-type {
+:root:has(#layout-toggle:checked) #contentholder > .spacer:first-of-type + div,
+:root:has(#layout-toggle:checked) #contentholder > div:first-of-type {
     left: unset !important;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px 0 0;
 }
-:root:has(#on:checked) #contentholder > .spacer:first-of-type + div div .trans {
+:root:has(#layout-toggle:checked) #contentholder > .spacer:first-of-type + div div .trans {
     display: initial !important;
     filter: hue-rotate(305deg) brightness(0.4);
 }
-:root:has(#on:checked) #eventtxt {
+:root:has(#layout-toggle:checked) #eventtxt {
     background: var(--white);
 }
-:root:has(#on:checked) #eventtxt table tbody tr.theader {
+:root:has(#layout-toggle:checked) #eventtxt table tbody tr.theader {
     background: var(--descbox-img);
     background-color: white !important;
 }
 
-:root:has(#on:checked) .masthead {
+:root:has(#layout-toggle:checked) .masthead {
     position: relative;
     width: 40%;
     line-height: 0;
     height: 100%;
     display: inline-block;
 }
-:root:has(#on:checked) .masthead-wrap {
+:root:has(#layout-toggle:checked) .masthead-wrap {
     position: absolute;
     top: 0;
     right: 0;
@@ -299,7 +299,7 @@
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
     margin: 30px 0 30px 100px;
 }
-:root:has(#on:checked) .masthead-wrap::before {
+:root:has(#layout-toggle:checked) .masthead-wrap::before {
     width: 250px;
     height: 250px;
     background: var(--corner-gradient);
@@ -308,10 +308,10 @@
     outline: none;
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }
-:root:has(#on:checked) .masthead-wrap:hover .masthead-links {
+:root:has(#layout-toggle:checked) .masthead-wrap:hover .masthead-links {
     height: 145px;
 }
-:root:has(#on:checked) .masthead-wrap .masthead-links {
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links {
     display: flex;
     height: calc(var(--slider-header-size) + 15px);
     flex-direction: column;
@@ -324,42 +324,42 @@
     overflow: hidden;
     transition: 0.8s ease;
 }
-:root:has(#on:checked) .masthead-wrap .masthead-links a,
-:root:has(#on:checked) .masthead-wrap .masthead-links a:link,
-:root:has(#on:checked) .masthead-wrap .masthead-links a:visited {
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links a,
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links a:link,
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links a:visited {
     line-height: 1;
     padding: 3px 0;
 }
-:root:has(#on:checked) .masthead-wrap .masthead-links .slider__caption {
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links .slider__caption {
     margin: 2px 0 12px;
     line-height: 1;
 }
-:root:has(#on:checked) .masthead-wrap .profile-picture {
+:root:has(#layout-toggle:checked) .masthead-wrap .profile-picture {
     width: 100%;
     padding: 10px;
     outline: var(--border);
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }
-:root:has(#on:checked) .masthead-wrap .utilities {
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities {
     display: flex;
     justify-content: space-evenly;
     margin: 0 10%;
     z-index: 1;
     position: relative;
 }
-:root:has(#on:checked) .masthead-wrap .utilities a,
-:root:has(#on:checked) .masthead-wrap .utilities a:link,
-:root:has(#on:checked) .masthead-wrap .utilities a:visited,
-:root:has(#on:checked) .masthead-wrap .utilities span {
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities a,
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities a:link,
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities a:visited,
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities span {
     font-size: 2vw;
     padding: 0px 5px 10px 5px;
 }
-:root:has(#on:checked) .masthead-wrap .utilities img {
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities img {
     width: auto;
     height: 2.1vw;
     padding: 0px 2px 2px 2px;
 }
-:root:has(#on:checked) .main-wrap {
+:root:has(#layout-toggle:checked) .main-wrap {
     width: 60%;
     height: fit-content;
     float: right;
@@ -367,36 +367,36 @@
     overflow-y: auto;
     background-color: var(--descbox-bg);
 }
-:root:has(#on:checked) .main-wrap .header {
+:root:has(#layout-toggle:checked) .main-wrap .header {
     display: flex;
     justify-content: flex-end;
 }
-:root:has(#on:checked) .main-wrap .nav {
+:root:has(#layout-toggle:checked) .main-wrap .nav {
     width: fit-content;
     display: flex;
     justify-content: space-evenly;
 }
-:root:has(#on:checked) .main-wrap .nav a,
-:root:has(#on:checked) .main-wrap .nav a:link,
-:root:has(#on:checked) .main-wrap .nav a:visited {
+:root:has(#layout-toggle:checked) .main-wrap .nav a,
+:root:has(#layout-toggle:checked) .main-wrap .nav a:link,
+:root:has(#layout-toggle:checked) .main-wrap .nav a:visited {
     padding: 1vw 1.2vw;
     font-family: var(--font-family-1);
     font-weight: bold;
     font-size: 2vw;
 }
-:root:has(#on:checked) .main-wrap .cattery-name {
+:root:has(#layout-toggle:checked) .main-wrap .cattery-name {
     font-size: 5vw;
     font-family: var(--font-family-1);
     line-height: 5vw;
     margin: 0.5rem 0;
     font-weight: 900;
 }
-:root:has(#on:checked) .main-wrap .cattery-name,
-:root:has(#on:checked) .main-wrap p {
+:root:has(#layout-toggle:checked) .main-wrap .cattery-name,
+:root:has(#layout-toggle:checked) .main-wrap p {
     margin: 0 50px;
     padding: 10px 0 0;
 }
-:root:has(#on:checked) .main-wrap .intro {
+:root:has(#layout-toggle:checked) .main-wrap .intro {
     background: #001a1e30;
     text-align: center;
     width: 70%;
@@ -405,28 +405,28 @@
     border-bottom: 1.5px solid #001b21;
     font-style: italic;
 }
-:root:has(#on:checked) .main-wrap .intro span {
+:root:has(#layout-toggle:checked) .main-wrap .intro span {
     font-size: 1rem;
     font-weight: 100;
 }
-:root:has(#on:checked) .main-wrap .sparring {
+:root:has(#layout-toggle:checked) .main-wrap .sparring {
     text-align: center;
     font-weight: bold;
     font-style: italic;
 }
-:root:has(#on:checked) .main-wrap .shoutout {
+:root:has(#layout-toggle:checked) .main-wrap .shoutout {
     font-size: 1.6vw;
     text-align: center;
     padding-top: 10px;
     display: block;
     font-style: italic;
 }
-:root:has(#on:checked) .space_below {
+:root:has(#layout-toggle:checked) .space_below {
     display: grid;
     gap: 1.2rem;
     grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
 }
-:root:has(#on:checked) .item_box {
+:root:has(#layout-toggle:checked) .item_box {
     background: var(--corner-gradient);
     background-color: var(--descbox-bg);
     outline: var(--border);
@@ -435,92 +435,59 @@
     margin: 0px !important;
     justify-self: center;
 }
-:root:has(#on:checked) .mweor_icon {
+:root:has(#layout-toggle:checked) .mweor_icon {
     background-image: url("https://files.catbox.moe/mecmuc.png") !important;
 }
-:root:has(#on:checked) #mpopup {
+:root:has(#layout-toggle:checked) #mpopup {
     background: var(--descbox-img);
     color: transparent;
     margin: auto;
     left: unset !important;
 }
-:root:has(#on:checked) #popupclose {
+:root:has(#layout-toggle:checked) #popupclose {
     color: var(--link-light);
 }
-:root:has(#on:checked) #mpopup .theader {
+:root:has(#layout-toggle:checked) #mpopup .theader {
     background: var(--ltteal);
     color: var(--text-dark) !important;
 }
-:root:has(#on:checked) #mpopup .theader td,
-:root:has(#on:checked) #mpopup .theader .popup_title {
+:root:has(#layout-toggle:checked) #mpopup .theader td,
+:root:has(#layout-toggle:checked) #mpopup .theader .popup_title {
     --settings-text-color: var(--white);
     color: var(--white);
 }
-:root:has(#on:checked) .trow2, :root:has(#on:checked) .trow2 table, :root:has(#on:checked) .trow2 tr, :root:has(#on:checked) .trow2 td {
+:root:has(#layout-toggle:checked) .trow2, :root:has(#layout-toggle:checked) .trow2 table, :root:has(#layout-toggle:checked) .trow2 tr, :root:has(#layout-toggle:checked) .trow2 td {
     background: var(--ltteal);
 }
-:root:has(#on:checked) input[type=text],
-:root:has(#on:checked) textarea {
+:root:has(#layout-toggle:checked) input[type=text],
+:root:has(#layout-toggle:checked) textarea {
     font-family: var(--font-family-2) !important;
 }
-:root:has(#on:checked) .credits-toggle {
+:root:has(#layout-toggle:checked) .credits-toggle {
     bottom: -253px;
 }
 
-:root:has(#off:checked) .masthead-wrap {
+:root:has(#layout-toggle:disabled) .masthead-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-:root:has(#off:checked) .masthead-wrap img {
+:root:has(#layout-toggle:disabled) .masthead-wrap img {
     max-width: 250px;
 }
-:root:has(#off:checked) .masthead-wrap .utilities,
-:root:has(#off:checked) .masthead-wrap .masthead-links {
+:root:has(#layout-toggle:disabled) .masthead-wrap .utilities,
+:root:has(#layout-toggle:disabled) .masthead-wrap .masthead-links {
     display: none;
 }
-:root:has(#off:checked) .main-wrap {
+:root:has(#layout-toggle:disabled) .main-wrap {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-:root:has(#off:checked) .main-wrap .header,
-:root:has(#off:checked) .main-wrap .cattery-name {
+:root:has(#layout-toggle:disabled) .main-wrap .header,
+:root:has(#layout-toggle:disabled) .main-wrap .cattery-name {
     display: none;
 }
-:root:has(#off:checked) .main-wrap .slider {
+:root:has(#layout-toggle:disabled) .main-wrap .slider {
     height: 180px;
-}
-
-.credits-toggle {
-    padding: 10px 10px 0 0;
-    max-width: 100px;
-    transition: all 0.5s ease;
-    z-index: 999;
-    bottom: -211px;
-}
-.credits-toggle .signature {
-    color: var(--white);
-    text-shadow: var(--shadow), var(--shadow);
-}
-.credits-toggle .credits {
-    box-shadow: -5px -5px 8px #001e2759;
-}
-.credits-toggle .signature {
-    color: var(--white);
-    font-size: 40px;
-    line-height: 1;
-}
-.credits-toggle p {
-    text-align: center;
-}
-.credits-toggle .credits {
-    border-radius: 10px 0 0 0;
-    text-align: center;
-    background: white;
-    padding: 8px;
-}
-.credits-toggle:hover, .credits-toggle:active, .credits-toggle:focus {
-    transition: all 0.5s ease;
-    bottom: 0 !important;
 }
