@@ -13,230 +13,191 @@
 	GITHUB	:
 	@import url("https://biwhaleshark.github.io/CSShiny/core.css");
 ******************************************************************/
-
-// Imported Stylesheets
 @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
-
-:root:has(#on:checked) {
-	// Basic Restylings
-	html {
-		font-size: 18px;
-		box-sizing: border-box !important;
-	}
-
-	*,
-	::before,
-	::after {
-		box-sizing: border-box !important;
-	}
-
-	body {
-		overflow-x: hidden;
-		margin: 0;
-		padding: 0;
-		color: black;
-		font-size: 1rem;
-		line-height: 1;
-		font-weight: 300;
-		font-family: var(--text-font);
-		text-rendering: optimizeLegibility;
-	}
-
-	// Dev Testing
-	.dev {
-		border: 2px dashed red !important;
-	}
-
-	// Images
-	#bodyi,
-	#topbanneri,
-	#titleimg,
-	.trans {
-		display: var(--image-display);
-	}
-
-	#content,
-	.sf-menu ul,
-	.ui-widget-header {
-		background-image: var(--bg-image-display);
-	}
-
-	#topbanner,
-	.sf-menu,
-	#menu_holder,
-	#footer {
-		display: var(--default-content);
-	}
-
-	.highlight_me,
-	.highlight_me td {
-		background: transparent !important;
-	}
-
-	// Borders
-	#cattery_infobox .add_small_margins,
-	#cattery_menu li,
-	.ui-widget-content,
-	.ui-widget-header,
-	.ui-state-active,
-	.ui-widget-content .ui-state-active,
-	.ui-widget-header .ui-state-active,
-	.mweorbox table tbody tr td div,
-	.tborder,
-	.ui-state-hover,
-	.ui-widget-content .ui-state-hover,
-	.ui-widget-header .ui-state-hover,
-	.ui-state-focus,
-	.ui-widget-content .ui-state-focus,
-	.ui-widget-header .ui-state-focus {
-		border-color: transparent !important;
-	}
-
-	// Default BG Color
-	html,
-	body {
-		background-color: white;
-	}
-
-	//************************************************
-	//	Responsive Cattery Settings
-	//************************************************
-	#contentholder {
-		form center .tborder {
-			background-color: white;
-			display: flex;
-			width: 100% !important;
-
-			tbody {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-			}
-		}
-	}
-
-	.theader {
-		background-color: var(--settings-bg-color) !important;
-		display: flex;
-		justify-content: center;
-
-		td {
-			color: var(--settings-text-color);
-		}
-	}
-
-	.trow1 {
-		display: flex;
-		justify-content: left;
-		flex-wrap: wrap;
-		color: black;
-
-		td {
-			color: var(--text-dark);
-			background-color: white;
-			color: black;
-
-			&:nth-child(even) {
-				width: 80%;
-				text-align: left;
-			}
-
-			&:nth-child(odd) {
-				width: 20%;
-				text-align: left;
-			}
-		}
-	}
-
-	input[type="text"],
-	textarea,
-	textarea,
-	input[type="text"],
-	input[type="password"],
-	select,
-	input.pretty_dropdown_text,
-	.pretty_dropdown_options {
-		width: 95%;
-		float: left;
-		background: white;
-		color: black;
-	}
+:root:has(#on:checked) html {
+    font-size: 18px;
+    box-sizing: border-box !important;
+}
+:root:has(#on:checked) *,
+:root:has(#on:checked) ::before,
+:root:has(#on:checked) ::after {
+    box-sizing: border-box !important;
+}
+:root:has(#on:checked) body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 300;
+    font-family: var(--text-font);
+    text-rendering: optimizeLegibility;
+}
+:root:has(#on:checked) .dev {
+    border: 2px dashed red !important;
+}
+:root:has(#on:checked) #bodyi,
+:root:has(#on:checked) #topbanneri,
+:root:has(#on:checked) #titleimg,
+:root:has(#on:checked) .trans {
+    display: var(--image-display);
+}
+:root:has(#on:checked) #content,
+:root:has(#on:checked) .sf-menu ul,
+:root:has(#on:checked) .ui-widget-header {
+    background-image: var(--bg-image-display);
+}
+:root:has(#on:checked) #topbanner,
+:root:has(#on:checked) .sf-menu,
+:root:has(#on:checked) #menu_holder,
+:root:has(#on:checked) #footer {
+    display: var(--default-content);
+}
+:root:has(#on:checked) .highlight_me,
+:root:has(#on:checked) .highlight_me td {
+    background: transparent !important;
+}
+:root:has(#on:checked) #cattery_infobox .add_small_margins,
+:root:has(#on:checked) #cattery_menu li,
+:root:has(#on:checked) .ui-widget-content,
+:root:has(#on:checked) .ui-widget-header,
+:root:has(#on:checked) .ui-state-active,
+:root:has(#on:checked) .ui-widget-content .ui-state-active,
+:root:has(#on:checked) .ui-widget-header .ui-state-active,
+:root:has(#on:checked) .mweorbox table tbody tr td div,
+:root:has(#on:checked) .tborder,
+:root:has(#on:checked) .ui-state-hover,
+:root:has(#on:checked) .ui-widget-content .ui-state-hover,
+:root:has(#on:checked) .ui-widget-header .ui-state-hover,
+:root:has(#on:checked) .ui-state-focus,
+:root:has(#on:checked) .ui-widget-content .ui-state-focus,
+:root:has(#on:checked) .ui-widget-header .ui-state-focus {
+    border-color: transparent !important;
+}
+:root:has(#on:checked) html,
+:root:has(#on:checked) body {
+    background-color: white;
+}
+:root:has(#on:checked) #contentholder form center .tborder {
+    background-color: white;
+    display: flex;
+    width: 100% !important;
+}
+:root:has(#on:checked) #contentholder form center .tborder tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+:root:has(#on:checked) .theader {
+    background-color: var(--settings-bg-color) !important;
+    display: flex;
+    justify-content: center;
+}
+:root:has(#on:checked) .theader td {
+    color: var(--settings-text-color);
+}
+:root:has(#on:checked) .trow1 {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    color: black;
+}
+:root:has(#on:checked) .trow1 td {
+    color: var(--text-dark);
+    background-color: white;
+    color: black;
+}
+:root:has(#on:checked) .trow1 td:nth-child(even) {
+    width: 80%;
+    text-align: left;
+}
+:root:has(#on:checked) .trow1 td:nth-child(odd) {
+    width: 20%;
+    text-align: left;
+}
+:root:has(#on:checked) input[type=text],
+:root:has(#on:checked) textarea,
+:root:has(#on:checked) textarea,
+:root:has(#on:checked) input[type=text],
+:root:has(#on:checked) input[type=password],
+:root:has(#on:checked) select,
+:root:has(#on:checked) input.pretty_dropdown_text,
+:root:has(#on:checked) .pretty_dropdown_options {
+    width: 95%;
+    float: left;
+    background: white;
+    color: black;
 }
 
-//************************************************
-//	Layout On/Off Button Styles
-//************************************************
 :root:has(#on:checked) .csshiny-inactive {
-	display: block;
+    display: block;
 }
+
 :root:has(#on:checked) .csshiny-active {
-	display: none;
+    display: none;
 }
 
 :root:has(#off:checked) .csshiny-inactive {
-	display: none;
+    display: none;
 }
+
 :root:has(#off:checked) .csshiny-active {
-	display: block;
+    display: block;
 }
 
 .exit-button::before {
-	content: '\f057';
-	font-family: FontAwesome;
-	font-size: 2rem;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 2rem;
 }
 
 .csshiny-signature {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	padding: 10px;
-	font-size: 40px;
-	line-height: 1;
-	color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 40px;
+    line-height: 1;
+    color: white;
 }
 
 .csshiny-credit {
-	justify-content: center;
-	align-items: center;
-	color: white !important;
-	text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+    text-align: center;
 }
 
 /** LIGHTBOX MARKUP **/
-
 .csshiny-credit {
-	/* Default to hidden */
-	display: none;
-
-	/* Overlay entire screen */
-	position: fixed;
-	z-index: 999;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	/* A bit of padding around image */
-	padding: 1em;
-
-	/* Translucent background */
-	background: #00151aed;
+    /* Default to hidden */
+    display: none;
+    /* Overlay entire screen */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* A bit of padding around image */
+    padding: 1em;
+    /* Translucent background */
+    background: #00151aed;
 }
 
 /* Unhide the lightbox when it's the target */
 .csshiny-credit:target {
-	display: flex;
+    display: flex;
 }
 
 .csshiny-credit span {
-	/* Full width and height */
-	display: block;
-	width: 100%;
-	height: 100%;
-
-	/* Size and position background image */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 5%;
+    /* Full width and height */
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Size and position background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5%;
 }
