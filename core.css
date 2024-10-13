@@ -131,19 +131,18 @@
     color: #000;
 }
 
-.csshiny-inactive {
-    display: block;
-}
-
-.csshiny-active {
-    display: none !important;
-}
-
 :root:has(#layout-toggle:checked) .csshiny-inactive {
     display: none;
 }
 :root:has(#layout-toggle:checked) .csshiny-active {
     display: block;
+}
+
+:root:has(#layout-toggle:not(:checked)) .csshiny-inactive {
+    display: block;
+}
+:root:has(#layout-toggle:not(:checked)) .csshiny-active {
+    display: none;
 }
 
 .csshiny-signature {
@@ -177,6 +176,11 @@
 }
 .csshiny-credit:target {
     display: flex;
+}
+.csshiny-credit .layout-buttons {
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
 }
 .csshiny-credit .csshiny-exit {
     position: fixed;
