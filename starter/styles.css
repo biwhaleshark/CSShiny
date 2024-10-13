@@ -1,15 +1,15 @@
 /************************************************
-	FILE	:	styles.css
-	THEME	:	STARTER
-	AUTHOR	:	#559
-	FOR		:	USERID/TOPICID
+	FILE	        :	    styles.css
+	LAYOUT	        :	    STARTER
+    LAST UPDATED    :	    2024/10/12
+    Created by #559.    Powered by CSShiny.
 
 	DESC	:
 	main CSS file associated with theme/layout.
 	contains all CSS required for theme/layout,
 	including calls to component stylesheets.
 
-	this file called in the base HTML file
+	this file called in the base/starter HTML file
 	for theme/layout.
 
 	GOLIVE DELETE: called in HTML base file.
@@ -23,6 +23,7 @@
 	Imported Styles
 ************************************************/
 @import url("https://biwhaleshark.github.io/CSShiny/core.css");
+
 /************************************************
 	Variables
 ************************************************/
@@ -32,8 +33,13 @@
     --holder-margin: 3rem 0;
     --descbox-margin: 1rem 0;
     --descbox-padding: 1rem;
+
+    //// Core Variables
     --settings-text-color: --button-text;
     --settings-bg-color: --button-bg;
+
+    //// User Facing Variables
+    // Base Colors
     --color1: #ffa7a7;
     --color2: #C44D58;
     --color3: #C7F464;
@@ -41,22 +47,32 @@
     --color5: #556270;
     --white: white;
     --black: black;
+
+    // Fonts
     --text-font: "Arial", sans-serif;
     --header-font: var(--text-font);
+
+    // Text Colors
     --text-dark: var(--black);
     --text-light: var(--white;);
     --header-dark: var(--text-dark);
     --header-light: var(--text-light);
+
+    // Background Colors
     --descbox-bg-color: var(--white);
     --contentholder-bg-color: transparent;
     --body-bg-color: var(--color4);
     --bg-image: null;
     --bg-repeat: null;
     --bg-size: null;
+
+    // Link Colors
     --link-dark: var(--text-dark);
     --link-dark-hover: var(--link-dark);
     --link-light: var(--text-light);
     --link-light-hover: var(--link-light);
+
+    // Button Colors
     --button-text: var(--black);
     --button-text-hover: var(--white);
     --button-bg: var(--white);
@@ -66,166 +82,169 @@
 /************************************************
 	Element Display Toggles
 ************************************************/
-:root:has(#on:checked) body .sf-menu {
-    display: none;
-}
-:root:has(#on:checked) body #bodyi {
-    display: none;
-}
-:root:has(#on:checked) body #holder #topbanner {
-    display: none;
-}
-:root:has(#on:checked) body #holder #topbanner #topbanneri {
-    display: none;
-}
-:root:has(#on:checked) body #holder #topbanner #layoutuinfo {
-    display: none;
-}
-:root:has(#on:checked) body #holder #topbanner #gametime {
-    display: none;
-}
-:root:has(#on:checked) body #holder #topbanner #addbookmark {
-    display: none;
-}
-:root:has(#on:checked) body #holder #content #contentholder .spacer,
-:root:has(#on:checked) body #holder #content #contentholder .clearer {
-    display: none;
-}
-:root:has(#on:checked) body #holder #content #contentholder .titlebar #titleimg {
-    display: none;
-}
-:root:has(#on:checked) body #holder #content #contentholder #cattery_infobox {
-    display: none;
-}
-:root:has(#on:checked) body #holder #content #contentholder #cattery_descbox > i:last-of-type {
-    display: none;
-}
-:root:has(#on:checked) body #holder #content #contentholder .titlebar {
-    display: none;
-}
-:root:has(#on:checked) body #holder #content #contentholder > .add_small_margins {
-    display: none;
-}
-:root:has(#on:checked) body #holder #bottombanner {
-    display: none;
-}
-:root:has(#on:checked) body #holder #footer {
-    display: none;
-}
+:root:has(#on:checked) {
+    body {
+        .sf-menu { display: none; }
+        #bodyi { display: none; }
 
+        #holder {
+            #topbanner {
+                display: none; 
+                #topbanneri { display: none; }
+                #layoutuinfo { display: none; }
+                #gametime { display: none; }
+                #addbookmark { display: none; }
+            }
+
+            #content #contentholder {
+                .spacer, 
+                .clearer { display: none; }
+                .titlebar #titleimg { display: none; }
+                #cattery_infobox { display: none; }
+                #cattery_descbox > i:last-of-type { display: none; }
+
+                // Optional Hidden
+                .titlebar { display: none; }
+                & > .add_small_margins { display: none; }
+            }
+
+            #bottombanner { display: none; }
+            #footer { display: none; }
+        }
+    }
+}
 /************************************************
 	Resets
 ************************************************/
-:root:has(#on:checked) body {
-    background-color: var(--body-bg-color) !important;
-    background: var(--bg-image);
-    background-repeat: var(--bg-repeat);
-    background-size: var(--bg-size);
-    font-size: 1rem;
-}
-:root:has(#on:checked) #holder {
-    background: transparent;
-    position: relative;
-    width: 100%;
-}
-:root:has(#on:checked) body,
-:root:has(#on:checked) #holder {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-:root:has(#on:checked) #content {
-    background: var(--contentholder-bg-color);
-    padding: 0;
-    margin: var(--holder-margin);
-    width: var(--holder-width);
-    left: 0;
-}
-:root:has(#on:checked) #contentholder {
-    width: 100%;
-    margin: 0;
-    left: 0;
-}
-:root:has(#on:checked) #cattery_descbox {
-    width: var(--descbox-width);
-    float: none;
-    right: unset;
-    padding: var(--descbox-padding);
-    margin: var(--descbox-margin);
-    background: var(--descbox-bg-color);
-}
-:root:has(#on:checked) #cattery_infobox {
-    background: transparent;
-    padding: 0;
-    float: none;
-    left: 0;
-}
-:root:has(#on:checked) .titlebar {
-    width: 100%;
-    margin: 0;
-}
-:root:has(#on:checked) #titletxt {
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-}
-:root:has(#on:checked) .add_small_margins {
-    margin: 0;
-}
-:root:has(#on:checked) a,
-:root:has(#on:checked) a:link,
-:root:has(#on:checked) a:visited {
-    color: var(--link-dark-hover);
-}
-:root:has(#on:checked) a:hover, :root:has(#on:checked) a:active, :root:has(#on:checked) a:focus,
-:root:has(#on:checked) a:link:hover,
-:root:has(#on:checked) a:link:active,
-:root:has(#on:checked) a:link:focus,
-:root:has(#on:checked) a:visited:hover,
-:root:has(#on:checked) a:visited:active,
-:root:has(#on:checked) a:visited:focus {
-    color: var(--link-dark-hover);
-}
-:root:has(#on:checked) .ui-tabs-nav {
-    display: flex !important;
-    flex-wrap: wrap !important;
-}
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav li {
-    height: 35px;
-    flex: 0 1 10%;
-    padding: 6px 8px 6px 8px;
-    white-space: break-spaces;
-    float: none;
-}
-:root:has(#on:checked) .ui-tabs .ui-tabs-nav li a {
-    height: 35px;
-    width: 100%;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-:root:has(#on:checked) .ui-widget-header {
-    background: transparent;
-}
-:root:has(#on:checked) .ui-state-default,
-:root:has(#on:checked) .ui-widget-header .ui-state-default,
-:root:has(#on:checked) .ui-widget-content .ui-state-default {
-    background: transparent;
-}
-:root:has(#on:checked) .button,
-:root:has(#on:checked) .button_tall {
-    color: var(--button-text);
-    background: va(--button-bg);
-    background-color: unset !important;
-}
-:root:has(#on:checked) .button:hover,
-:root:has(#on:checked) .button_tall:hover {
-    color: var(--button-text-hover);
-    background: va(--button-bg-hover);
-    background-color: unset !important;
+:root:has(#on:checked) {
+    body {
+        background-color: var(--body-bg-color) !important;
+        background: var(--bg-image);
+        background-repeat: var(--bg-repeat);
+        background-size: var(--bg-size);
+        font-size: 1rem;
+    }
+
+    #holder {
+        background: transparent;
+        position: relative;
+        width: 100%;
+    }
+
+    body,
+    #holder {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #content {
+        background: var(--contentholder-bg-color);
+        padding: 0;
+        margin: var(--holder-margin);
+        width: var(--holder-width);
+        left: 0;
+    }
+
+    #contentholder {
+        width: 100%;
+        margin: 0;
+        left: 0;
+    }
+
+    #cattery_descbox {
+        width: var(--descbox-width);
+        float: none;
+        right: unset;
+        padding: var(--descbox-padding);
+        margin: var(--descbox-margin);
+        background: var(--descbox-bg-color);
+    }
+
+    #cattery_infobox {
+        background: transparent;
+        padding: 0;
+        float: none;
+        left: 0;
+    }
+
+    .titlebar {
+        width: 100%;
+        margin: 0;
+    }
+
+    #titletxt {
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+
+    .add_small_margins {
+        margin: 0;
+    }
+
+    // Link Defaults
+    a,
+    a:link,
+    a:visited {
+        color: var(--link-dark-hover);
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: var(--link-dark-hover);
+        }
+    }
+
+    //// Mweor Tabs
+    // Adjusts tab width below
+    .ui-tabs-nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        height: 35px;
+        flex: 0 1 10%;
+        padding: 6px 8px 6px 8px;
+        white-space: break-spaces;
+        float: none;
+    }
+
+    .ui-tabs .ui-tabs-nav li a {
+        height: 35px;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ui-widget-header {
+        background: transparent;
+    }
+
+    .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-widget-content .ui-state-default {
+        background: transparent;
+    }
+
+    .button,
+    .button_tall {
+        color: var(--button-text);
+        background: va(--button-bg);
+        background-color: unset !important;
+    }
+
+    .button:hover,
+    .button_tall:hover {
+        color: var(--button-text-hover);
+        background: va(--button-bg-hover);
+        background-color: unset !important;
+    }
 }
 
 /************************************************
