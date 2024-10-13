@@ -146,7 +146,7 @@
     display: block;
 }
 
-.exit-button::before {
+.cssshiny-exit::before {
     content: "";
     font-family: FontAwesome;
     font-size: 2rem;
