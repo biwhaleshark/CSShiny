@@ -82,7 +82,7 @@
 /************************************************
 	Element Display Toggles
 ************************************************/
-:root:has(#on:checked) {
+:root:has(#layout-toggle:checked) {
     body {
         .sf-menu { display: none; }
         #bodyi { display: none; }
@@ -224,6 +224,9 @@
 
     .ui-widget-header {
         background: transparent;
+        display: flex;
+        width: 100%;
+        padding: 0;
     }
 
     .ui-state-default,
