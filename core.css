@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /******************************************************************
 	FILE	        :	core.css
 	AUTHOR	        :	#559
@@ -154,6 +153,14 @@
     font-size: 2rem;
     line-height: 1;
     color: #fff;
+    z-index: 9999;
+    height: fit-content;
+    top: unset;
+    margin: unset;
+}
+
+:root:has(#credit-toggle:checked) .csshiny-credit {
+    display: flex !important;
 }
 
 .csshiny-credit {
@@ -172,10 +179,6 @@
     bottom: 0;
     /* Translucent background */
     background: rgba(0, 0, 0, 0.85);
-    /* Unhide the lightbox when it's the target */
-}
-.csshiny-credit:target {
-    display: flex;
 }
 .csshiny-credit .layout-buttons {
     display: flex;
@@ -199,7 +202,8 @@
     content: "";
     font-family: FontAwesome;
 }
-.csshiny-credit .csshiny-toggle {
+.csshiny-credit .csshiny-toggle,
+.csshiny-credit #credit-toggle {
     display: none;
 }
 .csshiny-credit span {
