@@ -163,6 +163,10 @@
     display: flex !important;
 }
 
+#credit-toggle {
+    display: none !important;
+}
+
 .csshiny-credit {
     flex-direction: column;
     justify-content: center;
@@ -203,8 +207,7 @@
     content: "";
     font-family: FontAwesome;
 }
-.csshiny-credit .csshiny-toggle,
-.csshiny-credit #credit-toggle {
+.csshiny-credit .csshiny-toggle {
     display: none;
 }
 .csshiny-credit span {
