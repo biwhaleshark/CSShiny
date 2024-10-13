@@ -14,16 +14,16 @@
 	@import url("https://biwhaleshark.github.io/CSShiny/core.css");
 ******************************************************************/
 @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
-:root:has(#on:checked) html {
+:root:has(#layout-toggle:checked) html {
     font-size: 18px;
     box-sizing: border-box !important;
 }
-:root:has(#on:checked) *,
-:root:has(#on:checked) ::before,
-:root:has(#on:checked) ::after {
+:root:has(#layout-toggle:checked) *,
+:root:has(#layout-toggle:checked) ::before,
+:root:has(#layout-toggle:checked) ::after {
     box-sizing: border-box !important;
 }
-:root:has(#on:checked) body {
+:root:has(#layout-toggle:checked) body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -34,106 +34,106 @@
     font-family: var(--text-font);
     text-rendering: optimizeLegibility;
 }
-:root:has(#on:checked) .dev {
+:root:has(#layout-toggle:checked) .dev {
     border: 2px dashed red !important;
 }
-:root:has(#on:checked) #bodyi,
-:root:has(#on:checked) #topbanneri,
-:root:has(#on:checked) #titleimg,
-:root:has(#on:checked) .trans {
+:root:has(#layout-toggle:checked) #bodyi,
+:root:has(#layout-toggle:checked) #topbanneri,
+:root:has(#layout-toggle:checked) #titleimg,
+:root:has(#layout-toggle:checked) .trans {
     display: var(--image-display);
 }
-:root:has(#on:checked) #content,
-:root:has(#on:checked) .sf-menu ul,
-:root:has(#on:checked) .ui-widget-header {
+:root:has(#layout-toggle:checked) #content,
+:root:has(#layout-toggle:checked) .sf-menu ul,
+:root:has(#layout-toggle:checked) .ui-widget-header {
     background-image: var(--bg-image-display);
 }
-:root:has(#on:checked) #topbanner,
-:root:has(#on:checked) .sf-menu,
-:root:has(#on:checked) #menu_holder,
-:root:has(#on:checked) #footer {
+:root:has(#layout-toggle:checked) #topbanner,
+:root:has(#layout-toggle:checked) .sf-menu,
+:root:has(#layout-toggle:checked) #menu_holder,
+:root:has(#layout-toggle:checked) #footer {
     display: var(--default-content);
 }
-:root:has(#on:checked) .highlight_me,
-:root:has(#on:checked) .highlight_me td {
+:root:has(#layout-toggle:checked) .highlight_me,
+:root:has(#layout-toggle:checked) .highlight_me td {
     background: transparent !important;
 }
-:root:has(#on:checked) #cattery_infobox .add_small_margins,
-:root:has(#on:checked) #cattery_menu li,
-:root:has(#on:checked) .ui-widget-content,
-:root:has(#on:checked) .ui-widget-header,
-:root:has(#on:checked) .ui-state-active,
-:root:has(#on:checked) .ui-widget-content .ui-state-active,
-:root:has(#on:checked) .ui-widget-header .ui-state-active,
-:root:has(#on:checked) .mweorbox table tbody tr td div,
-:root:has(#on:checked) .tborder,
-:root:has(#on:checked) .ui-state-hover,
-:root:has(#on:checked) .ui-widget-content .ui-state-hover,
-:root:has(#on:checked) .ui-widget-header .ui-state-hover,
-:root:has(#on:checked) .ui-state-focus,
-:root:has(#on:checked) .ui-widget-content .ui-state-focus,
-:root:has(#on:checked) .ui-widget-header .ui-state-focus {
+:root:has(#layout-toggle:checked) #cattery_infobox .add_small_margins,
+:root:has(#layout-toggle:checked) #cattery_menu li,
+:root:has(#layout-toggle:checked) .ui-widget-content,
+:root:has(#layout-toggle:checked) .ui-widget-header,
+:root:has(#layout-toggle:checked) .ui-state-active,
+:root:has(#layout-toggle:checked) .ui-widget-content .ui-state-active,
+:root:has(#layout-toggle:checked) .ui-widget-header .ui-state-active,
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr td div,
+:root:has(#layout-toggle:checked) .tborder,
+:root:has(#layout-toggle:checked) .ui-state-hover,
+:root:has(#layout-toggle:checked) .ui-widget-content .ui-state-hover,
+:root:has(#layout-toggle:checked) .ui-widget-header .ui-state-hover,
+:root:has(#layout-toggle:checked) .ui-state-focus,
+:root:has(#layout-toggle:checked) .ui-widget-content .ui-state-focus,
+:root:has(#layout-toggle:checked) .ui-widget-header .ui-state-focus {
     border-color: transparent !important;
 }
-:root:has(#on:checked) html,
-:root:has(#on:checked) body {
+:root:has(#layout-toggle:checked) html,
+:root:has(#layout-toggle:checked) body {
     background-color: #fff;
 }
-:root:has(#on:checked) #contentholder form center .tborder {
+:root:has(#layout-toggle:checked) #contentholder form center .tborder {
     background-color: #fff;
     display: flex;
     width: 100% !important;
 }
-:root:has(#on:checked) #contentholder form center .tborder tbody {
+:root:has(#layout-toggle:checked) #contentholder form center .tborder tbody {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-:root:has(#on:checked) .theader {
+:root:has(#layout-toggle:checked) .theader {
     background-color: var(--settings-bg-color) !important;
     display: flex;
     justify-content: center;
 }
-:root:has(#on:checked) .theader td {
+:root:has(#layout-toggle:checked) .theader td {
     color: var(--settings-text-color);
 }
-:root:has(#on:checked) .trow1 {
+:root:has(#layout-toggle:checked) .trow1 {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
     color: #000;
 }
-:root:has(#on:checked) .trow1 td {
+:root:has(#layout-toggle:checked) .trow1 td {
     color: var(--text-dark);
     background-color: #fff;
     color: #000;
 }
-:root:has(#on:checked) .trow1 td:nth-child(even) {
+:root:has(#layout-toggle:checked) .trow1 td:nth-child(even) {
     width: 80%;
     text-align: left;
 }
-:root:has(#on:checked) .trow1 td:nth-child(odd) {
+:root:has(#layout-toggle:checked) .trow1 td:nth-child(odd) {
     width: 20%;
     text-align: left;
 }
-:root:has(#on:checked) input[type=text],
-:root:has(#on:checked) textarea,
-:root:has(#on:checked) textarea,
-:root:has(#on:checked) input[type=text],
-:root:has(#on:checked) input[type=password],
-:root:has(#on:checked) select,
-:root:has(#on:checked) input.pretty_dropdown_text,
-:root:has(#on:checked) .pretty_dropdown_options {
+:root:has(#layout-toggle:checked) input[type=text],
+:root:has(#layout-toggle:checked) textarea,
+:root:has(#layout-toggle:checked) textarea,
+:root:has(#layout-toggle:checked) input[type=text],
+:root:has(#layout-toggle:checked) input[type=password],
+:root:has(#layout-toggle:checked) select,
+:root:has(#layout-toggle:checked) input.pretty_dropdown_text,
+:root:has(#layout-toggle:checked) .pretty_dropdown_options {
     width: 95%;
     float: left;
     background: #fff;
     color: #000;
 }
 
-:root:has(#on:checked) .csshiny-inactive {
+:root:has(#layout-toggle:checked) .csshiny-inactive {
     display: block;
 }
-:root:has(#on:checked) .csshiny-active {
+:root:has(#layout-toggle:checked) .csshiny-active {
     display: none;
 }
 
