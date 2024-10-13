@@ -79,7 +79,8 @@
 :root:has(#layout-toggle:checked) #cattery_menu,
 :root:has(#layout-toggle:checked) #cattery_descbox i:last-child,
 :root:has(#layout-toggle:checked) form .add_marigns,
-:root:has(#layout-toggle:checked) .breed_count {
+:root:has(#layout-toggle:checked) .breed_count,
+:root:has(#layout-toggle:checked) .centered{
     display: none;
 }
 :root:has(#layout-toggle:checked) body,
@@ -256,7 +257,7 @@
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed;
-    border: var(--border);
+    border: var(--border) !important;
 }
 :root:has(#layout-toggle:checked) #modtools_holder {
     left: 10px !important;
@@ -467,27 +468,27 @@
     bottom: -253px;
 }
 
-:root:has(#layout-toggle:disabled) .masthead-wrap {
+:root:has(#layout-toggle:not(:checked)) .masthead-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-:root:has(#layout-toggle:disabled) .masthead-wrap img {
+:root:has(#layout-toggle:not(:checked)) .masthead-wrap img {
     max-width: 250px;
 }
-:root:has(#layout-toggle:disabled) .masthead-wrap .utilities,
-:root:has(#layout-toggle:disabled) .masthead-wrap .masthead-links {
+:root:has(#layout-toggle:not(:checked)) .masthead-wrap .utilities,
+:root:has(#layout-toggle:not(:checked)) .masthead-wrap .masthead-links {
     display: none;
 }
-:root:has(#layout-toggle:disabled) .main-wrap {
+:root:has(#layout-toggle:not(:checked)) .main-wrap {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-:root:has(#layout-toggle:disabled) .main-wrap .header,
-:root:has(#layout-toggle:disabled) .main-wrap .cattery-name {
+:root:has(#layout-toggle:not(:checked)) .main-wrap .header,
+:root:has(#layout-toggle:not(:checked)) .main-wrap .cattery-name {
     display: none;
 }
-:root:has(#layout-toggle:disabled) .main-wrap .slider {
+:root:has(#layout-toggle:not(:checked)) .main-wrap .slider {
     height: 180px;
 }
