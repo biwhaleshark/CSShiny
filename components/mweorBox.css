@@ -1,14 +1,9 @@
 /************************************************
-	FILE:	responsiveSettings.css
+	FILE:	mweorBox.css
 	BY:	#559
 
 	Restyles the default mweorbox
 ************************************************/
-
-* {
-	box-sizing: border-box !important;
-}
-
 .mweorbox {
 	width: 200px;
 	height: fit-content !important;
