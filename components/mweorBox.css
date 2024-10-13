@@ -4,14 +4,14 @@
 
 	Restyles the default mweorbox
 ************************************************/
-.mweorbox {
+:root:has(#layout-toggle:checked) .mweorbox {
 	width: 200px;
 	height: fit-content !important;
 	border-radius: 0px !important;
 }
 
-.mweorbox table,
-.mweorbox table tbody {
+:root:has(#layout-toggle:checked) .mweorbox table,
+:root:has(#layout-toggle:checked) .mweorbox table tbody {
 	width: 100%;
 	height: 100%;
 	background: transparent;
@@ -19,14 +19,14 @@
 	position: relative;
 }
 
-.mweorbox table tbody tr:nth-child(1) {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) {
 	height: 225px;
 	display: flex;
 	flex-direction: column-reverse;
 	position: relative;
 }
 
-.mweorbox table tbody tr:nth-child(1) td:nth-child(3) {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(3) {
 	background: #fff;
 	z-index: 1;
 	width: fit-content;
@@ -37,25 +37,25 @@
 	left: 0;
 }
 
-.mweorbox table tbody tr:nth-child(1) td:nth-child(3) .mweor_icon{
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(3) .mweor_icon{
 	margin: 5px !important;
 }
 
-.mweorbox table tbody tr:nth-child(1) td:nth-child(2) {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(2) {
 	top: 0;
 	width: 100% !important;
 	height: 150px;
 	position: absolute;
 }
 
-.mweorbox table tbody tr:nth-child(1) td:nth-child(2) div {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(2) div {
 	width: 100% !important;
 	height: 100% !important;
 	border: 0 solid transparent !important;
 }
 
 
-.mweorbox table tbody tr:nth-child(1) td:nth-child(2) div img {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(2) div img {
 	width: 100%;
 	display: block;
 	height: auto;
@@ -63,24 +63,24 @@
 	transition: ease-in 0.2s;
 }
 
-.mweorbox:hover table tbody tr:nth-child(1) td:nth-child(2) div img {
+:root:has(#layout-toggle:checked) .mweorbox:hover table tbody tr:nth-child(1) td:nth-child(2) div img {
 	filter: grayscale(1);
 	transition: ease-in 0.2s;
 }
 
-.fv {
+:root:has(#layout-toggle:checked) .fv {
 	display: none;
 }
 
-.mweorbox table tbody tr:nth-child(1) td:nth-child(1) {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(1) {
 	z-index: 2;
 }
 
-.mweorbox table tbody tr:nth-child(1) td:nth-child(1) .mweor_icon {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(1) .mweor_icon {
 	margin: 5px;
 }
 
-.mweorbox table tbody tr:nth-child(2) {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) {
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
@@ -89,33 +89,34 @@
 	z-index: 1;
 }
 
-.mweorbox table tbody tr:nth-child(2) td {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td,
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) .highlight_me {
 	width: fit-content;
 	max-width: 175px;
-	background: #fff;
+	background: #fff !important;
 	border-radius: 5px 0 0 0;
 	padding: 10px;
 }
 
-.mweorbox table tbody tr:nth-child(2) td * {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td * {
 	text-align: center !important;
 }
 
-.mweorbox table tbody tr:nth-child(2) .highlight_me {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) .highlight_me {
 	background: #fff !important;
 }
 
-.mweorbox table tbody tr:nth-child(2) td div {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td div {
 	text-align: end;
 	color: var(--fontColor) !important;
 }
 
-.mweorbox table tbody tr:nth-child(2) td .text_medium a {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td .text_medium a {
 	font-size: 16px;
 	font-weight: bold;
 	color: var(--fontColor) !important;
 }
 
-.mweorbox table tbody tr:nth-child(2) td .text_medium a:hover {
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td .text_medium a:hover {
 	text-decoration: underline;
 }
