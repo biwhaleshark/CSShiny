@@ -178,6 +178,7 @@
     display: flex;
 }
 .csshiny-credit .layout-buttons {
+    display: flex;
     justify-content: center;
     align-items: center;
     height: fit-content;
@@ -192,6 +193,7 @@
     line-height: 1;
     color: #fff;
     padding: 14px;
+    text-decoration: none !important;
 }
 .csshiny-credit .csshiny-exit::before {
     content: "";
