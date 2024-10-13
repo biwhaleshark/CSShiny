@@ -468,6 +468,14 @@
     bottom: -253px;
 }
 
+:root:has(#layout-toggle:checked) .csshiny-signature {
+    text-shadow: var(--shadow);
+}
+
+:root:has(#layout-toggle:checked) .csshiny-credit input:checked + label {
+    background: var(--dkteal);
+}
+
 :root:has(#layout-toggle:not(:checked)) .masthead-wrap {
     display: flex;
     flex-direction: column;
