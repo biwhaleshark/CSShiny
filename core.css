@@ -27,7 +27,7 @@
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    color: black;
+    color: #000;
     font-size: 1rem;
     line-height: 1;
     font-weight: 300;
@@ -77,10 +77,10 @@
 }
 :root:has(#on:checked) html,
 :root:has(#on:checked) body {
-    background-color: white;
+    background-color: #fff;
 }
 :root:has(#on:checked) #contentholder form center .tborder {
-    background-color: white;
+    background-color: #fff;
     display: flex;
     width: 100% !important;
 }
@@ -101,12 +101,12 @@
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    color: black;
+    color: #000;
 }
 :root:has(#on:checked) .trow1 td {
     color: var(--text-dark);
-    background-color: white;
-    color: black;
+    background-color: #fff;
+    color: #000;
 }
 :root:has(#on:checked) .trow1 td:nth-child(even) {
     width: 80%;
@@ -126,14 +126,13 @@
 :root:has(#on:checked) .pretty_dropdown_options {
     width: 95%;
     float: left;
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
 }
 
 :root:has(#on:checked) .csshiny-inactive {
     display: block;
 }
-
 :root:has(#on:checked) .csshiny-active {
     display: none;
 }
@@ -141,36 +140,26 @@
 :root:has(#off:checked) .csshiny-inactive {
     display: none;
 }
-
 :root:has(#off:checked) .csshiny-active {
     display: block;
 }
 
-.csshiny-exit::before {
-    content: "";
-    font-family: FontAwesome;
-    font-size: 2rem;
-}
-
 .csshiny-signature {
     position: fixed;
+    z-index: 999;
     bottom: 0;
     right: 0;
     padding: 10px;
     font-size: 40px;
     line-height: 1;
-    color: white;
+    color: #fff;
 }
 
 .csshiny-credit {
     justify-content: center;
     align-items: center;
-    color: white !important;
+    color: #fff !important;
     text-align: center;
-}
-
-/** LIGHTBOX MARKUP **/
-.csshiny-credit {
     /* Default to hidden */
     display: none;
     /* Overlay entire screen */
@@ -180,24 +169,22 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* A bit of padding around image */
-    padding: 1em;
     /* Translucent background */
-    background: #00151aed;
+    background: rgba(0, 0, 0, 0.85);
+    /* Unhide the lightbox when it's the target */
 }
-
-/* Unhide the lightbox when it's the target */
 .csshiny-credit:target {
     display: flex;
 }
-
+.csshiny-credit .cssshiny-exit::before {
+    content: "";
+    font-family: FontAwesome;
+    font-size: 2rem;
+    color: #fff;
+}
 .csshiny-credit span {
     /* Full width and height */
     display: block;
     width: 100%;
     height: 100%;
-    /* Size and position background image */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 5%;
 }
