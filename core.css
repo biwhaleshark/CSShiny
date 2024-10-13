@@ -146,7 +146,7 @@
     display: block;
 }
 
-.cssshiny-exit::before {
+.csshiny-exit::before {
     content: "";
     font-family: FontAwesome;
     font-size: 2rem;
