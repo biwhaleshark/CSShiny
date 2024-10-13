@@ -27,7 +27,7 @@
 }
 
 .mweorbox table tbody tr:nth-child(1) td:nth-child(3) {
-	background: var(--bgColor);
+	background: #fff;
 	z-index: 1;
 	width: fit-content;
 	border-radius: 0 0px 5px 0px;
@@ -63,7 +63,7 @@
 	transition: ease-in 0.2s;
 }
 
-.mweorbox table tbody tr:nth-child(1) td:nth-child(2) div img:hover {
+.mweorbox:hover table tbody tr:nth-child(1) td:nth-child(2) div img {
 	filter: grayscale(1);
 	transition: ease-in 0.2s;
 }
@@ -92,13 +92,17 @@
 .mweorbox table tbody tr:nth-child(2) td {
 	width: fit-content;
 	max-width: 175px;
-	background: var(--bgColor);
+	background: #fff;
 	border-radius: 5px 0 0 0;
 	padding: 10px;
 }
 
+.mweorbox table tbody tr:nth-child(2) td * {
+	text-align: center !important;
+}
+
 .mweorbox table tbody tr:nth-child(2) .highlight_me {
-	background: var(--bgColor) !important;
+	background: #fff !important;
 }
 
 .mweorbox table tbody tr:nth-child(2) td div {
