@@ -176,7 +176,7 @@
 .csshiny-credit:target {
     display: flex;
 }
-.csshiny-credit .cssshiny-exit::before {
+.csshiny-credit .csshiny-exit::before {
     content: "";
     font-family: FontAwesome;
     font-size: 2rem;
