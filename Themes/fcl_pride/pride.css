@@ -52,7 +52,7 @@
     --header-light: var(--text-light);
     --descbox-bg-color: var(--color1-transparent);
     --contentholder-bg-color: transparent;
-    --body-bg-color: var(--white);
+    --body-bg-color: var(--color5);
     --bg-image: null;
     --bg-repeat: null;
     --bg-size: null;
@@ -68,6 +68,19 @@
     --border-radius-left: 999px 0 0 999px;
 }
 
+/************************************************
+	Dark & Light Mode
+************************************************/
+@container style(--mode-toggle: light) {
+    body {
+        --body-bg-color: white;
+    }
+}
+@container style(--mode-toggle: dark) {
+    body {
+        --body-bg-color: black;
+    }
+}
 /************************************************
 	Element Display Toggles
 ************************************************/
