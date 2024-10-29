@@ -84,7 +84,8 @@
 /************************************************
 	Element Display Toggles
 ************************************************/
-:root:has(#layout-toggle:checked) body .sf-menu {
+:root:has(#layout-toggle:checked) body .sf-menu,
+:root:has(#layout-toggle:checked) body #menu_holder {
     display: none;
 }
 :root:has(#layout-toggle:checked) body #bodyi {
