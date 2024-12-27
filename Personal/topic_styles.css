@@ -63,7 +63,7 @@
 #contentholder center table .trow3 .code {
     background: #000;
     color: #fff;
-    margin: 10px 40px 10px 60px;
+    margin-inline: calc(var(--font-size) * 2);
     padding: 10px;
     border-radius: 10px;
     line-height: 18px;
