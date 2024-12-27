@@ -24,12 +24,12 @@
 #contentholder center table .trow3 br {
     display: none;
 }
-#contentholder center table .trow3 h1,
-#contentholder center table .trow3 h2,
-#contentholder center table .trow3 h3,
-#contentholder center table .trow3 h4,
-#contentholder center table .trow3 h5,
-#contentholder center table .trow3 h6 {
+#contentholder center table .trow3 hd1,
+#contentholder center table .trow3 hd2,
+#contentholder center table .trow3 hd3,
+#contentholder center table .trow3 hd4,
+#contentholder center table .trow3 hd5,
+#contentholder center table .trow3 hd6 {
     margin: 0;
     font-family: Georgia, serif;
 }
@@ -50,22 +50,22 @@
     font-style: italic;
     margin-bottom: var(--space);
 }
-#contentholder center table .trow3 h1 {
+#contentholder center table .trow3 hd1 {
     font-size: calc(var(--font-size) * 3.4);
 }
-#contentholder center table .trow3 h2 {
+#contentholder center table .trow3 hd2 {
     font-size: calc(var(--font-size) * 3);
 }
-#contentholder center table .trow3 h3 {
+#contentholder center table .trow3 hd3 {
     font-size: calc(var(--font-size) * 1.875);
 }
-#contentholder center table .trow3 h4 {
+#contentholder center table .trow3 hd4 {
     font-size: calc(var(--font-size) * 1.5);
 }
-#contentholder center table .trow3 h5 {
+#contentholder center table .trow3 hd5 {
     font-size: calc(var(--font-size) * 1.25);
 }
-#contentholder center table .trow3 h6 {
+#contentholder center table .trow3 hd6 {
     font-size: calc(var(--font-size) * 1.125);
 }
 #contentholder center table .trow3 .align-right {
