@@ -47,10 +47,12 @@
 #contentholder center table .trow3 .right {
     text-align: right;
     float: right;
+    max-width: 50%;
 }
 #contentholder center table .trow3 .left {
     text-align: left;
     float: left;
+    max-width: 50%;
 }
 #contentholder center table .trow3 .center {
     text-align: center;
@@ -60,7 +62,7 @@
 }
 #contentholder center table .trow3 .code {
     background: #000;
-    color: #000;
+    color: #fff;
 }
 #contentholder center table .trow3 .code i {
     color: #00e63a;
