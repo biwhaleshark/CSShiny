@@ -1,18 +1,30 @@
+:root {
+    --font-size: 16px;
+}
+
 #contentholder center table .trow3 {
     box-sizing: border-box;
     width: min(400px, 100% - 1rem);
     margin-inline: auto;
     display: block;
     height: auto;
-    --font-size: 16px;
     font-size: var(--font-size);
     line-height: 1.4;
+}
+#contentholder center table .trow3 p {
+    font-size: var(--font-size);
 }
 #contentholder center table .trow3 br {
     display: none;
 }
-#contentholder center table .trow3 h1, #contentholder center table .trow3 h2, #contentholder center table .trow3 h3, #contentholder center table .trow3 h4, #contentholder center table .trow3 h5, #contentholder center table .trow3 h6 {
+#contentholder center table .trow3 h1,
+#contentholder center table .trow3 h2,
+#contentholder center table .trow3 h3,
+#contentholder center table .trow3 h4,
+#contentholder center table .trow3 h5,
+#contentholder center table .trow3 h6 {
     margin: 0;
+    font-family: Georgia, serif;
 }
 #contentholder center table .trow3 h1 {
     font-size: calc(var(--font-size) * 2.5);
@@ -39,4 +51,20 @@
 #contentholder center table .trow3 .left {
     text-align: left;
     float: left;
+}
+#contentholder center table .trow3 .center {
+    text-align: center;
+}
+#contentholder center table .trow3 .quote {
+    margin-inline: calc(var(--font-size) * 2);
+}
+#contentholder center table .trow3 .code {
+    background: #000;
+    color: #000;
+}
+#contentholder center table .trow3 .code i {
+    color: #00e63a;
+}
+#contentholder center table .trow3 > * + * {
+    margin-top: 1em !important;
 }
