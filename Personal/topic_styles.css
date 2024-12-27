@@ -32,15 +32,19 @@
     margin: 0;
     font-family: Georgia, serif;
 }
-#contentholder center table .trow3 headline {
-    font-size: calc(var(--font-size) * 3);
+#contentholder center table .trow3 headline,
+#contentholder center table .trow3 subheadline {
     text-align: right;
     line-height: 1;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+#contentholder center table .trow3 headline {
+    font-size: calc(var(--font-size) * 3);
 }
 #contentholder center table .trow3 subheadline {
     font-size: calc(var(--font-size) * 1.125);
-    text-align: right;
-    line-height: 1;
     font-style: italic;
 }
 #contentholder center table .trow3 h1 {
