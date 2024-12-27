@@ -42,7 +42,7 @@
     font-size: calc(var(--font-size) * 1.25);
 }
 #contentholder center table .trow3 h6 {
-    font-size: var(--font-size);
+    font-size: calc(var(--font-size) * 1.125);
 }
 #contentholder center table .trow3 .align-right {
     text-align: right;
