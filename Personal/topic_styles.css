@@ -17,7 +17,7 @@
 }
 #contentholder center table .trow3 p {
     line-height: 1.25;
-    margin-inline: 12px;
+    margin-block: 12px;
 }
 #contentholder center table .trow3 .divider {
     margin: var(--space);
