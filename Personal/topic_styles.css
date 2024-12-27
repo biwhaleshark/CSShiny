@@ -17,6 +17,9 @@
 #contentholder center table .trow3 p {
     line-height: 1.25;
 }
+#contentholder center table .trow3 .spacer {
+    margin: 2rem;
+}
 #contentholder center table .trow3 br {
     display: none;
 }
