@@ -11,7 +11,7 @@
     font-size: var(--font-size);
     line-height: 1.4;
 }
-#contentholder center table .trow3 p {
+#contentholder center table .trow3 * {
     font-size: var(--font-size);
 }
 #contentholder center table .trow3 br {
