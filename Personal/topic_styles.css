@@ -63,10 +63,26 @@
 #contentholder center table .trow3 .code {
     background: #000;
     color: #fff;
+    margin: 10px 40px 10px 60px;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 18px;
 }
 #contentholder center table .trow3 .code i {
     color: #00e63a;
 }
 #contentholder center table .trow3 > * + * {
     margin-top: 1em !important;
+}
+#contentholder center table .trow3 #index {
+    background: #fff;
+    height: auto;
+    width: 200px;
+    left: 870px;
+    top: 130px;
+    position: fixed;
+    padding: 15px;
+    border: 3.5px solid #000;
+    border-radius: 10px;
+    font-size: 14px;
 }
