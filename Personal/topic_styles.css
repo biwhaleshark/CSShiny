@@ -1,5 +1,6 @@
 :root {
     --font-size: 16px;
+    --space: 2rem;
 }
 
 #contentholder center table .trow3 {
@@ -18,7 +19,7 @@
     line-height: 1.25;
 }
 #contentholder center table .trow3 .divider {
-    margin: 2rem;
+    margin: var(--space);
 }
 #contentholder center table .trow3 br {
     display: none;
@@ -47,6 +48,7 @@
 #contentholder center table .trow3 subheadline {
     font-size: calc(var(--font-size) * 1.125);
     font-style: italic;
+    margin-bottom: var(--space);
 }
 #contentholder center table .trow3 h1 {
     font-size: calc(var(--font-size) * 3.4);
