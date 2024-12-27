@@ -89,7 +89,7 @@
 #contentholder center table .trow3 .quote {
     margin-inline: calc(var(--font-size) * 2);
 }
-#contentholder center table .trow3 .code {
+#contentholder center table .trow3 code {
     background: #000;
     color: #fff;
     margin-inline: calc(var(--font-size) * 2);
@@ -97,7 +97,7 @@
     border-radius: 10px;
     line-height: 18px;
 }
-#contentholder center table .trow3 .code i {
+#contentholder center table .trow3 code i {
     color: #00e63a;
 }
 #contentholder center table .trow3 > * + * {
