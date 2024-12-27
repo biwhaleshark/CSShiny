@@ -41,6 +41,7 @@
     font-size: calc(var(--font-size) * 1.125);
     text-align: right;
     line-height: 1;
+    font-style: italic;
 }
 #contentholder center table .trow3 h1 {
     font-size: calc(var(--font-size) * 3.4);
