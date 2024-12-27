@@ -39,6 +39,7 @@
     margin: 0;
     font-family: Georgia, serif;
     font-weight: bold;
+    display: block;
 }
 #contentholder center table .trow3 headline {
     font-size: calc(var(--font-size) * 3);
