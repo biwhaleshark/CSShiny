@@ -91,14 +91,14 @@
 }
 #contentholder center table .trow3 code {
     background: #000;
-    color: #fff;
+    color: #00e63a;
     margin-inline: calc(var(--font-size) * 2);
     padding: 10px;
     border-radius: 10px;
     line-height: 18px;
 }
 #contentholder center table .trow3 code i {
-    color: #00e63a;
+    color: #fff;
 }
 #contentholder center table .trow3 > * + * {
     margin-top: 1em !important;
