@@ -1,0 +1,533 @@
+/************************************************
+	FILE:	Starlight.css
+	THEME:	Starlight
+	FOR:	#559
+	BY:	#559
+	DATE:	2024/02/08
+************************************************/
+@import url("https://biwhaleshark.github.io/CSShiny/core.css");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://biwhaleshark.github.io/CSShiny/components/carousel_slider.css");
+@import url("https://biwhaleshark.github.io/CSShiny/components/mweorBox.css");
+:root:has(#layout-toggle:checked) {
+    --dkteal: #003b43;
+    --ltteal: #cfd3d4;
+    --white: #fff;
+    --font-family-1: "Poiret One", cursive;
+    --font-family-2: "Arial", sans-serif;
+    --text-dark: var(--black);
+    --text-light: var(--white);
+    --link-dark: var(--text-dark);
+    --link-light: var(--text-light);
+    --header-dark: var(--text-dark);
+    --header-light: var(--text-light);
+    font-size: 20px;
+    --bg-color: var(--dkteal);
+    --bg-image: linear-gradient(
+        120deg,
+        transparent 60%,
+        #0010184d 60%,
+        #001018 75%,
+        #441416 75%,
+        #441416d1 80%,
+        transparent 80%
+    );
+    --contentholder-bg: transparent;
+    --descbox-bg: var(--white);
+    --descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
+    --shadow: 0.25rem 0.25rem 0.4rem #001e27;
+    --border: 0.05rem solid #ffffff75;
+    --corner-gradient: linear-gradient(
+        135deg,
+        #00262f 0%,
+        #00262f 8%,
+        #681312 8%,
+        #681312 12%,
+        transparent 12%
+    );
+    --border-radius-small: 0.5rem;
+    --border-radius-big: 0.75rem;
+    --slider-height: 19.5rem;
+    --slider-header-size: 1.4rem;
+    --holder-width: 90%;
+    --descbox-width: 100%;
+    --holder-margin: 3rem 0;
+    --descbox-margin: 1rem 0;
+    --descbox-padding: 1rem;
+    --image-display: none;
+    --bg-image-display: none;
+    --default-content: none;
+}
+
+:root:has(#layout-toggle:checked) {
+    --holder-width: 90%;
+    --descbox-width: 100%;
+    --holder-margin: null;
+    --descbox-margin: 2rem 0 2rem 0;
+    --descbox-padding: 0;
+}
+
+:root:has(#layout-toggle:checked) html {
+    background-color: var(--dkteal);
+}
+:root:has(#layout-toggle:checked) .titlebar,
+:root:has(#layout-toggle:checked) #titletxt,
+:root:has(#layout-toggle:checked) .add_small_margins,
+:root:has(#layout-toggle:checked) #reportplayer,
+:root:has(#layout-toggle:checked) #cattery_infobox,
+:root:has(#layout-toggle:checked) #cattery_menu,
+:root:has(#layout-toggle:checked) #cattery_descbox i:last-child,
+:root:has(#layout-toggle:checked) form .add_marigns,
+:root:has(#layout-toggle:checked) .breed_count,
+:root:has(#layout-toggle:checked) .centered {
+    display: none;
+}
+:root:has(#layout-toggle:checked) body,
+:root:has(#layout-toggle:checked) #holder {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+:root:has(#layout-toggle:checked) body {
+    background-color: var(--bg-color) !important;
+    background: var(--bg-image);
+    background-repeat: none;
+    background-size: none;
+    background-attachment: fixed;
+    font-size: 1rem !important;
+}
+:root:has(#layout-toggle:checked) body #holder {
+    background: transparent;
+    position: relative;
+    width: 100%;
+}
+:root:has(#layout-toggle:checked) body #holder #content {
+    background: var(--contentholder-bg);
+    padding: 0;
+    margin: var(--holder-margin);
+    width: var(--holder-width);
+    left: 0;
+    color: unset !important;
+}
+:root:has(#layout-toggle:checked) body #holder #content #contentholder {
+    width: 100%;
+    margin: 0;
+    left: 0;
+}
+:root:has(#layout-toggle:checked)
+    body
+    #holder
+    #content
+    #contentholder
+    #cattery_descbox {
+    width: var(--descbox-width);
+    height: fit-content !important;
+    float: none;
+    right: unset;
+    padding: var(--descbox-padding);
+    margin: var(--descbox-margin);
+    background-color: var(--descbox-bg) !important;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-big);
+    outline: var(--border);
+    background: var(--descbox-img);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: fixed;
+}
+:root:has(#layout-toggle:checked)
+    body
+    #holder
+    #content
+    #contentholder
+    #cattery_infobox {
+    background: transparent;
+    padding: 0;
+    float: none;
+    left: 0;
+}
+:root:has(#layout-toggle:checked) .titlebar {
+    width: 100%;
+    margin: 0;
+}
+:root:has(#layout-toggle:checked) #titletxt {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+:root:has(#layout-toggle:checked) .add_small_margins {
+    margin: 0;
+}
+:root:has(#layout-toggle:checked) a,
+:root:has(#layout-toggle:checked) a:link,
+:root:has(#layout-toggle:checked) a:visited {
+    color: var(--link-dark);
+    font-weight: bold;
+}
+:root:has(#layout-toggle:checked) a:hover,
+:root:has(#layout-toggle:checked) a:active,
+:root:has(#layout-toggle:checked) a:focus,
+:root:has(#layout-toggle:checked) a:link:hover,
+:root:has(#layout-toggle:checked) a:link:active,
+:root:has(#layout-toggle:checked) a:link:focus,
+:root:has(#layout-toggle:checked) a:visited:hover,
+:root:has(#layout-toggle:checked) a:visited:active,
+:root:has(#layout-toggle:checked) a:visited:focus {
+    text-decoration: underline;
+    color: var(--link-dark) !important;
+}
+:root:has(#layout-toggle:checked) .button,
+:root:has(#layout-toggle:checked) .button_tall {
+    color: var(--link-light);
+    background: #003b43 !important;
+    border: var(--border) !important;
+    box-shadow: var(--shadow);
+}
+:root:has(#layout-toggle:checked) .button:hover,
+:root:has(#layout-toggle:checked) .button:active,
+:root:has(#layout-toggle:checked) .button:focus,
+:root:has(#layout-toggle:checked) .button_tall:hover,
+:root:has(#layout-toggle:checked) .button_tall:active,
+:root:has(#layout-toggle:checked) .button_tall:focus {
+    color: var(--link-light) !important;
+    background: #001417 !important;
+    border: var(--border) !important;
+}
+:root:has(#layout-toggle:checked) #mweor_tabs {
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    background: var(--white);
+}
+:root:has(#layout-toggle:checked) .tab_paging {
+    width: 100%;
+    margin: 0 0.5rem 0.5rem 0;
+}
+:root:has(#layout-toggle:checked) .ui-tabs {
+    padding: 0;
+}
+:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav li {
+    margin: 0;
+}
+:root:has(#layout-toggle:checked) .ui-state-default,
+:root:has(#layout-toggle:checked) .ui-widget-header .ui-state-default,
+:root:has(#layout-toggle:checked) .ui-widget-content .ui-state-default {
+    background: var(--ltteal);
+    border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
+    border: 0.1rem solid transparent;
+    border-bottom-width: 0;
+}
+:root:has(#layout-toggle:checked) .ui-widget-content {
+    border: none;
+    outline: var(--border);
+    border-radius: var(--border-radius-big);
+    color: var(--black) !important;
+    background: white;
+}
+:root:has(#layout-toggle:checked) .login_reward_box {
+    outline: var(--border);
+    border: 0 solid transparent;
+    background: var(--descbox-bg);
+    border-radius: var(--border-radius-big);
+}
+:root:has(#layout-toggle:checked) .login_rewards .active,
+:root:has(#layout-toggle:checked) .login_rewards .received {
+    background: var(--ltteal);
+}
+:root:has(#layout-toggle:checked) .login_rewards > div {
+    border: 0 solid transparent;
+}
+:root:has(#layout-toggle:checked) .ui-widget-header {
+    background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
+    border: 0 solid transparent;
+    color: transparent;
+}
+:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav {
+    padding: 0;
+}
+:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background: var(--descbox-bg) !important;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav li a {
+    background: transparent;
+}
+:root:has(#layout-toggle:checked) .text_medium {
+    display: initial !important;
+}
+:root:has(#layout-toggle:checked) #contentholder form center .tborder {
+    width: 100% !important;
+    background: var(--descbox-img);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-big);
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed;
+    border: var(--border) !important;
+}
+:root:has(#layout-toggle:checked) #modtools_holder {
+    left: 0.5rem !important;
+    right: unset !important;
+}
+:root:has(#layout-toggle:checked) #contentholder > .spacer:first-of-type + div,
+:root:has(#layout-toggle:checked) #contentholder > div:first-of-type {
+    left: unset !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75 0 0;
+}
+:root:has(#layout-toggle:checked)
+    #contentholder
+    > .spacer:first-of-type
+    + div
+    div
+    .trans {
+    display: initial !important;
+    filter: hue-rotate(305deg) brightness(0.4);
+}
+:root:has(#layout-toggle:checked) #eventtxt {
+    background: var(--white);
+}
+:root:has(#layout-toggle:checked) #eventtxt table tbody tr.theader {
+    background: var(--descbox-img);
+    background-color: white !important;
+}
+
+:root:has(#layout-toggle:checked) .masthead {
+    position: relative;
+    width: 40%;
+    line-height: 0;
+    height: 100%;
+    display: inline-block;
+}
+:root:has(#layout-toggle:checked) .masthead-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 11rem;
+    width: auto;
+    background: var(--descbox-bg);
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+    margin: 1.5rem 0 1.5rem 5rem;
+}
+:root:has(#layout-toggle:checked) .masthead-wrap::before {
+    width: 12.5rem;
+    height: 12.5rem;
+    background: var(--corner-gradient);
+    position: absolute;
+    content: "";
+    outline: none;
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+}
+:root:has(#layout-toggle:checked) .masthead-wrap:hover .masthead-links {
+    height: 7.25rem;
+}
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links {
+    display: flex;
+    height: calc(var(--slider-header-size) + 0.75rem);
+    flex-direction: column;
+    border-top: 0.075 solid #001b21;
+    background: #001a1e30;
+    margin: 0 0.75rem 0.5rem;
+    padding: 0.25rem 0.5rem 0.9rem;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s ease;
+}
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links a,
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links a:link,
+:root:has(#layout-toggle:checked) .masthead-wrap .masthead-links a:visited {
+    line-height: 1;
+    padding: 0.15rem 0;
+}
+:root:has(#layout-toggle:checked)
+    .masthead-wrap
+    .masthead-links
+    .slider__caption {
+    margin: 0.1rem 0 0.6rem;
+    line-height: 1;
+}
+:root:has(#layout-toggle:checked) .masthead-wrap .profile-picture {
+    width: 100%;
+    padding: 0.5rem;
+    outline: var(--border);
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+}
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 10%;
+    z-index: 1;
+    position: relative;
+}
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities a,
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities a:link,
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities a:visited,
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities span {
+    font-size: 2vw;
+    padding: 0 0.25rem 0.5rem 0.25rem;
+}
+:root:has(#layout-toggle:checked) .masthead-wrap .utilities img {
+    width: auto;
+    height: 2.1vw;
+    padding: 0 0.1rem 0.1rem 0.1rem;
+}
+:root:has(#layout-toggle:checked) .main-wrap {
+    width: 60%;
+    height: fit-content;
+    float: right;
+    position: relative;
+    overflow-y: auto;
+    background-color: var(--descbox-bg);
+}
+:root:has(#layout-toggle:checked) .main-wrap .header {
+    display: flex;
+    justify-content: flex-end;
+}
+:root:has(#layout-toggle:checked) .main-wrap .nav {
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+}
+:root:has(#layout-toggle:checked) .main-wrap .nav a,
+:root:has(#layout-toggle:checked) .main-wrap .nav a:link,
+:root:has(#layout-toggle:checked) .main-wrap .nav a:visited {
+    padding: 1vw 1.2vw;
+    font-family: var(--font-family-1);
+    font-weight: bold;
+    font-size: 2vw;
+}
+:root:has(#layout-toggle:checked) .main-wrap .cattery-name {
+    font-size: 5vw;
+    font-family: var(--font-family-1);
+    line-height: 5vw;
+    margin: 0.5rem 0;
+    font-weight: 900;
+}
+:root:has(#layout-toggle:checked) .main-wrap .cattery-name,
+:root:has(#layout-toggle:checked) .main-wrap p {
+    margin: 0 2.5rem;
+    padding: 0.5rem 0 0;
+}
+
+:root:has(#layout-toggle:checked) .main-wrap p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.1;
+}
+:root:has(#layout-toggle:checked) .main-wrap .intro {
+    background: #001a1e30;
+    text-align: center;
+    width: 70%;
+    margin: auto !important;
+    padding: 0.5rem !important;
+    border-bottom: 0.075rem solid #001b21;
+    font-style: italic;
+}
+:root:has(#layout-toggle:checked) .main-wrap .intro span {
+    font-size: 1rem;
+    font-weight: 100;
+}
+:root:has(#layout-toggle:checked) .main-wrap .sparring {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+:root:has(#layout-toggle:checked) .main-wrap .shoutout {
+    font-size: 1.6vw;
+    text-align: center;
+    padding-top: 0.5rem;
+    display: block;
+    font-style: italic;
+}
+:root:has(#layout-toggle:checked) .space_below {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
+}
+:root:has(#layout-toggle:checked) .item_box {
+    background: var(--corner-gradient);
+    background-color: var(--descbox-bg);
+    outline: var(--border);
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--shadow);
+    margin: 0 !important;
+    justify-self: center;
+}
+:root:has(#layout-toggle:checked) .mweor_icon {
+    background-image: url("https://files.catbox.moe/mecmuc.png") !important;
+}
+:root:has(#layout-toggle:checked) #mpopup {
+    background: var(--descbox-img);
+    color: transparent;
+    margin: auto;
+    left: unset !important;
+}
+:root:has(#layout-toggle:checked) #popupclose {
+    color: var(--link-light);
+}
+:root:has(#layout-toggle:checked) #mpopup .theader {
+    background: var(--ltteal);
+    color: var(--text-dark) !important;
+}
+:root:has(#layout-toggle:checked) #mpopup .theader td,
+:root:has(#layout-toggle:checked) #mpopup .theader .popup_title {
+    --settings-text-color: var(--white);
+    color: var(--white);
+}
+:root:has(#layout-toggle:checked) .trow2,
+:root:has(#layout-toggle:checked) .trow2 table,
+:root:has(#layout-toggle:checked) .trow2 tr,
+:root:has(#layout-toggle:checked) .trow2 td {
+    background: var(--ltteal);
+}
+:root:has(#layout-toggle:checked) input[type="text"],
+:root:has(#layout-toggle:checked) textarea {
+    font-family: var(--font-family-2) !important;
+}
+:root:has(#layout-toggle:checked) .credits-toggle {
+    bottom: -12.65rem;
+}
+
+:root:has(#layout-toggle:checked) .csshiny-signature {
+    text-shadow: var(--shadow);
+}
+
+:root:has(#layout-toggle:checked) .csshiny-credit input:checked + label {
+    background: var(--dkteal);
+    border: var(--border);
+}
+
+:root:has(#layout-toggle:not(:checked)) .masthead-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+:root:has(#layout-toggle:not(:checked)) .masthead-wrap img {
+    max-width: 12.5rem;
+}
+:root:has(#layout-toggle:not(:checked)) .masthead-wrap .utilities,
+:root:has(#layout-toggle:not(:checked)) .masthead-wrap .masthead-links {
+    display: none;
+}
+:root:has(#layout-toggle:not(:checked)) .main-wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+:root:has(#layout-toggle:not(:checked)) .main-wrap .header,
+:root:has(#layout-toggle:not(:checked)) .main-wrap .cattery-name {
+    display: none;
+}
+:root:has(#layout-toggle:not(:checked)) .main-wrap .slider {
+    height: 9rem;
+}
