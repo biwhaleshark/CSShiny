@@ -1,15 +1,15 @@
 /************************************************
-    FILE                :	    pride.css
-    LAYOUT              :	    Pride_Dev
-    LAST UPDATED        :	    2024/10/29
-    Created by #559. Powered by ◈CSShiny.
+	FILE:			styles.css
+	LAYOUT THEME:	PRIDE
+	CREATED FOR:	USERID/TOPICID
+	CREATED BY:		#559
 
 	DESC	:
 	main CSS file associated with theme/layout.
 	contains all CSS required for theme/layout,
 	including calls to component stylesheets.
 
-	this file called in the base/starter HTML file
+	this file called in the base HTML file
 	for theme/layout.
 
 	GOLIVE DELETE: called in HTML base file.
@@ -17,288 +17,244 @@
 	calls:
 	- core file
 	- css componment files for layout
-*************************************************
+************************************************/
 
-*************************************************
+/************************************************
 	Imported Styles
 ************************************************/
 @import url("https://biwhaleshark.github.io/CSShiny/core.css");
+
+/* Fonts */
+
 /************************************************
 	Variables
 ************************************************/
 :root {
+	--holder-width: 90%;
+	--descbox-width: 100%;
+	
+	--holder-margin: 3rem 0;
+	--descbox-margin: 1rem 0;
+	--descbox-padding: 1rem;
+	
+	/* core variables */
+	--settings-text-color: --button-text;
+	--settings-bg-color: --button-bg;
+
+    /*** user facing variables ***/
+    /* Base Colors */
     --color1: #ffa7a7;
-    --color1-transparent: #ffa7a794;
-    --color2: #c44d58;
-    --color3: #c7f464;
-    --color4: #4ecdc4;
+    --color2: #C44D58;
+    --color3: #C7F464;
+    --color4: #4ECDC4;
     --color5: #556270;
-    --white: white;
-    --black: black;
-    --holder-width: 100%;
-    --descbox-width: 75%;
-    --holder-margin: 3rem 0;
-    --descbox-margin: 1rem 0;
-    --descbox-padding: 1rem;
-    --settings-text-color: --button-text;
-    --settings-bg-color: --button-bg;
-    --credits-toggle-bg: var(--color2);
-    --text-font: "Arial", sans-serif;
+
+	--black: #000;
+	--white: #fff;
+
+    /* Fonts */
+    --text-font: 'Arial', sans-serif;
     --header-font: var(--text-font);
-    font-size: 20px;
+
+    /* Text Colors */
     --text-dark: var(--black);
     --text-light: var(--white;);
     --header-dark: var(--text-dark);
     --header-light: var(--text-light);
-    --descbox-bg-color: var(--color1-transparent);
+
+    /* Background Colors */
+    --descbox-bg-color: var(--white);
     --contentholder-bg-color: transparent;
-    --body-bg-color: var(--color5);
+    --body-bg-color: var(--black);
     --bg-image: null;
     --bg-repeat: null;
     --bg-size: null;
+
+    /* Link Colors */
     --link-dark: var(--text-dark);
     --link-dark-hover: var(--link-dark);
     --link-light: var(--text-light);
     --link-light-hover: var(--link-light);
+
+    /* Button Colors */
     --button-text: var(--black);
     --button-text-hover: var(--white);
     --button-bg: var(--white);
     --button-bg-hover: var(--black);
-    --border-radius-right: 0 999px 999px 0;
-    --border-radius-left: 999px 0 0 999px;
 }
 
 /************************************************
-	Dark & Light Mode
-************************************************/
-@container style(--mode-toggle: light) {
-    body {
-        --body-bg-color: white;
-    }
-}
-@container style(--mode-toggle: dark) {
-    body {
-        --body-bg-color: black;
-    }
-}
-/************************************************
-	Element Display Toggles
-************************************************/
-:root:has(#layout-toggle:checked) body .sf-menu,
-:root:has(#layout-toggle:checked) body #menu_holder {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #bodyi {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #topbanner {
-    display: none;
-    /* #gametime {
-        display: none;
-    } */
-}
-:root:has(#layout-toggle:checked) body #holder #topbanner #topbanneri {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #topbanner #layoutuinfo {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #topbanner #addbookmark {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #content #contentholder {
-    /* .titlebar {
-        display: none;
-    } */
-}
-:root:has(#layout-toggle:checked) body #holder #content #contentholder .spacer,
-:root:has(#layout-toggle:checked) body #holder #content #contentholder .clearer {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #content #contentholder .titlebar #titleimg {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #content #contentholder #cattery_infobox .plain_table {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #content #contentholder #cattery_descbox > i:last-of-type {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #content #contentholder > .add_small_margins {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #bottombanner {
-    display: none;
-}
-:root:has(#layout-toggle:checked) body #holder #footer {
-    display: none;
-}
-
-.csshiny-header {
-    display: none;
-}
-
-:root:has(#layout-toggle:checked) .csshiny-header {
-    display: flex !important;
-}
-
-/************************************************
-	Resets
-************************************************/
-:root:has(#layout-toggle:checked) body {
-    background-color: var(--body-bg-color) !important;
-    background: var(--bg-image);
-    background-repeat: var(--bg-repeat);
-    background-size: var(--bg-size);
-    font: 0.8rem var(--text-font);
-}
-:root:has(#layout-toggle:checked) body * {
-    font: inherit;
-    line-height: 1.1;
-}
-:root:has(#layout-toggle:checked) #holder {
-    background: transparent;
-    position: relative;
-    width: 100%;
-}
-:root:has(#layout-toggle:checked) body,
-:root:has(#layout-toggle:checked) #holder {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-:root:has(#layout-toggle:checked) #content {
-    background: var(--contentholder-bg-color);
-    padding: 0;
-    margin: 0;
-    width: var(--holder-width);
-    left: 0;
-}
-:root:has(#layout-toggle:checked) #contentholder {
-    width: 100%;
-    margin: 0;
-    position: unset;
-    margin: var(--holder-margin);
-}
-:root:has(#layout-toggle:checked) #contentholder .titlebar:nth-of-type(2) {
-    height: fit-content;
-}
-:root:has(#layout-toggle:checked) #cattery_descbox {
-    width: var(--descbox-width);
-    float: left;
-    right: unset;
-    padding: var(--descbox-padding);
-    margin: var(--descbox-margin);
-    background: var(--descbox-bg-color);
-    border-radius: var(--border-radius-right);
-    position: unset;
-    padding-right: 150px;
-    /* WIP */
-}
-:root:has(#layout-toggle:checked) #cattery_infobox {
-    background: transparent;
-    padding: 0;
-    float: right;
-    left: 0;
-}
-:root:has(#layout-toggle:checked) .titlebar {
-    width: 100%;
-    margin: 0;
-}
-:root:has(#layout-toggle:checked) #titletxt {
-    width: fit-content;
-    height: auto;
-    top: 0;
-    left: 0;
-    padding: var(--descbox-padding);
-    margin: var(--descbox-margin);
-}
-:root:has(#layout-toggle:checked) .add_small_margins {
-    margin: 0;
-}
-:root:has(#layout-toggle:checked) a,
-:root:has(#layout-toggle:checked) a:link,
-:root:has(#layout-toggle:checked) a:visited {
-    color: var(--link-dark-hover);
-}
-:root:has(#layout-toggle:checked) a:hover, :root:has(#layout-toggle:checked) a:active, :root:has(#layout-toggle:checked) a:focus,
-:root:has(#layout-toggle:checked) a:link:hover,
-:root:has(#layout-toggle:checked) a:link:active,
-:root:has(#layout-toggle:checked) a:link:focus,
-:root:has(#layout-toggle:checked) a:visited:hover,
-:root:has(#layout-toggle:checked) a:visited:active,
-:root:has(#layout-toggle:checked) a:visited:focus {
-    color: var(--link-dark-hover);
-}
-:root:has(#layout-toggle:checked) .ui-tabs-nav {
-    display: flex !important;
-    flex-wrap: wrap !important;
-}
-:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav li {
-    height: 35px;
-    flex: 0 1 10%;
-    padding: 6px 8px 6px 8px;
-    white-space: break-spaces;
-    float: none;
-}
-:root:has(#layout-toggle:checked) .ui-tabs .ui-tabs-nav li a {
-    height: 35px;
-    width: 100%;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-:root:has(#layout-toggle:checked) .ui-widget-header {
-    background: transparent;
-    display: flex;
-    width: 100%;
-    padding: 0;
-}
-:root:has(#layout-toggle:checked) .ui-state-default,
-:root:has(#layout-toggle:checked) .ui-widget-header .ui-state-default,
-:root:has(#layout-toggle:checked) .ui-widget-content .ui-state-default,
-:root:has(#layout-toggle:checked) .ui-widget-content {
-    background: transparent;
-}
-:root:has(#layout-toggle:checked) .button,
-:root:has(#layout-toggle:checked) .button_tall {
-    color: var(--button-text);
-    background: va(--button-bg);
-    background-color: unset !important;
-}
-:root:has(#layout-toggle:checked) .button:hover,
-:root:has(#layout-toggle:checked) .button_tall:hover {
-    color: var(--button-text-hover);
-    background: va(--button-bg-hover);
-    background-color: unset !important;
-}
-
-/************************************************
-	Styles
+	Element display
 ************************************************/
 :root:has(#layout-toggle:checked) {
-    /* Simplified Nav */
-}
-:root:has(#layout-toggle:checked) .csshiny-header {
-    display: flex !important;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-block: 10px;
-    /* WIP change to REM */
-}
-:root:has(#layout-toggle:checked) .csshiny-header nav.csshiny-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-}
-:root:has(#layout-toggle:checked) #gametime {
-    position: absolute;
-    top: 0;
-    right: 0;
+	body {
+		.sf-menu {}
+		#bodyi { display: none; }
+		#holder {
+			#topbanner {
+				height: fit-content !important;
+
+				#topbanneri { display: none !important; }
+				#layoutuinfo {}
+				#gametime {}
+				#addbookmark { display: none !important; }
+			}
+
+			#content #contentholder {
+				.spacer, .clearer { display: none !important; }
+				.titlebar {
+					#titleimg { display: none !important; }
+					#titletxt {}
+				}
+				.add_small_margins {
+					#reportplayer {}
+					span.tip {}
+					.good_label:last-of-type {}
+				}
+
+				#cattery_infobox {
+					display: none !important;
+					.add_small_margins {}
+					.centered {}
+					.plain_table {}
+					#cattery_menu {}
+				}
+
+				#cattery_descbox {
+					& > i:last-of-type { display: none !important; }
+				}
+
+				& > form .add_margins {}
+				.space_below {}
+			}
+
+			#bottombanner { display: none !important; }
+			#footer {
+				display: none !important; 
+				.social_media {}
+
+			}
+		}
+	}
+
+	/************************************************
+		Resets
+	************************************************/
+
+	body {
+		background-color: var(--body-bg-color) !important;
+		background: var(--bg-image);
+		background-repeat: var(--bg-repeat);
+		background-size: var(--bg-size);
+	}
+
+	#holder {
+		background: transparent;
+		position: relative;
+		width: 100%;
+	}
+
+	body,
+	#holder {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#content {
+		background: var(--contentholder-bg-color);
+		padding: 0;
+		margin: var(--holder-margin);
+		width: var(--holder-width);
+		left: 0;
+	}
+
+	#contentholder {
+		width: 100%;
+		margin: 0;
+		left: 0;
+	}
+
+	#cattery_descbox {
+		width: var(--descbox-width);
+		float: none;
+		right: unset;
+		padding: var(--descbox-padding);
+		margin: var(--descbox-margin);
+		background: var(--descbox-bg-color);
+	}
+
+	#cattery_infobox {
+		background: transparent;
+		padding: 0;
+		float: none;
+		left: 0;
+	}
+
+	.titlebar {
+		width: 100%;
+		margin: 0;
+	}
+
+	#titletxt {
+		width: 100%;
+		height: auto;
+		top: 0;
+		left: 0;
+	}
+
+	.add_small_margins {
+		margin: 0;
+	}
+
+	/* Link Defaults */
+	a,
+	a:link,
+	a:visited {
+		color: var(--link-dark-hover);
+	}
+
+	/* Mweor Tabs */
+	.ui-widget-header {
+		background: transparent;
+	}
+
+	.ui-state-default,
+	.ui-widget-header .ui-state-default,
+	.ui-widget-content .ui-state-default {
+		background: transparent;
+	}
+
+	.button,
+	.button_tall {
+		color: var(--button-text);
+		background: va(--button-bg);
+		background-color: unset !important;
+	}
+
+	.button:hover,
+	.button_tall:hover {
+		color: var(--button-text-hover);
+		background: va(--button-bg-hover);
+		background-color: unset !important;
+	}
+
+	/* Cattery Setting Box */
+	#contentholder form center .tborder {
+		width: 100% !important;
+	}
+
+	/* Modbox Tools */
+	#modtools_holder {
+		right: 0;
+		top: 0;
+		left: auto !important;
+		position: absolute !important;
+	}
+
+	/************************************************
+		Styles
+	************************************************/
+
 }
