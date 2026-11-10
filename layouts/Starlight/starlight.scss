@@ -1,0 +1,573 @@
+/************************************************
+	FILE:	Starlight.css
+	THEME:	Starlight
+	FOR:	#559
+	BY:	#559
+	DATE:	2024/02/08
+************************************************/
+
+// Core Imports
+@import "/core/core";
+@import "/core/components/carousel_slider";
+@import "/core/components/mweor_box";
+
+// Font Imports
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+:root:has(#layout-toggle:checked) {
+    --dkteal: #003b43;
+    --ltteal: #cfd3d4;
+    --white: #fff;
+    --font-family-1: "Poiret One", cursive;
+    --font-family-2: "Arial", sans-serif;
+    --text-dark: var(--black);
+    --text-light: var(--white);
+    --link-dark: var(--text-dark);
+    --link-light: var(--text-light);
+    --header-dark: var(--text-dark);
+    --header-light: var(--text-light);
+    font-size: 16px;
+    //
+    --html-background: var(--dkteal);
+    --bg-image: linear-gradient(
+        120deg,
+        transparent 60%,
+        #0010184d 60%,
+        #001018 75%,
+        #441416 75%,
+        #441416d1 80%,
+        transparent 80%
+    );
+    --contentholder-bg: transparent;
+    --descbox-bg: var(--white);
+    --descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
+    --shadow: 5px 5px 8px #001e27;
+    --border: 1px solid #ffffff75;
+    --corner-gradient: linear-gradient(135deg, #00262f 0%, #00262f 8%, #681312 8%, #681312 12%, transparent 12%);
+    --border-radius-small: 10px;
+    --border-radius-big: 15px;
+    --slider-height: 190px;
+    --slider-header-size: 1.4rem;
+    --holder-width: 90%;
+    --descbox-width: 100%;
+    --holder-margin: null;
+    --descbox-margin: 2rem 0 2rem 0;
+    --descbox-padding: 1rem;
+    --image-display: none;
+    --bg-image-display: none;
+    --default-content: none;
+}
+
+:root:has(#layout-toggle:checked) {
+    .titlebar,
+    #titletxt,
+    .add_small_margins,
+    #reportplayer,
+    #cattery_infobox,
+    #cattery_menu,
+    #cattery_descbox i:last-child,
+    form .add_marigns,
+    .breed_count,
+    .centered {
+        display: none;
+    }
+
+    body,
+    #holder {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    body {
+        &::before {
+            position: fixed;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: var(--bg-image) !important;
+            background-repeat: none;
+            background-size: none;
+            background-attachment: fixed;
+            font-size: 1rem !important;
+        }
+
+        #holder {
+            background: transparent;
+            position: relative;
+            width: 100%;
+
+            #content {
+                background: var(--contentholder-bg);
+                padding: 0;
+                margin: var(--holder-margin);
+                width: var(--holder-width);
+                left: 0;
+                color: unset !important;
+
+                #contentholder {
+                    width: 100%;
+                    margin: 0;
+                    left: 0;
+
+                    #cattery_descbox {
+                        width: var(--descbox-width);
+                        height: fit-content !important;
+                        float: none;
+                        right: unset;
+                        padding: var(--descbox-padding);
+                        margin: var(--descbox-margin);
+                        background-color: var(--descbox-bg) !important;
+                        box-shadow: var(--shadow);
+                        border-radius: var(--border-radius-big);
+                        outline: var(--border);
+                        background: var(--descbox-img);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        background-attachment: fixed;
+                    }
+
+                    #cattery_infobox {
+                        background: transparent;
+                        padding: 0;
+                        float: none;
+                        left: 0;
+                    }
+
+                    form center .tborder {
+                        width: 100% !important;
+                        background: var(--descbox-img);
+                        box-shadow: var(--shadow);
+                        border-radius: var(--border-radius-big);
+                        background-size: cover !important;
+                        background-position: center !important;
+                        background-attachment: fixed;
+                        border: var(--border) !important;
+                    }
+
+                    & > .spacer:first-of-type + div,
+                    & > div:first-of-type {
+                        left: unset !important;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 15px 0 0;
+                    }
+
+                    & > .spacer:first-of-type + div div .trans {
+                        display: initial !important;
+                        filter: hue-rotate(305deg) brightness(0.4);
+                    }
+                }
+            }
+        }
+    }
+
+    .titlebar {
+        width: 100%;
+        margin: 0;
+    }
+
+    #titletxt {
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+
+    .add_small_margins {
+        margin: 0;
+    }
+
+    a,
+    a:link,
+    a:visited {
+        color: var(--link-dark);
+        font-weight: bold;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: underline;
+            color: var(--link-dark) !important;
+        }
+    }
+
+    .button,
+    .button_tall {
+        color: var(--link-light);
+        background: #003b43 !important;
+        border: var(--border) !important;
+        box-shadow: var(--shadow);
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: var(--link-light) !important;
+            background: #001417 !important;
+            border: var(--border) !important;
+        }
+    }
+
+    #mweor_tabs {
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        background: var(--white);
+    }
+
+    .tab_paging {
+        width: 100%;
+        margin: 0 10px 10px 0px;
+    }
+
+    .ui-tabs {
+        padding: 0;
+        .ui-tabs-nav li {
+            margin: 0px;
+        }
+    }
+
+    .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-widget-content .ui-state-default {
+        background: var(--ltteal);
+        border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
+        border: 2px solid transparent;
+        border-bottom-width: 0px;
+    }
+
+    .ui-widget-content {
+        border: none;
+        outline: var(--border);
+        border-radius: var(--border-radius-big);
+        color: var(--black) !important;
+        background: white;
+    }
+
+    .login_reward_box {
+        outline: var(--border);
+        border: 0px solid transparent;
+        background: var(--descbox-bg);
+        border-radius: var(--border-radius-big);
+    }
+
+    .login_rewards .active,
+    .login_rewards .received {
+        background: var(--ltteal);
+    }
+
+    .login_rewards > div {
+        border: 0px solid transparent;
+    }
+
+    .ui-widget-header {
+        background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png") !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: fixed !important;
+        border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
+        border: 0px solid transparent;
+        color: transparent;
+    }
+
+    .ui-tabs .ui-tabs-nav {
+        padding: 0;
+
+        li.ui-tabs-active {
+            background: var(--descbox-bg) !important;
+            border-radius: 14px 14px 0 0;
+        }
+
+        li a {
+            background: transparent;
+        }
+    }
+
+    .text_medium {
+        display: initial !important;
+    }
+
+    #modtools_holder {
+        left: 10px !important;
+        right: unset !important;
+    }
+
+    #eventtxt {
+        background: var(--white);
+    }
+
+    #eventtxt table tbody tr.theader {
+        background: var(--descbox-img);
+        background-color: white !important;
+    }
+
+    .masthead {
+        position: relative;
+        width: 40%;
+        line-height: 0;
+        height: 100%;
+        display: inline-block;
+    }
+
+    .masthead-wrap {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 220px;
+        width: auto;
+        background: var(--descbox-bg);
+        border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+        margin: 30px 0 30px 100px;
+
+        :hover .masthead-links {
+            height: 145px;
+        }
+
+        &::before {
+            width: 250px;
+            height: 250px;
+            background: var(--corner-gradient);
+            position: absolute;
+            content: "";
+            outline: none;
+            border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+        }
+
+        .masthead-links {
+            display: flex;
+            height: calc(var(--slider-header-size) + 15px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top: 1.5px solid #001b21;
+            background: #001a1e30;
+            margin: 0 15px 10px;
+            padding: 5px 10px 18px;
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+            transition: 0.8s ease;
+
+            a,
+            a:link,
+            a:visited {
+                line-height: 1;
+                padding: 3px 0;
+            }
+
+            .slider__caption {
+                margin: 2px 0 12px;
+                line-height: 1;
+            }
+        }
+
+        .profile-picture {
+            width: 100%;
+            padding: 10px;
+            outline: var(--border);
+            border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+        }
+
+        .utilities {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0 10%;
+            z-index: 1;
+            position: relative;
+
+            a,
+            a:link,
+            a:visited,
+            span {
+                font-size: 2vw;
+                padding: 0px 5px 10px 5px;
+            }
+
+            img {
+                width: auto;
+                height: 2.1vw;
+                padding: 0px 2px 2px 2px;
+            }
+        }
+    }
+
+    .main-wrap {
+        width: 60%;
+        height: fit-content;
+        float: right;
+        position: relative;
+        overflow-y: auto;
+        background-color: var(--descbox-bg);
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav {
+            width: fit-content;
+            display: flex;
+            justify-content: space-evenly;
+
+            a,
+            a:link,
+            a:visited {
+                padding: 1vw 1.2vw;
+                font-family: var(--font-family-1);
+                font-weight: bold;
+                font-size: 2vw;
+            }
+        }
+
+        .cattery-name {
+            font-size: 5vw;
+            font-family: var(--font-family-1);
+            line-height: 5vw;
+            margin: 0.5rem 0;
+            font-weight: 900;
+        }
+
+        .cattery-name,
+        p {
+            margin: 0 50px;
+            padding: 10px 0 0;
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .intro {
+            background: #001a1e30;
+            text-align: center;
+            width: 70%;
+            margin: auto !important;
+            padding: 10px !important;
+            border-bottom: 1.5px solid #001b21;
+            font-style: italic;
+
+            span {
+                font-size: 1rem;
+                font-weight: 100;
+            }
+        }
+
+        .sparring {
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .shoutout {
+            font-size: 1.6vw;
+            text-align: center;
+            padding-top: 10px;
+            display: block;
+            font-style: italic;
+        }
+    }
+
+    .space_below {
+        display: grid;
+        gap: 1.2rem;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    }
+
+    .item_box {
+        background: var(--corner-gradient);
+        background-color: var(--descbox-bg);
+        outline: var(--border);
+        border-radius: var(--border-radius-small);
+        box-shadow: var(--shadow);
+        margin: 0px !important;
+        justify-self: center;
+    }
+
+    .mweor_icon {
+        background-image: url("https://files.catbox.moe/mecmuc.png") !important;
+    }
+
+    #mpopup {
+        background: var(--descbox-img);
+        color: transparent;
+        margin: auto;
+        left: unset !important;
+
+        .theader {
+            background: var(--ltteal);
+            color: var(--text-dark) !important;
+
+            td,
+            .popup_title {
+                --settings-text-color: var(--white);
+                color: var(--white);
+            }
+        }
+    }
+
+    #popupclose {
+        color: var(--link-light);
+    }
+
+    .trow2,
+    .trow2 table,
+    .trow2 tr,
+    .trow2 td {
+        background: var(--ltteal);
+    }
+
+    input[type="text"],
+    textarea {
+        font-family: var(--font-family-2) !important;
+    }
+
+    .credits-toggle {
+        bottom: -253px;
+    }
+
+    .csshiny-signature {
+        text-shadow: var(--shadow);
+    }
+
+    .csshiny-credit input:checked + label {
+        background: var(--dkteal);
+        border: var(--border);
+    }
+}
+
+:root:has(#layout-toggle:not(:checked)) {
+    .masthead-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            max-width: 250px;
+        }
+
+        .utilities,
+        .masthead-links {
+            display: none;
+        }
+    }
+
+    .main-wrap {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .header,
+        .cattery-name {
+            display: none;
+        }
+
+        .slider {
+            height: 180px;
+        }
+    }
+}
