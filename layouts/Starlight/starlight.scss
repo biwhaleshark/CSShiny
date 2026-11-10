@@ -40,7 +40,7 @@
     );
     --contentholder-bg: transparent;
     --descbox-bg: var(--white);
-    --descbox-img: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_vertical.jpg");
+    --descbox-img: url("https://biwhaleshark.github.io/CSShiny/layouts/Starlight/images/bg_vertical.jpg");
     --shadow: 5px 5px 8px #001e27;
     --border: 1px solid #ffffff75;
     --corner-gradient: linear-gradient(135deg, #00262f 0%, #00262f 8%, #681312 8%, #681312 12%, transparent 12%);
@@ -52,7 +52,7 @@
     --descbox-width: 100%;
     --holder-margin: null;
     --descbox-margin: 2rem 0 2rem 0;
-    --descbox-padding: 1rem;
+    --descbox-padding: 0;
     --image-display: none;
     --bg-image-display: none;
     --default-content: none;
@@ -264,7 +264,7 @@
     }
 
     .ui-widget-header {
-        background: url("https://raw.githubusercontent.com/biwhaleshark/CSShiny/main/Personal/Starlight/images/bg_horizontal.png") !important;
+        background: url("https://biwhaleshark.github.io/CSShiny/layouts/Starlight/images/bg_horizontal.png") !important;
         background-size: cover !important;
         background-position: center !important;
         background-attachment: fixed !important;
