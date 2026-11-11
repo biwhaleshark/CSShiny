@@ -1,7 +1,7 @@
 /************************************************
 	FILE	        :	    main.scss
 	LAYOUT	        :	    STARTER
-    LAST UPDATED    :	    2024/10/12
+    LAST UPDATED    :	    2026/11/10
     Created by #559.    Powered by CSShiny.
 
 	DESC	:
@@ -22,8 +22,8 @@
 *************************************************
 	Imported Styles
 ************************************************/
-@import url("/core/core.scss");
-@import url("/core/core.scss");
+@import "/scss/core";
+//@import url("https://biwhaleshark.github.io/CSShiny/core/core.css");
 
 /************************************************
 	Variables
@@ -39,7 +39,7 @@
     --color1: #ffa7a7;
     --color2: #C44D58;
     --color3: #C7F464;
-    --color4: #4ECDC4;
+    --color4: #00f5e4;
     --color5: #556270;
     --white: white;
     --black: black;

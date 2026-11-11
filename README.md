@@ -23,7 +23,7 @@ Commands
 > ctrl + c 
 > ends watch script
 
-https://petrapixel.neocities.org/coding/git-tutorial#additional-commands
+https://petrapixel.neocities.org/coding/git-tutorial
 
 
 # Framework Structure

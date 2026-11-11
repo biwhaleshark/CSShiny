@@ -1,15 +1,16 @@
 /************************************************
-	FILE:	Starlight.css
-	THEME:	Starlight
-	FOR:	#559
-	BY:	#559
-	DATE:	2024/02/08
+	THEME:	        Starlight
+    CREATED BY:     #559
+	CREATED FOR:    #559
 ************************************************/
 
 // Core Imports
-@import "/core/core";
-@import "/core/components/carousel_slider";
-@import "/core/components/mweor_box";
+@import "../../scss/core";
+//@import url("https://biwhaleshark.github.io/CSShiny/core/core.css");
+@import "../../scss/blocks/slider";
+//@import url("https://biwhaleshark.github.io/CSShiny/core/blocks/slider.css");
+@import "../../scss/components/mweor_box";
+//@import url("https://biwhaleshark.github.io/CSShiny/core/components/mweor_box.css");
 
 // Font Imports
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
@@ -341,7 +342,7 @@
             height: calc(var(--slider-header-size) + 15px);
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             border-top: 1.5px solid #001b21;
             background: #001a1e30;
             margin: 0 15px 10px;
@@ -350,6 +351,12 @@
             position: relative;
             overflow: hidden;
             transition: 0.8s ease;
+
+            &:hover,
+        &:active,
+        &:focus {
+            height: fit-content;
+        }
 
             a,
             a:link,
