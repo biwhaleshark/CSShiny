@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<HTML>
 
-<head>
+<HEAD>
 
-    <title>PRIDE</title>
-    <meta name="viewport" content="width=800, initial-scale=1">
+    <TITLE>OLD BLUE</TITLE>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description"
         content="A pseudo realistic pet raising simulation with a healthy dash of fantasy, Mweor is a game which allows you to raise, care for, spar with, and breed mweors, cat-like felines which come in various species, all for free!" />
@@ -12,236 +11,339 @@
         content="cats, cat game, cat sim, virtual cat, mweor, pet sim, virtual pet, pet game, custom cat" />
     <script type="text/javascript" src="https://mweor.com/js/utilities.js?5"></script>
     <link rel="stylesheet" href="https://mweor.com/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://mweor.com/css/mweor.css?5" />
     <link rel="stylesheet" href="https://mweor.com/css/mweor_all.css?31" />
-    <link rel="stylesheet" href="https://mweor.com/css/mweor_pride.css?9" />
-
 
     <script type="text/javascript" src="https://mweor.com/js/jquery-ui-lightbox.js"></script>
     <script type="text/javascript" src="https://mweor.com/js/cattery.js?5"></script>
     <script type="text/javascript" src="https://mweor.com/js/compose.js?1"></script>
-</head>
+</HEAD>
 
-<body>
+<BODY>
     <div class="popup invisible" id="bookmark">
         <div class="popup_title">Add Bookmark</div><a id="bookmarkclose">[x]</a><br>Label:
         <input type="text" name="bookmarkname" id="bookmarkname" maxlength="100" size="30" />
         <input type="hidden" name="bookmarkurl" id="bookmarkurl" value="/cattery.php" />
         <input type="submit" name="bookmarkbutton" id="bookmarkbutton" class="button" value="Add" />
     </div>
-    <div id="menu_holder">
-        <img src="https://mweor.com/images/layout_pride/menu.png" id="menu_image" class="trans" />
+    <ul class="sf-menu">
+        <li class="current">
+            <a href="/cattery.php">Cattery</a>
 
-        <div id="cattery_shadow" class="menu_shadow"></div>
-        <div id="cattery_holder" class="menu_link_holder">
-            <a id="cattery_link" class="menu_link_spacer" href="https://mweor.com/cattery.php" title="cattery"><img
-                    src="https://mweor.com/images/blank.gif" id="cattery_link_spacer" /></a>
+            <ul>
+                <li class="current">
+                    <a href="/inventory.php">Inventory</a>
+                </li>
+                <li>
+                    <a href="/yourshop.php">Your Shop</a>
+                </li>
+                <li>
+                    <a href="/mweor_items.php">Dressing Room</a>
+                </li>
+                <li>
+                    <a href="/mweor_bids.php">Mweor Bids</a>
+                </li>
+                <li>
+                    <a href="/breed.php">Breed Mweors</a>
+                </li>
+                <li>
+                    <a href="/transfers.php">Transfers</a>
+                </li>
+                <li>
+                    <a href="/messages.php">Your Messages</a>
+                </li>
+                <li>
+                    <a href="/goals">Goals & Tasks</a>
+                </li>
+                <li>
+                    <a href="/history.php">Account History</a>
+                </li>
+                <li>
+                    <a href="/cattery_upgrades.php">Cattery Upgrades</a>
+                </li>
+                <li>
+                    <a href="/cattery_order.php">Mweor Order</a>
+                </li>
+                <li>
+                    <a href="/itemlocator.php">Item Locator</a>
+                </li>
+                <li>
+                    <a href="/new.php/craftshop">Craftshop</a>
+                </li>
+                <li>
+                    <a href="/changepassword.php">Change Password</a>
+                </li>
+                <li>
+                    <a href="/mp.php">MP Center</a>
+                </li>
+            </ul>
 
-            <div class="menu_dropdown" id="cattery_dropdown">
-                <div class="menu_dropdown_inner" id="cattery_dropdown_inner">
-                    <div class="menu_link_container">
-                        <div class="menu_dropdown_floater">
-                            <div class="menu_subtitle">Commerce</div>
-                            <a href="https://mweor.com/inventory.php">Inventory</a>
-                            <a href="https://mweor.com/yourshop.php">Your Shop</a>
-                            <a href="https://mweor.com/transfers.php">Transfers</a>
-                            <a href="https://mweor.com/mp.php">MP Center</a>
-                            <a href="https://mweor.com/itemlocator.php">Item Locator</a>
-                            <a href="https://mweor.com/new.php/craftshop">Craftshop</a>
-                        </div>
-                        <div id="cattery_divider" class="menu_dropdown_divider"></div>
-                        <div class="menu_dropdown_floater">
-                            <div class="menu_subtitle">Mweors</div>
-                            <a href="https://mweor.com/breed.php">Breeding Center</a>
-                            <a href="https://mweor.com/mweor_items.php">Dressing Room</a>
-                            <a href="https://mweor.com/custom_designs.php">Custom Designs</a>
-                            <a href="https://mweor.com/createcustom.php">Custom Generator</a>
-                            <a href="https://mweor.com/cattery_order.php">Mweor Order</a>
-                            <a href="https://mweor.com/mweor_bids.php">Sale Bids</a>
-                        </div>
-                        <div id="cattery_divider" class="menu_dropdown_divider"></div>
-                        <div class="menu_dropdown_floater">
-                            <div class="menu_subtitle">Personal</div>
-                            <a href="https://mweor.com/messages.php">Messages</a>
-                            <a href="https://mweor.com/goals">Goals & Tasks</a>
-                            <a href="https://mweor.com/history.php">Account History</a>
-                            <a href="https://mweor.com/cattery_upgrades.php">Cattery Upgrades</a>
-                            <a href="https://mweor.com/changepassword.php">Change Password</a>
-                            <a href="https://mweor.com/resetcattery.php">Reset Cattery</a>
-                        </div>
-                    </div>
-                    <img src="https://mweor.com/images/layout_pride/menu_cattery.png" class="menu_dropdown_bkg trans" />
-                </div>
-            </div>
-        </div>
+        </li>
+        <li>
+            <a href="/explore.php">Explore</a>
+            <ul>
+                <li><a href="/new.php/preserve">Mweor Preserve</a></li>
+                <li><a href="/new.php/thunder_town">Thunder Town</a></li>
+                <li><a href="/new.php/arbor_village">Arbor Village</a></li>
+                <li><a href="/avalanche">Avalanche Tunnel</a></li>
+                <li><a href="/grotto">Glacier Grotto</a></li>
+                <li>
+                    <a href="/new.php/island">Magma Isles</a>
+                </li>
+                <li>
+                    <a href="/scores.php">Score Boards</a>
+                </li>
+                <li>
+                    <a href="/createcustom.php">Custom Generator</a>
+                </li>
+                <li>
+                    <a href="/custom_designs.php">Custom Designs</a>
+                <li>
+                    <a href="/dumpster.php">Dumpster</a>
+                </li>
+                <li>
+                    <a href="/shops.php?id=1">Shops</a>
 
-        <div id="explore_shadow" class="menu_shadow"></div>
-        <div id="explore_holder" class="menu_link_holder">
-            <a id="explore_link" class="menu_link_spacer" href="https://mweor.com/explore.php" title="explore"><img
-                    src="https://mweor.com/images/blank.gif" id="explore_link_spacer" /></a>
+                    <ul>
+                        <li class="current">
+                            <a href="/shops.php?id=1">Toy Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=3">Accessory Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=4">Jewelry Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=5">Background Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=7">This and That Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=17">Foreground Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=8">Pet Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=9">Magical Rarities Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=2">Statue Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=16">Seasonal Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=6">Suspicious Snack Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=11">Fame Shop</a>
+                        </li>
+                        <li>
+                            <a href="/shops.php?id=15">Pride Item Shop</a>
+                        </li>
+                        <li>
+                            <a href="/usershop_list.php">User Shops</a>
+                        </li>
+                    </ul>
 
-            <div class="menu_dropdown" id="explore_dropdown">
-                <div class="menu_dropdown_inner" id="explore_dropdown_inner">
-                    <div class="menu_dropdown_floater">
-                        <div class="menu_subtitle">Travel</div>
-                        <a href="https://mweor.com/new.php/preserve">Mweor Preserve</a>
-                        <a href="https://mweor.com/new.php/thunder_town">Thunder Town</a>
-                        <a href="https://mweor.com/new.php/arbor_village">Arbor Village</a><a href="https://mweor.com/avalanche">Avalanche Tunnel</a> <a
-                            href="https://mweor.com/grotto">Glacier Grotto</a> <a href="https://mweor.com/new.php/island">Magma Isles</a>
-                        <a href="https://mweor.com/scores.php">Score Boards</a>
+                </li>
+                <li>
+                    <a href="/bank.php">Bank</a>
+                </li>
+                <li>
+                    <a href="/trades.php">Trading Center</a>
+                </li>
+                <li>
+                    <a href="/games_pawdraw.php">Games</a>
 
-                        <div class="menu_subtitle menu_subtitle_spacer">Games</div>
-                        <a href="https://mweor.com/games_number.php">Guess the Number</a>
-                        <a href="https://mweor.com/games_find.php">Item Hunter</a>
-                        <a href="https://mweor.com/games_mcd.php">Mouse-Cat-Dog</a>
-                        <a href="https://mweor.com/games_pawdraw.php">Paw Draw</a>
-                        <a href="https://mweor.com/socialite" title="The Socialite">The Socialite</a>
+                    <ul>
+                        <li class="current">
+                            <a href="/games_number.php">Guess the Number</a>
+                        </li>
+                        <li>
+                            <a href="/games_mcd.php">Mouse-Cat-Dog</a>
+                        </li>
+                        <li>
+                            <a href="/games_pawdraw.php">Paw Draw</a>
+                        </li>
+                        <li>
+                            <a href="/games_find.php">Item Hunter</a>
+                        </li>
+                        <li>
+                            <a href="/socialite" title="The Socialite">The Socialite</a>
+                        </li>
+                    </ul>
+                <li>
+                    <a href="/mweorsearch.php">Searches</a>
 
-                        <div class="menu_subtitle menu_subtitle_spacer">Search</div>
-                        <a href="https://mweor.com/mweorsearch.php">Mweor Search</a>
-                        <a href="https://mweor.com/shopsearch.php">Shop Search</a>
-                        <a href="https://mweor.com/searchtopics.php">Topic Search</a>
-                        <a href="https://mweor.com/usersearch.php">User Search</a>
-                        <a href="https://mweor.com/trades.php?action=search">Trade Search</a>
-                    </div>
-                    <div id="explore_divider" class="menu_dropdown_divider"></div>
-                    <div class="menu_dropdown_floater">
-                        <div class="menu_subtitle">Market</div>
-                        <a href="https://mweor.com/bank.php">Bank</a>
-                        <a href="https://mweor.com/shops.php?id=3">Accessory Shop</a>
-                        <a href="https://mweor.com/shops.php?id=5">Background Shop</a>
-                        <a href="https://mweor.com/dumpster.php">Dumpster</a>
-                        <a href="https://mweor.com/shops.php?id=11">Fame Shop</a>
-                        <a href="https://mweor.com/shops.php?id=17">Foreground Shop</a>
-                        <a href="https://mweor.com/shops.php?id=4">Jewelry Shop</a>
-                        <a href="https://mweor.com/shops.php?id=9">Magical Rarities</a>
-                        <a href="https://mweor.com/shops.php?id=8">Pet Shop</a>
-                        <a href="https://mweor.com/shops.php?id=15">Pride Item Shop</a>
-                        <a href="https://mweor.com/shops.php?id=16">Seasonal Shop</a>
-                        <a href="https://mweor.com/shops.php?id=2">Statue Shop</a>
-                        <a href="https://mweor.com/shops.php?id=6">Suspicious Snacks</a>
-                        <a href="https://mweor.com/shops.php?id=7">This and That Shop</a>
-                        <a href="https://mweor.com/shops.php?id=1">Toy Shop</a>
-                        <a href="https://mweor.com/usershop_list.php">User Shops</a>
-                        <a href="https://mweor.com/trades.php">Trading Center</a>
+                    <ul>
+                        <li class="current">
+                            <a href="/usersearch.php">User Search</a>
+                        </li>
+                        <li>
+                            <a href="/mweorsearch.php">Mweor Search</a>
+                        </li>
+                        <li>
+                            <a href="/shopsearch.php">Shop Search</a>
+                        </li>
+                        <li>
+                            <a href="/trades.php?action=search">Trade Search</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/contest_dressup">Contests</a>
 
-                        <div class="menu_subtitle menu_subtitle_spacer">Contests</div>
-                        <a href="https://mweor.com/contest">Design Contests</a>
-                        <a href="https://mweor.com/contest_dressup">Dressup Contests</a>
-                    </div>
-                    <div id="explore_divider" class="menu_dropdown_divider"></div>
-                    <div class="menu_dropdown_floater">
-                        <div class="menu_subtitle">Bookmarks</div>
-                        <a href="https://mweor.com/bookmarks.php">Manage Bookmarks</a>
-                        <a href="https://mweor.com/viewtopic.php?id=2170">| topic | formatting</a><a href="https://mweor.com/viewtopic.php?id=782825">|
-                            topic | G2G</a><a href="https://mweor.com/viewtopic.php?id=777125">| topic | design shop</a><a
-                            href="https://mweor.com/viewtopic.php?id=758156">| topic | stalk list</a><a
-                            href="https://mweor.com/mweorsearch.php?search_type=all&mweor_name=&breed%5B%5D=1&age_min=&age_max=4&generation_min=&generation_max=1&soundness_min=&soundness_max=&level_min=&level_max=&owner=&order_by=2&search=Search">|
-                            search | newest users</a><a
-                            href="https://mweor.com/mweorsearch.php?search_type=all&mweor_name=&age_min=&age_max=10&generation_min=&generation_max=1&exclude_starters=1&soundness_min=&soundness_max=&level_min=&level_max=&owner=&order_by=2&search=Search">|
-                            search | newest customs</a><a
-                            href="https://mweor.com/mweorsearch.php?search_type=sale&sale_type=0&sale_currency=0&sale_price_min=&sale_price_max=&points_heritage_min=&points_heritage_max=&age_min=&age_max=&generation_min=&generation_max=1&soundness_min=&soundness_max=&level_min=&level_max=&mutation_min=&mutation_max=&owner=&order_by=5&search=Search">|
-                            search | customs for sale</a><a
-                            href="https://mweor.com/searchtopics.php?subject=mpd&author=&mweor=&board=0&search=Search">| mod | MPD</a><a
-                            href="https://mweor.com/searchtopics.php?start=0&subject=mdp&author=0&board=0&search=Go%21">| mod | MDP</a><a
-                            href="https://mweor.com/searchtopics.php?subject=delete&author=&mweor=&board=0&search=Search">| mod |
-                            delete</a><a href="https://mweor.com/viewtopic.php?id=783317">| code | mweor info icons</a><a
-                            href="https://mweor.com/mweor.php?id=8616217">mweor color insp</a>
-                    </div>
-                    <img src="https://mweor.com/images/layout_pride/menu_explore.png" class="menu_dropdown_bkg trans" />
-                </div>
-            </div>
-        </div>
+                    <ul>
+                        <li class="current">
+                            <a href="/contest">Design Contests</a>
+                        </li>
+                        <li>
+                            <a href="/contest_dressup">Dressup Contests</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/bookmarks.php">Bookmarks</a>
 
-        <div id="chat_shadow" class="menu_shadow"></div>
-        <div id="chat_holder" class="menu_link_holder">
-            <a id="chat_link" class="menu_link_spacer" href="https://mweor.com/chat.php" title="chat"><img src="https://mweor.com/images/blank.gif"
-                    id="chat_link_spacer" /></a>
-
-            <div class="menu_dropdown" id="chat_dropdown">
-                <div class="menu_dropdown_inner" id="chat_dropdown_inner">
-                    <div class="menu_dropdown_floater">
-                        <div class="menu_subtitle">Communicate</div>
-                        <a href="https://mweor.com/chat.php">Forum and Chat</a>
-                        <a href="https://mweor.com/topics.php?id=12">Advertising</a>
-                        <a href="https://mweor.com/topics.php?id=8">Bug Board</a>
-                        <a href="https://mweor.com/topics.php?id=2">Meowing Spot</a>
-                        <a href="https://mweor.com/topics.php?id=11">Mweor Sales</a>
-                        <a href="https://mweor.com/topics.php?id=1">News Archive</a>
-                    </div>
-                    <div id="chat_divider" class="menu_dropdown_divider"></div>
-                    <div class="menu_dropdown_floater">
-                        <div class="menu_subtitle">Social</div>
-                        <a href="https://mweor.com/registries">Registries/Tribes</a>
-                        <a href="https://mweor.com/block.php">Blocked List</a>
-                        <a href="https://mweor.com/friends.php">Friends List</a>
-                        <a href="https://mweor.com/online.php">Online Users</a>
-                    </div>
-                    <div id="chat_divider" class="menu_dropdown_divider"></div>
-                    <div class="menu_dropdown_floater">
-                        <div class="menu_subtitle">Tools</div>
-                        <a href="https://mweor.com/modbox">ModBox</a>
-                        <a href="https://mweor.com/searchtopics.php">Topic Search</a>
-                        <a href="https://mweor.com/usersearch.php">User Search</a>
-                    </div>
-                    <img src="https://mweor.com/images/layout_pride/menu_chat.png" class="menu_dropdown_bkg trans" />
-                </div>
-            </div>
-        </div>
-
-        <div id="news_shadow" class="menu_shadow"></div>
-        <a id="news_link" class="menu_link_spacer no_dropdown" href="https://mweor.com/news.php" title="news"><img
-                src="https://mweor.com/images/blank.gif" id="news_link_spacer" /></a>
-
-        <div id="help_shadow" class="menu_shadow"></div>
-        <a id="help_link" class="menu_link_spacer no_dropdown" href="https://mweor.com/help.php" title="help"><img
-                src="https://mweor.com/images/blank.gif" id="help_link_spacer" /></a>
-
-        <div id="logout_shadow" class="menu_shadow"></div>
-        <a id="logout_link" class="menu_link_spacer no_dropdown" href="https://mweor.com/logout.php" title="logout"><img
-                src="https://mweor.com/images/blank.gif" id="logout_link_spacer" /></a>
-    </div>
-
+                    <ul>
+                        <li class="current">
+                            <a href="/viewtopic.php?id=2170">| topic | formatting</a>
+                        </li>
+                        <li>
+                            <a href="/viewtopic.php?id=782825">| topic | G2G</a>
+                        </li>
+                        <li>
+                            <a href="/viewtopic.php?id=777125">| topic | design shop</a>
+                        </li>
+                        <li>
+                            <a href="/viewtopic.php?id=758156">| topic | stalk list</a>
+                        </li>
+                        <li>
+                            <a
+                                href="/mweorsearch.php?search_type=all&mweor_name=&breed%5B%5D=1&age_min=&age_max=4&generation_min=&generation_max=1&soundness_min=&soundness_max=&level_min=&level_max=&owner=&order_by=2&search=Search">|
+                                search | newest users</a>
+                        </li>
+                        <li>
+                            <a
+                                href="/mweorsearch.php?search_type=all&mweor_name=&age_min=&age_max=10&generation_min=&generation_max=1&exclude_starters=1&soundness_min=&soundness_max=&level_min=&level_max=&owner=&order_by=2&search=Search">|
+                                search | newest customs</a>
+                        </li>
+                        <li>
+                            <a
+                                href="/mweorsearch.php?search_type=sale&sale_type=0&sale_currency=0&sale_price_min=&sale_price_max=&points_heritage_min=&points_heritage_max=&age_min=&age_max=&generation_min=&generation_max=1&soundness_min=&soundness_max=&level_min=&level_max=&mutation_min=&mutation_max=&owner=&order_by=5&search=Search">|
+                                search | customs for sale</a>
+                        </li>
+                        <li>
+                            <a href="/searchtopics.php?subject=mpd&author=&mweor=&board=0&search=Search">| mod | MPD</a>
+                        </li>
+                        <li>
+                            <a href="/searchtopics.php?start=0&subject=mdp&author=0&board=0&search=Go%21">| mod |
+                                MDP</a>
+                        </li>
+                        <li>
+                            <a href="/searchtopics.php?subject=delete&author=&mweor=&board=0&search=Search">| mod |
+                                delete</a>
+                        </li>
+                        <li>
+                            <a href="/viewtopic.php?id=783317">| code | mweor info icons</a>
+                        </li>
+                        <li>
+                            <a href="/mweor.php?id=8616217">mweor color insp</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/chat.php">Community</a>
+            <ul>
+                <li class="current">
+                    <a href="/chat.php">Boards/Chat</a>
+                </li>
+                <li>
+                    <a href="/registries">Registries/Tribes</a>
+                </li>
+                <li>
+                    <a href="/searchtopics.php">Topic Search</a>
+                </li>
+                <li>
+                    <a href="/usersearch.php">User Search</a>
+                </li>
+                <li>
+                    <a href="/online.php">Online Users</a>
+                </li>
+                <li>
+                    <a href="/friends.php">Friends List</a>
+                </li>
+                <li>
+                    <a href="/block.php">Blocked List</a>
+                </li>
+                <li>
+                    <a href="/modbox">ModBox</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/news.php">News</a>
+        </li>
+        <li>
+            <a href="/help.php">Help</a>
+            <ul>
+                <li class="current">
+                    <a href="/resetcattery.php">Reset Cattery</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/logout.php">Logout</a>
+        </li>
+    </ul>
     <div id="bodyi"></div>
-
 
     <div id="holder">
 
         <div id="topbanner">
 
-            <img src="https://mweor.com/images/layout_pride/banner_top.png" id="topbanneri" class="trans">
-
-            <a href="https://mweor.com/index.php" title="Mweor Home" id="link_home"><img src="https://mweor.com/images/blank.gif"
-                    id="link_home_spacer" /></a>
+            <img src="https://mweor.com/images/layout2/banner_top.png" id="topbanneri" class="trans">
 
             <div id="layoutuinfo">
-                You are: cerah (#559) <a href="https://mweor.com/modbox/helper"><span class="fa fa-info circle active"></span></a>||
-                <span class="tip"
-                    tip="Your money is in-game currency which you can use to purchase items from various shops, feed your mweors, and so on. Having trouble making money? Play games like Paw Draw and Guess the Number daily for an easy way to make money!">Money:
-                    <a href="https://mweor.com/bank.php" style="color: white;">$84,741</a></span> || <span class="tip"
-                    tip="Earn fame by fighting off creatures and completing daily and weekly tasks!  Fame Points can be spent in the Fame Shop.">Fame
-                    Points: <a href="https://mweor.com/shops.php?id=11" style="color: white;">721,273</a></span> || <span class="tip"
-                    tip="MP stands for Mweor Points. This is an in-game currency which can be used to purchase special items (like statues for creating custom Mweors in the Statue Shop or leaves in the MP Item Shop). The most common way to get MP is by purchasing them with USD. For more information, please visit the MP Exchange.">MP:
-                    <a href="https://mweor.com/mp.php" style="color: white;">0</a></span>
+                You are: cerah (#559) <a href="/modbox/helper"><span class="fa fa-info circle active"></span></a><br><a
+                    href="/bank.php">Money: $84,741</a><span class="tip" tip="Your money is in-game currency which you can use to purchase items from various shops, feed your
+			mweors, and so on. Having trouble making money? Play games like Paw Draw and
+			Guess the Number daily for an easy way to make money!" class="trans"><img src="https://mweor.com/images/icons/q.png" width="12"
+                        height="12" class="trans"></span> || <a href="/shops.php?id=11">Fame Points: 721,273</a><span
+                    class="tip"
+                    tip="Earn fame by fighting off creaturesand completing daily and weekly tasks! Fame Points can be spent in the Fame Shop."
+                    class="trans"><img src="https://mweor.com/images/icons/q.png" width="12" height="12" class="trans"></span> || <a
+                    href="/mp.php">MP: 0</a><span class="tip" tip="MP stands for Mweor Points. This is an in-game currency which can be used to purchase 
+		special items (like statues for creating custom Mweors in the Statue Shop or leaves in the MP Item Shop). The most common way to get
+		MP is by purchasing them with USD. For more information, please visit the MP Center." class="trans"><img
+                        src="https://mweor.com/images/icons/q.png" width="12" height="12" class="trans"></span>
             </div>
 
             <span id="gametime">Server Time:
-                10:58:27PM 11/09/26
+                10:57:36PM 11/09/26
             </span><img src="https://mweor.com/images/icons/bookmark.png" width="85" height="15" id="addbookmark" class="trans" />
         </div>
 
         <div id="content">
 
             <div id="contentholder">
+                <div class="spacer"></div>
                 <div class="titlebar">
-                    <img src="https://mweor.com/images/layout_pride/titlebar.png" class="trans" id="titleimg">
+                    <img src="https://mweor.com/images/layout_green/titlebar.png" class="trans" id="titleimg">
                     <div id="titletxt">skylark</div>
                 </div>
-                <div class="add_small_margins"><a id="reportplayer" href="https://mweor.com/modbox/index/8/559">
+                <div class="add_small_margins"><a id="reportplayer" href="/modbox/index/8/559">
                         <img src="https://mweor.com/images/icons/report.png" class="trans tip" border="0" width="12" height="12"
                             tip="Report Player/Cattery" style="cursor: pointer;">
-                    </a><span class="tip good_label" tip="Last Active: 10:58PM">Online</span><span
+                    </a><span class="tip good_label" tip="Last Active: 10:57PM">Online</span><span
                         class="neutral_label"><img src="https://mweor.com/images/icons/mod_full.png" width="13" height="13" class="trans"
-                            border="0"> Moderator</span><span class="good_label"><a href="https://mweor.com/messages.php?user=559"><span
+                            border="0"> Moderator</span><span class="good_label"><a href="/messages.php?user=559"><span
                                 class="fa fa-info circle active"></span>Newbie Helper! Message me for help!</a></span>
                 </div>
                 <div id="cattery_infobox">
@@ -278,7 +380,7 @@
                         </tr>
                         <tr>
                             <th style="width: 80px;">Season Rank:</th>
-                            <td><a href="https://mweor.com/scores.php?stype=fame&page=5&highlight=559">#106</a></td>
+                            <td><a href="/scores.php?stype=fame&page=5&highlight=559">#106</a></td>
                         </tr>
                     </table>
                     <ul id="cattery_menu" style="border: 0;
@@ -295,17 +397,19 @@
                                 border-radius: 5px;
                             }
                         </style>
-                        <li><a href="https://mweor.com/registries/view/532">Registry: cerah&#39;s customs</a></li>
-                        <li><a href="https://mweor.comusershop.php?id=559">Shop</a></li>
-                        <li><a href="https://mweor.comcattery_offspring.php?id=559">Offspring List</a></li>
-                        <li><a href="https://mweor.comcattery_expected.php?id=559">Expected Mwits</a></li>
-                        <li><a href="https://mweor.comcattery_retired.php?id=559">Retired Mweors</a></li>
-                        <li><a href="https://mweor.comcattery_overview.php?id=559">Overview</a></li>
-                        <li><a href="https://mweor.com/cattery_upgrades.php">Cattery Upgrades</a></li>
+                        <li><a href="/registries/view/532">Registry: cerah&#39;s customs</a></li>
+                        <li><a href="usershop.php?id=559">Shop</a></li>
+                        <li><a href="cattery_offspring.php?id=559">Offspring List</a></li>
+                        <li><a href="cattery_expected.php?id=559">Expected Mwits</a></li>
+                        <li><a href="cattery_retired.php?id=559">Retired Mweors</a></li>
+                        <li><a href="cattery_overview.php?id=559">Overview</a></li>
+                        <li><a href="/cattery_upgrades.php">Cattery Upgrades</a></li>
                     </ul>
                 </div>
                 <div id="cattery_descbox">
                     <link rel="stylesheet" href="/public/assets/main.css" />
+
+
 
 <!-- Layout Credits and On/Off Toggle -->
 <input type="checkbox" id="credit-toggle" />
@@ -326,12 +430,11 @@
     <p>Slider code edited from <a href="https://www.cssscript.com/html-css3-only-content-slider/" target="_blank">CSS Script</a></p>
     <p>Free icons used with permission by <a href="/viewtopic.php?id=783317" target="_blank">char #151855</a></p>
 </div>
-
-                    <br><br><i>-- Last Updated on 10:58PM 11.09.2026</i>
+                    <br><br><i>-- Last Updated on 10:57PM 11.09.2026</i>
                 </div>
                 <div class="spacer"></div>
                 <div class="titlebar">
-                    <img src="https://mweor.com/images/layout_pride/titlebar.png" class="trans" id="titleimg">
+                    <img src="https://mweor.com/images/layout_green/titlebar.png" class="trans" id="titleimg">
                     <div id="titletxt">Mweors</div>
                 </div>
                 <div>
@@ -370,10 +473,10 @@
                 <form action="/cattery.php" method="post">
                     <div id="mweor_tabs" style="position: static!important;">
                         <ul>
-                            <li><a href="https://mweor.com#tab_0">petrichor (4)</a></li>
-                            <li><a href="https://mweor.com#tab_1">thunderstorm (30)</a></li>
-                            <li><a href="https://mweor.com#tab_2">rainshower (22)</a></li>
-                            <li><a href="https://mweor.com#tab_3">new arrivals (3)</a></li>
+                            <li><a href="#tab_0">petrichor (4)</a></li>
+                            <li><a href="#tab_1">thunderstorm (30)</a></li>
+                            <li><a href="#tab_2">rainshower (22)</a></li>
+                            <li><a href="#tab_3">new arrivals (3)</a></li>
                         </ul>
                         <div id="tab_0">
                             <div class="clearer"></div>
@@ -413,7 +516,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=620">brinh ♡</a></div>
+                                                        href="/mweor.php?id=620">brinh ♡</a></div>
                                                 <div>1630 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -465,7 +568,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=2470562">moving forward ♡ ✧</a></div>
+                                                        href="/mweor.php?id=2470562">moving forward ♡ ✧</a></div>
                                                 <div>1228 years old (Gen 1)</div>
                                                 <div>Level 7</div>
                                                 <div class="selected_mweor_holder">
@@ -515,7 +618,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=2093048">shards of ice ♡</a></div>
+                                                        href="/mweor.php?id=2093048">shards of ice ♡</a></div>
                                                 <div>1310.5 years old (Gen 6)</div>
                                                 <div>Level 1</div>
                                                 <div class="selected_mweor_holder">
@@ -565,7 +668,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=7505035">prologue ♡</a></div>
+                                                        href="/mweor.php?id=7505035">prologue ♡</a></div>
                                                 <div>519.75 years old (Gen 2)</div>
                                                 <div>Level 0</div>
                                                 <div class="selected_mweor_holder">
@@ -627,7 +730,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9385905">okarun ✧</a></div>
+                                                        href="/mweor.php?id=9385905">okarun ✧</a></div>
                                                 <div>81 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -679,7 +782,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8771224">until the night turns ✧</a></div>
+                                                        href="/mweor.php?id=8771224">until the night turns ✧</a></div>
                                                 <div>263.5 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -733,7 +836,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5784164">mothman ♡ ✧</a></div>
+                                                        href="/mweor.php?id=5784164">mothman ♡ ✧</a></div>
                                                 <div>732.25 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -763,7 +866,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=4139812" class="lightbox"
                                                         title="potatair chip ☼ (#4139812)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=4139812&quot;&gt;potatair chip ☼ (#4139812)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=4139812&sm=1" border="0" width="100"
                                                             height="75"
@@ -787,7 +890,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=4139812">potatair chip ☼</a></div>
+                                                        href="/mweor.php?id=4139812">potatair chip ☼</a></div>
                                                 <div>950.75 years old (Gen 1)</div>
                                                 <div>Level 4</div>
                                                 <div class="selected_mweor_holder">
@@ -817,7 +920,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=3783265" class="lightbox"
                                                         title="ghost town ✧ (#3783265)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=3783265&quot;&gt;ghost town ✧ (#3783265)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=3783265&sm=1" border="0" width="100"
                                                             height="75"
@@ -841,7 +944,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=3783265">ghost town ✧</a></div>
+                                                        href="/mweor.php?id=3783265">ghost town ✧</a></div>
                                                 <div>990.75 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -871,7 +974,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=2547524" class="lightbox"
                                                         title="starlight starbright ♡ ☆ (#2547524)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=2547524&quot;&gt;starlight starbright ♡ ☆ (#2547524)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=2547524&sm=1" border="0" width="100"
                                                             height="75"
@@ -895,7 +998,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=2547524">starlight starbright ♡ ☆</a></div>
+                                                        href="/mweor.php?id=2547524">starlight starbright ♡ ☆</a></div>
                                                 <div>1212.25 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -925,7 +1028,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9335441" class="lightbox"
                                                         title="déjà vu ✧ (#9335441)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9335441&quot;&gt;déjà vu ✧ (#9335441)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9335441&sm=1" border="0" width="100"
                                                             height="75"
@@ -947,7 +1050,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9335441">déjà vu ✧</a></div>
+                                                        href="/mweor.php?id=9335441">déjà vu ✧</a></div>
                                                 <div>95 years old (Gen 1)</div>
                                                 <div>Level 9</div>
                                                 <div class="selected_mweor_holder">
@@ -977,7 +1080,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9090421" class="lightbox"
                                                         title="tiye ✧ (#9090421)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9090421&quot;&gt;tiye ✧ (#9090421)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9090421&sm=1" border="0" width="100"
                                                             height="75"
@@ -999,7 +1102,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9090421">tiye ✧</a></div>
+                                                        href="/mweor.php?id=9090421">tiye ✧</a></div>
                                                 <div>171.25 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -1029,7 +1132,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8043434" class="lightbox"
                                                         title="conquest of spaces ✧ ♡ (#8043434)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8043434&quot;&gt;conquest of spaces ✧ ♡ (#8043434)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8043434&sm=1" border="0" width="100"
                                                             height="75"
@@ -1051,7 +1154,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8043434">conquest of spaces ✧ ♡</a></div>
+                                                        href="/mweor.php?id=8043434">conquest of spaces ✧ ♡</a></div>
                                                 <div>442.5 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -1081,7 +1184,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=4592306" class="lightbox"
                                                         title="mipha ☼ (#4592306)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=4592306&quot;&gt;mipha ☼ (#4592306)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=4592306&sm=1" border="0" width="100"
                                                             height="75"
@@ -1103,7 +1206,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=4592306">mipha ☼</a></div>
+                                                        href="/mweor.php?id=4592306">mipha ☼</a></div>
                                                 <div>887.5 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -1133,7 +1236,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9660800" class="lightbox"
                                                         title="world of change ✧ (#9660800)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9660800&quot;&gt;world of change ✧ (#9660800)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9660800&sm=1" border="0" width="100"
                                                             height="75"
@@ -1155,7 +1258,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9660800">world of change ✧</a></div>
+                                                        href="/mweor.php?id=9660800">world of change ✧</a></div>
                                                 <div>3.75 years old (Gen 1)</div>
                                                 <div>Level 2</div>
                                                 <div class="selected_mweor_holder">
@@ -1185,7 +1288,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9660799" class="lightbox"
                                                         title="greet the dawn ✧ (#9660799)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9660799&quot;&gt;greet the dawn ✧ (#9660799)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9660799&sm=1" border="0" width="100"
                                                             height="75"
@@ -1209,7 +1312,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9660799">greet the dawn ✧</a></div>
+                                                        href="/mweor.php?id=9660799">greet the dawn ✧</a></div>
                                                 <div>3.75 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -1239,7 +1342,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8937024" class="lightbox"
                                                         title="inkpot gods ✧ (#8937024)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8937024&quot;&gt;inkpot gods ✧ (#8937024)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8937024&sm=1" border="0" width="100"
                                                             height="75"
@@ -1261,7 +1364,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8937024">inkpot gods ✧</a></div>
+                                                        href="/mweor.php?id=8937024">inkpot gods ✧</a></div>
                                                 <div>219.75 years old (Gen 1)</div>
                                                 <div>Level 1</div>
                                                 <div class="selected_mweor_holder">
@@ -1291,7 +1394,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8144336" class="lightbox"
                                                         title="the dawn of time to the end of days ✧ ♡ (#8144336)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8144336&quot;&gt;the dawn of time to the end of days ✧ ♡ (#8144336)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8144336&sm=1" border="0" width="100"
                                                             height="75"
@@ -1315,7 +1418,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8144336">the dawn of time to the end of days
+                                                        href="/mweor.php?id=8144336">the dawn of time to the end of days
                                                         ✧ ♡</a></div>
                                                 <div>427.5 years old (Gen 1)</div>
                                                 <div>Level 9</div>
@@ -1346,7 +1449,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=4074665" class="lightbox"
                                                         title="the loveland frog ☼ (#4074665)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=4074665&quot;&gt;the loveland frog ☼ (#4074665)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=4074665&sm=1" border="0" width="100"
                                                             height="75"
@@ -1370,7 +1473,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=4074665">the loveland frog ☼</a></div>
+                                                        href="/mweor.php?id=4074665">the loveland frog ☼</a></div>
                                                 <div>958.75 years old (Gen 1)</div>
                                                 <div>Level 4</div>
                                                 <div class="selected_mweor_holder">
@@ -1400,7 +1503,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8459068" class="lightbox"
                                                         title="storm in a glass of water ♡ ✧ (#8459068)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8459068&quot;&gt;storm in a glass of water ♡ ✧ (#8459068)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8459068&sm=1" border="0" width="100"
                                                             height="75"
@@ -1422,7 +1525,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8459068">storm in a glass of water ♡ ✧</a>
+                                                        href="/mweor.php?id=8459068">storm in a glass of water ♡ ✧</a>
                                                 </div>
                                                 <div>353 years old (Gen 1)</div>
                                                 <div>Level 19</div>
@@ -1453,7 +1556,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=6601025" class="lightbox"
                                                         title="no-eyed girl ♡ ✧ (#6601025)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=6601025&quot;&gt;no-eyed girl ♡ ✧ (#6601025)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=6601025&sm=1" border="0" width="100"
                                                             height="75"
@@ -1475,7 +1578,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=6601025">no-eyed girl ♡ ✧</a></div>
+                                                        href="/mweor.php?id=6601025">no-eyed girl ♡ ✧</a></div>
                                                 <div>642.75 years old (Gen 1)</div>
                                                 <div>Level 2</div>
                                                 <div class="selected_mweor_holder">
@@ -1505,7 +1608,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5572460" class="lightbox"
                                                         title="skating away ✧ (#5572460)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5572460&quot;&gt;skating away ✧ (#5572460)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5572460&sm=1" border="0" width="100"
                                                             height="75"
@@ -1527,7 +1630,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5572460">skating away ✧</a></div>
+                                                        href="/mweor.php?id=5572460">skating away ✧</a></div>
                                                 <div>758.5 years old (Gen 1)</div>
                                                 <div>Level 9</div>
                                                 <div class="selected_mweor_holder">
@@ -1557,7 +1660,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=4993088" class="lightbox"
                                                         title="saturn ☆ (#4993088)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=4993088&quot;&gt;saturn ☆ (#4993088)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=4993088&sm=1" border="0" width="100"
                                                             height="75"
@@ -1579,7 +1682,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=4993088">saturn ☆</a></div>
+                                                        href="/mweor.php?id=4993088">saturn ☆</a></div>
                                                 <div>837 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -1609,7 +1712,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=4193237" class="lightbox"
                                                         title="different kind of human ♡ ✧ ⚔ (#4193237)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=4193237&quot;&gt;different kind of human ♡ ✧ ⚔ (#4193237)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=4193237&sm=1" border="0" width="100"
                                                             height="75"
@@ -1631,7 +1734,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=4193237">different kind of human ♡ ✧ ⚔</a>
+                                                        href="/mweor.php?id=4193237">different kind of human ♡ ✧ ⚔</a>
                                                 </div>
                                                 <div>943.75 years old (Gen 1)</div>
                                                 <div>Level 12</div>
@@ -1666,7 +1769,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5942090" class="lightbox"
                                                         title="goliath ♡ ✧ (#5942090)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5942090&quot;&gt;goliath ♡ ✧ (#5942090)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5942090&sm=1" border="0" width="100"
                                                             height="75"
@@ -1690,7 +1793,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5942090">goliath ♡ ✧</a></div>
+                                                        href="/mweor.php?id=5942090">goliath ♡ ✧</a></div>
                                                 <div>714 years old (Gen 1)</div>
                                                 <div>Level 4</div>
                                                 <div class="selected_mweor_holder">
@@ -1720,7 +1823,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=7461405" class="lightbox"
                                                         title="in our talons ☆ (#7461405)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=7461405&quot;&gt;in our talons ☆ (#7461405)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=7461405&sm=1" border="0" width="100"
                                                             height="75"
@@ -1742,7 +1845,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=7461405">in our talons ☆</a></div>
+                                                        href="/mweor.php?id=7461405">in our talons ☆</a></div>
                                                 <div>528.25 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -1772,7 +1875,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5961844" class="lightbox"
                                                         title="citizen of glass ☆ (#5961844)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5961844&quot;&gt;citizen of glass ☆ (#5961844)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5961844&sm=1" border="0" width="100"
                                                             height="75"
@@ -1794,7 +1897,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5961844">citizen of glass ☆</a></div>
+                                                        href="/mweor.php?id=5961844">citizen of glass ☆</a></div>
                                                 <div>711.75 years old (Gen 1)</div>
                                                 <div>Level 2</div>
                                                 <div class="selected_mweor_holder">
@@ -1824,7 +1927,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=3918302" class="lightbox"
                                                         title="young as the morning, old as the sea ☆ (#3918302)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=3918302&quot;&gt;young as the morning, old as the sea ☆ (#3918302)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=3918302&sm=1" border="0" width="100"
                                                             height="75"
@@ -1848,7 +1951,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=3918302">young as the morning, old as the
+                                                        href="/mweor.php?id=3918302">young as the morning, old as the
                                                         sea ☆</a></div>
                                                 <div>974.25 years old (Gen 1)</div>
                                                 <div>Level 4</div>
@@ -1879,7 +1982,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5343814" class="lightbox"
                                                         title="the flatwoods monster ✧ (#5343814)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5343814&quot;&gt;the flatwoods monster ✧ (#5343814)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5343814&sm=1" border="0" width="100"
                                                             height="75"
@@ -1901,7 +2004,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5343814">the flatwoods monster ✧</a></div>
+                                                        href="/mweor.php?id=5343814">the flatwoods monster ✧</a></div>
                                                 <div>789.75 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -1931,7 +2034,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=4986201" class="lightbox"
                                                         title="something salty ✧ (#4986201)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=4986201&quot;&gt;something salty ✧ (#4986201)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=4986201&sm=1" border="0" width="100"
                                                             height="75"
@@ -1953,7 +2056,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=4986201">something salty ✧</a></div>
+                                                        href="/mweor.php?id=4986201">something salty ✧</a></div>
                                                 <div>837.25 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -1983,7 +2086,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=4986202" class="lightbox"
                                                         title="something sweet ✧ (#4986202)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=4986202&quot;&gt;something sweet ✧ (#4986202)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=4986202&sm=1" border="0" width="100"
                                                             height="75"
@@ -2005,7 +2108,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=4986202">something sweet ✧</a></div>
+                                                        href="/mweor.php?id=4986202">something sweet ✧</a></div>
                                                 <div>837.25 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -2035,7 +2138,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=6054900" class="lightbox"
                                                         title="holy smoke ✧ (#6054900)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=6054900&quot;&gt;holy smoke ✧ (#6054900)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=6054900&sm=1" border="0" width="100"
                                                             height="75"
@@ -2059,7 +2162,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=6054900">holy smoke ✧</a></div>
+                                                        href="/mweor.php?id=6054900">holy smoke ✧</a></div>
                                                 <div>702.75 years old (Gen 1)</div>
                                                 <div>Level 9</div>
                                                 <div class="selected_mweor_holder">
@@ -2089,7 +2192,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=6054898" class="lightbox"
                                                         title="dia ✧ (#6054898)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=6054898&quot;&gt;dia ✧ (#6054898)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=6054898&sm=1" border="0" width="100"
                                                             height="75"
@@ -2111,7 +2214,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=6054898">dia ✧</a></div>
+                                                        href="/mweor.php?id=6054898">dia ✧</a></div>
                                                 <div>702.75 years old (Gen 1)</div>
                                                 <div>Level 11</div>
                                                 <div class="selected_mweor_holder">
@@ -2141,7 +2244,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9439258" class="lightbox"
                                                         title="looking back ✧ (#9439258)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9439258&quot;&gt;looking back ✧ (#9439258)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9439258&sm=1" border="0" width="100"
                                                             height="75"
@@ -2163,7 +2266,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9439258">looking back ✧</a></div>
+                                                        href="/mweor.php?id=9439258">looking back ✧</a></div>
                                                 <div>68.75 years old (Gen 1)</div>
                                                 <div>Level 4</div>
                                                 <div class="selected_mweor_holder">
@@ -2203,7 +2306,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8408538" class="lightbox"
                                                         title="dirt-teen: the dirtening (#8408538)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8408538&quot;&gt;dirt-teen: the dirtening (#8408538)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8408538&sm=1" border="0" width="100"
                                                             height="75"
@@ -2225,7 +2328,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8408538">dirt-teen: the dirtening</a></div>
+                                                        href="/mweor.php?id=8408538">dirt-teen: the dirtening</a></div>
                                                 <div>368.75 years old (Gen 1)</div>
                                                 <div>Level 2</div>
                                                 <div class="selected_mweor_holder">
@@ -2255,7 +2358,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=2449882" class="lightbox"
                                                         title="renegade ☆ ♡ (#2449882)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=2449882&quot;&gt;renegade ☆ ♡ (#2449882)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=2449882&sm=1" border="0" width="100"
                                                             height="75"
@@ -2279,7 +2382,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=2449882">renegade ☆ ♡</a></div>
+                                                        href="/mweor.php?id=2449882">renegade ☆ ♡</a></div>
                                                 <div>1233.75 years old (Gen 1)</div>
                                                 <div>Level 7</div>
                                                 <div class="selected_mweor_holder">
@@ -2309,7 +2412,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=985299" class="lightbox"
                                                         title="midnight on a full moon ☆ ♡ (#985299)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=985299&quot;&gt;midnight on a full moon ☆ ♡ (#985299)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=985299&sm=1" border="0" width="100"
                                                             height="75"
@@ -2333,7 +2436,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=985299">midnight on a full moon ☆ ♡</a>
+                                                        href="/mweor.php?id=985299">midnight on a full moon ☆ ♡</a>
                                                 </div>
                                                 <div>1481 years old (Gen 1)</div>
                                                 <div>Level 7</div>
@@ -2364,7 +2467,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=1177" class="lightbox"
                                                         title="toby ☆ ♡ (#1177)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=1177&quot;&gt;toby ☆ ♡ (#1177)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=1177&sm=1" border="0" width="100"
                                                             height="75"
@@ -2388,7 +2491,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=1177">toby ☆ ♡</a></div>
+                                                        href="/mweor.php?id=1177">toby ☆ ♡</a></div>
                                                 <div>1628.5 years old (Gen 1)</div>
                                                 <div>Level 4</div>
                                                 <div class="selected_mweor_holder">
@@ -2418,7 +2521,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5253696" class="lightbox"
                                                         title="this beautiful life ♡ (#5253696)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5253696&quot;&gt;this beautiful life ♡ (#5253696)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5253696&sm=1" border="0" width="100"
                                                             height="75"
@@ -2440,7 +2543,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5253696">this beautiful life ♡</a></div>
+                                                        href="/mweor.php?id=5253696">this beautiful life ♡</a></div>
                                                 <div>797 years old (Gen 1)</div>
                                                 <div>Level 16</div>
                                                 <div class="selected_mweor_holder">
@@ -2470,7 +2573,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8454413" class="lightbox"
                                                         title="we ran out of cd space ✧ (#8454413)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8454413&quot;&gt;we ran out of cd space ✧ (#8454413)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8454413&sm=1" border="0" width="100"
                                                             height="75"
@@ -2492,7 +2595,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8454413">we ran out of cd space ✧</a></div>
+                                                        href="/mweor.php?id=8454413">we ran out of cd space ✧</a></div>
                                                 <div>355.5 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -2522,7 +2625,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8454414" class="lightbox"
                                                         title="touch-tone telephone ✧ (#8454414)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8454414&quot;&gt;touch-tone telephone ✧ (#8454414)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8454414&sm=1" border="0" width="100"
                                                             height="75"
@@ -2544,7 +2647,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8454414">touch-tone telephone ✧</a></div>
+                                                        href="/mweor.php?id=8454414">touch-tone telephone ✧</a></div>
                                                 <div>355.5 years old (Gen 1)</div>
                                                 <div>Level 2</div>
                                                 <div class="selected_mweor_holder">
@@ -2574,7 +2677,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=6705417" class="lightbox"
                                                         title="to a poet ✧ (#6705417)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=6705417&quot;&gt;to a poet ✧ (#6705417)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=6705417&sm=1" border="0" width="100"
                                                             height="75"
@@ -2596,7 +2699,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=6705417">to a poet ✧</a></div>
+                                                        href="/mweor.php?id=6705417">to a poet ✧</a></div>
                                                 <div>628.5 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -2626,7 +2729,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5208231" class="lightbox"
                                                         title="008 ✧ (#5208231)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5208231&quot;&gt;008 ✧ (#5208231)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5208231&sm=1" border="0" width="100"
                                                             height="75"
@@ -2648,7 +2751,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5208231">008 ✧</a></div>
+                                                        href="/mweor.php?id=5208231">008 ✧</a></div>
                                                 <div>810 years old (Gen 1)</div>
                                                 <div>Level 4</div>
                                                 <div class="selected_mweor_holder">
@@ -2678,7 +2781,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=3299249" class="lightbox"
                                                         title="pfau ✧ (#3299249)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=3299249&quot;&gt;pfau ✧ (#3299249)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=3299249&sm=1" border="0" width="100"
                                                             height="75"
@@ -2700,7 +2803,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=3299249">pfau ✧</a></div>
+                                                        href="/mweor.php?id=3299249">pfau ✧</a></div>
                                                 <div>1078.5 years old (Gen 1)</div>
                                                 <div>Level 11</div>
                                                 <div class="selected_mweor_holder">
@@ -2730,7 +2833,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8026726" class="lightbox"
                                                         title="you are enough ✧ (#8026726)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8026726&quot;&gt;you are enough ✧ (#8026726)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8026726&sm=1" border="0" width="100"
                                                             height="75"
@@ -2752,7 +2855,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8026726">you are enough ✧</a></div>
+                                                        href="/mweor.php?id=8026726">you are enough ✧</a></div>
                                                 <div>445.75 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -2782,7 +2885,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8026722" class="lightbox"
                                                         title="Queen ✧ (#8026722)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8026722&quot;&gt;Queen ✧ (#8026722)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8026722&sm=1" border="0" width="100"
                                                             height="75"
@@ -2804,7 +2907,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8026722">Queen ✧</a></div>
+                                                        href="/mweor.php?id=8026722">Queen ✧</a></div>
                                                 <div>445.75 years old (Gen 1)</div>
                                                 <div>Level 2</div>
                                                 <div class="selected_mweor_holder">
@@ -2834,7 +2937,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=7844110" class="lightbox"
                                                         title="cure for me ✧ (#7844110)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=7844110&quot;&gt;cure for me ✧ (#7844110)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=7844110&sm=1" border="0" width="100"
                                                             height="75"
@@ -2856,7 +2959,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=7844110">cure for me ✧</a></div>
+                                                        href="/mweor.php?id=7844110">cure for me ✧</a></div>
                                                 <div>477.5 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -2886,7 +2989,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5865276" class="lightbox"
                                                         title="pluto ✧ (#5865276)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5865276&quot;&gt;pluto ✧ (#5865276)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5865276&sm=1" border="0" width="100"
                                                             height="75"
@@ -2908,7 +3011,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5865276">pluto ✧</a></div>
+                                                        href="/mweor.php?id=5865276">pluto ✧</a></div>
                                                 <div>722.5 years old (Gen 1)</div>
                                                 <div>Level 7</div>
                                                 <div class="selected_mweor_holder">
@@ -2938,7 +3041,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5860520" class="lightbox"
                                                         title="stardrop ✧ (#5860520)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5860520&quot;&gt;stardrop ✧ (#5860520)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5860520&sm=1" border="0" width="100"
                                                             height="75"
@@ -2960,7 +3063,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5860520">stardrop ✧</a></div>
+                                                        href="/mweor.php?id=5860520">stardrop ✧</a></div>
                                                 <div>723 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -2990,7 +3093,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5710422" class="lightbox"
                                                         title="skyvory ✧ (#5710422)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5710422&quot;&gt;skyvory ✧ (#5710422)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5710422&sm=1" border="0" width="100"
                                                             height="75"
@@ -3012,7 +3115,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5710422">skyvory ✧</a></div>
+                                                        href="/mweor.php?id=5710422">skyvory ✧</a></div>
                                                 <div>741.5 years old (Gen 1)</div>
                                                 <div>Level 4</div>
                                                 <div class="selected_mweor_holder">
@@ -3042,7 +3145,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=5329946" class="lightbox"
                                                         title="north by north ✧ (#5329946)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=5329946&quot;&gt;north by north ✧ (#5329946)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=5329946&sm=1" border="0" width="100"
                                                             height="75"
@@ -3064,7 +3167,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=5329946">north by north ✧</a></div>
+                                                        href="/mweor.php?id=5329946">north by north ✧</a></div>
                                                 <div>791.5 years old (Gen 1)</div>
                                                 <div>Level 2</div>
                                                 <div class="selected_mweor_holder">
@@ -3094,7 +3197,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9135089" class="lightbox"
                                                         title="hours turned to minutes ✧ (#9135089)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9135089&quot;&gt;hours turned to minutes ✧ (#9135089)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9135089&sm=1" border="0" width="100"
                                                             height="75"
@@ -3116,7 +3219,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9135089">hours turned to minutes ✧</a></div>
+                                                        href="/mweor.php?id=9135089">hours turned to minutes ✧</a></div>
                                                 <div>158.5 years old (Gen 1)</div>
                                                 <div>Level 4</div>
                                                 <div class="selected_mweor_holder">
@@ -3146,7 +3249,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9011848" class="lightbox"
                                                         title="dusty | dirt/dust pls (#9011848)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9011848&quot;&gt;dusty | dirt/dust pls (#9011848)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9011848&sm=1" border="0" width="100"
                                                             height="75"
@@ -3168,7 +3271,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9011848">dusty | dirt/dust pls</a></div>
+                                                        href="/mweor.php?id=9011848">dusty | dirt/dust pls</a></div>
                                                 <div>197 years old (Gen 1)</div>
                                                 <div>Level 2</div>
                                                 <div class="selected_mweor_holder">
@@ -3198,7 +3301,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8608477" class="lightbox"
                                                         title="happy accidents ✧ (#8608477)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8608477&quot;&gt;happy accidents ✧ (#8608477)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8608477&sm=1" border="0" width="100"
                                                             height="75"
@@ -3220,7 +3323,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8608477">happy accidents ✧</a></div>
+                                                        href="/mweor.php?id=8608477">happy accidents ✧</a></div>
                                                 <div>307.75 years old (Gen 1)</div>
                                                 <div>Level 19</div>
                                                 <div class="selected_mweor_holder">
@@ -3253,7 +3356,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8962804" class="lightbox"
                                                         title="ship in a bottle (#8962804)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8962804&quot;&gt;ship in a bottle (#8962804)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8962804&sm=1" border="0" width="100"
                                                             height="75"
@@ -3275,7 +3378,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8962804">ship in a bottle</a></div>
+                                                        href="/mweor.php?id=8962804">ship in a bottle</a></div>
                                                 <div>212.75 years old (Gen 1)</div>
                                                 <div>Level 3</div>
                                                 <div class="selected_mweor_holder">
@@ -3305,7 +3408,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8780160" class="lightbox"
                                                         title="midna ♡✧ (#8780160)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8780160&quot;&gt;midna ♡✧ (#8780160)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8780160&sm=1" border="0" width="100"
                                                             height="75"
@@ -3327,7 +3430,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8780160">midna ♡✧</a></div>
+                                                        href="/mweor.php?id=8780160">midna ♡✧</a></div>
                                                 <div>261 years old (Gen 1)</div>
                                                 <div>Level 8</div>
                                                 <div class="selected_mweor_holder">
@@ -3364,7 +3467,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=8492381" class="lightbox"
                                                         title="firelight (#8492381)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=8492381&quot;&gt;firelight (#8492381)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=8492381&sm=1" border="0" width="100"
                                                             height="75"
@@ -3386,7 +3489,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=8492381">firelight</a></div>
+                                                        href="/mweor.php?id=8492381">firelight</a></div>
                                                 <div>343 years old (Gen 2)</div>
                                                 <div>Level 0</div>
                                                 <div class="selected_mweor_holder">
@@ -3416,7 +3519,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9608035" class="lightbox"
                                                         title="something sweet ✧ x something salty ✧ (#9608035)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9608035&quot;&gt;something sweet ✧ x something salty ✧ (#9608035)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9608035&sm=1" border="0" width="100"
                                                             height="75"
@@ -3438,7 +3541,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9608035">something sweet ✧ x something salty
+                                                        href="/mweor.php?id=9608035">something sweet ✧ x something salty
                                                         ✧</a></div>
                                                 <div>22.5 years old (Gen 2)</div>
                                                 <div>Level 0</div>
@@ -3469,7 +3572,7 @@
                                                     <a href="https://mweor.com/mweori.php?id=9608037" class="lightbox"
                                                         title="different kind of human ♡ ✧ ⚔ x the dawn of  (#9608037)"
                                                         mlink="&lt;a href=&quot;mweor.php?id=9608037&quot;&gt;different kind of human ♡ ✧ ⚔ x the dawn of  (#9608037)&lt;/a&gt;">
-                                                        <img loading="lazy" src="https://mweor.com/images/blank.gif"
+                                                        <img loading="lazy" src="/images/blank.gif"
                                                             class="loading_small_mweor load_me"
                                                             load_src="https://mweor.com/mweori.php?id=9608037&sm=1" border="0" width="100"
                                                             height="75"
@@ -3491,7 +3594,7 @@
                                         <tr>
                                             <td colspan="3" align="center">
                                                 <div class="text_medium add_small_margins"><a
-                                                        href="https://mweor.com/mweor.php?id=9608037">different kind of human ♡ ✧ ⚔ x the
+                                                        href="/mweor.php?id=9608037">different kind of human ♡ ✧ ⚔ x the
                                                         dawn of </a></div>
                                                 <div>22.5 years old (Gen 2)</div>
                                                 <div>Level 0</div>
@@ -3541,10 +3644,10 @@
                 </form>
                 <div class="spacer" style="margin-bottom: 30px;"></div>
                 <div class="titlebar">
-                    <img src="https://mweor.com/images/layout_pride/titlebar.png" class="trans" id="titleimg">
+                    <img src="https://mweor.com/images/layout_green/titlebar.png" class="trans" id="titleimg">
                     <div id="titletxt">Badges</div>
                 </div>
-                <div class="centered spacer">Earn badges by completing <a href="https://mweor.com/goals">Goals</a></div>
+                <div class="centered spacer">Earn badges by completing <a href="/goals">Goals</a></div>
                 <div class="space_below">
                     <div class="item_box"><img src="https://mweor.com/images/badges/1.png" />
                         <div class="name">Citizen of Mweoria</div>
@@ -3601,7 +3704,7 @@
                 </div>
                 <div class="spacer"></div>
                 <div class="titlebar">
-                    <img src="https://mweor.com/images/layout_pride/titlebar.png" class="trans" id="titleimg">
+                    <img src="https://mweor.com/images/layout_green/titlebar.png" class="trans" id="titleimg">
                     <div id="titletxt">Edit Settings</div>
                 </div>
                 <div class="spacer"></div>
@@ -3637,8 +3740,8 @@
                                     <select name="skin">
                                         <option value="0">Default Green</option>
                                         <option value="1">Bold Blue</option>
-                                        <option value="2">Old Blue</option>
-                                        <option value="3" SELECTED>Pride</option>
+                                        <option value="2" SELECTED>Old Blue</option>
+                                        <option value="3">Pride</option>
                                         <option value="4">Dark Green</option>
                                         <option value="5">Dark Pride</option>
                                     </select>
@@ -3782,235 +3885,225 @@
         </div>
 
         <div id="bottombanner">
-            <img src="https://mweor.com/images/layout_pride/banner_bottom.png" class="trans" id="bottombanneri">
+            <img src="https://mweor.com/images/layout2/banner_bottom.png" class="trans" id="bottombanneri">
         </div>
 
         <div id="footer">
             <div class="social_media">
-                <a href="https://mweor.comhttp://www.twitter.com/mweor" border="0"><img src="https://mweor.com/images/icons/twitter.png" width="40"
+                <a href="http://www.twitter.com/mweor" border="0"><img src="https://mweor.com/images/icons/twitter.png" width="40"
                         height="40" /></a>
-                <a href="https://mweor.comhttp://www.facebook.com/mweorgame" border="0"><img src="https://mweor.com/images/icons/fb.png" width="40"
+                <a href="http://www.facebook.com/mweorgame" border="0"><img src="https://mweor.com/images/icons/fb.png" width="40"
                         height="40" /></a>
-                <a href="https://mweor.comhttp://www.instagram.com/officialmweor" border="0"><img src="https://mweor.com/images/icons/ig.png" width="40"
+                <a href="http://www.instagram.com/officialmweor" border="0"><img src="https://mweor.com/images/icons/ig.png" width="40"
                         height="40" /></a>
             </div>
             Copyright &copy; 2008-2026 Mweor LLC. All rights reserved.<br>
             Use of this site signifies your acceptance and agreement to our Terms of Service.<br>
-            [<a href="https://mweor.com/logout.php">Logout</a>]
-            [<a href="https://mweor.com/tos.php">Terms of Service</a>]
-            [<a href="https://mweor.com/credits.php">Credits</a>]
-            [<a href="https://mweor.com/index.php">Index</a>]
+            [<a href="/logout.php">Logout</a>]
+            [<a href="/tos.php">Terms of Service</a>]
+            [<a href="/credits.php">Credits</a>]
+            [<a href="/index.php">Index</a>]
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <div class="popup" id="mpopup">
+        <div class="popup_title">Compose</div><a class="popupclose" id="popupclose">[x]</a>
+        <div class="popup_content" id="popup_content">You must have Javascript enabled to message other players.</div>
+        <div class="spacer" style="width: 300px;"></div>
+    </div>
+    <div id="popup_fade_background"></div>
+    <div id="modtools_holder" class="formholder">
+        <div class="title">Moderator Tools</div>
+        <a href="/modbox/category/new"><span class="fa fa-flag-o"></span>ModBox</a>
+        <a href="/ipcheck.php"><span class="fa fa-laptop"></span>IP Checker</a>
+        <a id="modtool_history"><span class="fa fa-clock-o"></span>Player History</a>
+        <a id="modtool_warn"><span class="fa fa-ban"></span>Warn/Comment</a>
+        <a id="modtool_clear"><span class="fa fa-eraser"></span>Clearer</a>
+    </div>
+
+    <div id="modtool_history_dialog" class="hide" title="Player History">
+        <div>
+            Player #: <input class="find_player" size="6" /> <span class="find_result"></span>
+        </div>
+        <div>
+            <button class="button" id="history_search">Search</button>
+        </div>
+        <div class="result">
 
         </div>
-
-
-        <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-
-        <div class="popup" id="mpopup">
-            <div class="popup_title">Compose</div><a class="popupclose" id="popupclose">[x]</a>
-            <div class="popup_content" id="popup_content">You must have Javascript enabled to message other players.
-            </div>
-            <div class="spacer" style="width: 300px;"></div>
-        </div>
-        <div id="popup_fade_background"></div>
-        <div id="modtools_holder" class="formholder">
-            <div class="title">Moderator Tools</div>
-            <a href="https://mweor.com/modbox/category/new"><span class="fa fa-flag-o"></span>ModBox</a>
-            <a href="https://mweor.com/ipcheck.php"><span class="fa fa-laptop"></span>IP Checker</a>
-            <a id="modtool_history"><span class="fa fa-clock-o"></span>Player History</a>
-            <a id="modtool_warn"><span class="fa fa-ban"></span>Warn/Comment</a>
-            <a id="modtool_clear"><span class="fa fa-eraser"></span>Clearer</a>
-        </div>
-
-        <div id="modtool_history_dialog" class="hide" title="Player History">
-            <div>
-                Player #: <input class="find_player" size="6" /> <span class="find_result"></span>
-            </div>
-            <div>
-                <button class="button" id="history_search">Search</button>
-            </div>
-            <div class="result">
-
-            </div>
-        </div>
+    </div>
 
 
 
-        <div id="modtool_warn_dialog" class="hide" title="Warn/Comment">
-            <div id="warn_response_box" class="hide"></div>
-            <table class="info_table" id="modtool_warn_table">
-                <tr>
-                    <th>Player #: </th>
-                    <td><input type="text" id="warn_user_id" class="find_player" size="6" /> <span
-                            class="find_result"></span></td>
-                </tr>
-                <tr>
-                    <th>Report ID#: </th>
-                    <td><input type="text" name="warn_report_id" id="warn_report_id" size="11" /> <span
-                            style="margin-left: 10px;">Please provide if possible.</span></td>
-                </tr>
-                <tr>
-                    <th>Type: </th>
-                    <td><input type="radio" name="warn_category" value="0" checked="checked" class="radio_warn_category"
-                            id="warn_category_0" /><label for="warn_category_0">Comment</label>&nbsp;&nbsp;&nbsp;<input
-                            type="radio" name="warn_category" value="1" class="radio_warn_category"
-                            id="warn_category_1" /><label for="warn_category_1">Warning</label>&nbsp;&nbsp;&nbsp;<input
-                            type="radio" name="warn_category" value="3" class="radio_warn_category"
-                            id="warn_category_3" /><label
-                            for="warn_category_3">Suspension</label>&nbsp;&nbsp;&nbsp;<input type="radio"
-                            name="warn_category" value="4" class="radio_warn_category" id="warn_category_4" /><label
-                            for="warn_category_4">Close Account</label>&nbsp;&nbsp;&nbsp;</td>
-                </tr>
-                <tr id="subcat_row" class="hide">
-                    <th>Category: </th>
-                    <td><input type="radio" name="warn_subcategories" value="0" class="radio_warn_subcategories"
-                            id="warn_subcategories_0" /><label for="warn_subcategories_0">Poor
-                            Conduct</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_subcategories" value="1"
-                            class="radio_warn_subcategories" id="warn_subcategories_1" /><label
-                            for="warn_subcategories_1">Spamming</label>&nbsp;&nbsp;&nbsp;<input type="radio"
-                            name="warn_subcategories" value="2" class="radio_warn_subcategories"
-                            id="warn_subcategories_2" /><label
-                            for="warn_subcategories_2">Scamming</label>&nbsp;&nbsp;&nbsp;</td>
-                </tr>
-                <tr id="severity_row" class="hide">
-                    <th>Severity: </th>
-                    <td><input type="radio" name="warn_severities" value="0" class="radio_warn_severities"
-                            id="warn_severities_0" /><label
-                            for="warn_severities_0">Verbal</label>&nbsp;&nbsp;&nbsp;<input type="radio"
-                            name="warn_severities" value="1" class="radio_warn_severities"
-                            id="warn_severities_1" /><label for="warn_severities_1">1st
-                            Degree</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_severities" value="2"
-                            class="radio_warn_severities" id="warn_severities_2" /><label for="warn_severities_2">2nd
-                            Degree</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_severities" value="3"
-                            class="radio_warn_severities" id="warn_severities_3" /><label for="warn_severities_3">3rd
-                            Degree</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_severities" value="4"
-                            class="radio_warn_severities" id="warn_severities_4" /><label for="warn_severities_4">4th
-                            Degree</label>&nbsp;&nbsp;&nbsp;</td>
-                </tr>
-                <tr id="suspension_row" class="hide">
-                    <th>Length: </th>
-                    <td><input type="radio" name="warn_suspensions" value="0" class="radio_warn_suspensions"
-                            id="warn_suspensions_0" /><label for="warn_suspensions_0">5
-                            min</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_suspensions" value="1"
-                            class="radio_warn_suspensions" id="warn_suspensions_1" /><label for="warn_suspensions_1">30
-                            min</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_suspensions" value="2"
-                            class="radio_warn_suspensions" id="warn_suspensions_2" /><label for="warn_suspensions_2">1
-                            hour</label>&nbsp;&nbsp;&nbsp;</td>
-                </tr>
-                <tr id="explanation_row">
-                    <th>Explanation: </th>
-                    <td><textarea id="warn_explanation" rows="8"
-                            cols="50">You are receiving this warning because... That behavior is not allowed on Mweor because...</textarea>
-                    </td>
-                </tr>
-                <tr id="comment_row">
-                    <th>Comment: </th>
-                    <td><textarea id="warn_comment" rows="8" cols="50"></textarea></td>
-                </tr>
-                <tr id="close_row" class="hide">
-                    <th>Note:</th>
-                    <td><span class="bold_small">ONLY use this option to close excessive accounts. Check account history
-                            prior to closing an account to make sure no comments indicating that there are multiple
-                            players within the same household exist.</span></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" class="button" id="warn_submit" value="Submit" /></td>
-                </tr>
-            </table>
-        </div>
+    <div id="modtool_warn_dialog" class="hide" title="Warn/Comment">
+        <div id="warn_response_box" class="hide"></div>
+        <table class="info_table" id="modtool_warn_table">
+            <tr>
+                <th>Player #: </th>
+                <td><input type="text" id="warn_user_id" class="find_player" size="6" /> <span
+                        class="find_result"></span></td>
+            </tr>
+            <tr>
+                <th>Report ID#: </th>
+                <td><input type="text" name="warn_report_id" id="warn_report_id" size="11" /> <span
+                        style="margin-left: 10px;">Please provide if possible.</span></td>
+            </tr>
+            <tr>
+                <th>Type: </th>
+                <td><input type="radio" name="warn_category" value="0" checked="checked" class="radio_warn_category"
+                        id="warn_category_0" /><label for="warn_category_0">Comment</label>&nbsp;&nbsp;&nbsp;<input
+                        type="radio" name="warn_category" value="1" class="radio_warn_category"
+                        id="warn_category_1" /><label for="warn_category_1">Warning</label>&nbsp;&nbsp;&nbsp;<input
+                        type="radio" name="warn_category" value="3" class="radio_warn_category"
+                        id="warn_category_3" /><label for="warn_category_3">Suspension</label>&nbsp;&nbsp;&nbsp;<input
+                        type="radio" name="warn_category" value="4" class="radio_warn_category"
+                        id="warn_category_4" /><label for="warn_category_4">Close Account</label>&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr id="subcat_row" class="hide">
+                <th>Category: </th>
+                <td><input type="radio" name="warn_subcategories" value="0" class="radio_warn_subcategories"
+                        id="warn_subcategories_0" /><label for="warn_subcategories_0">Poor
+                        Conduct</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_subcategories" value="1"
+                        class="radio_warn_subcategories" id="warn_subcategories_1" /><label
+                        for="warn_subcategories_1">Spamming</label>&nbsp;&nbsp;&nbsp;<input type="radio"
+                        name="warn_subcategories" value="2" class="radio_warn_subcategories"
+                        id="warn_subcategories_2" /><label for="warn_subcategories_2">Scamming</label>&nbsp;&nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr id="severity_row" class="hide">
+                <th>Severity: </th>
+                <td><input type="radio" name="warn_severities" value="0" class="radio_warn_severities"
+                        id="warn_severities_0" /><label for="warn_severities_0">Verbal</label>&nbsp;&nbsp;&nbsp;<input
+                        type="radio" name="warn_severities" value="1" class="radio_warn_severities"
+                        id="warn_severities_1" /><label for="warn_severities_1">1st
+                        Degree</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_severities" value="2"
+                        class="radio_warn_severities" id="warn_severities_2" /><label for="warn_severities_2">2nd
+                        Degree</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_severities" value="3"
+                        class="radio_warn_severities" id="warn_severities_3" /><label for="warn_severities_3">3rd
+                        Degree</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="warn_severities" value="4"
+                        class="radio_warn_severities" id="warn_severities_4" /><label for="warn_severities_4">4th
+                        Degree</label>&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr id="suspension_row" class="hide">
+                <th>Length: </th>
+                <td><input type="radio" name="warn_suspensions" value="0" class="radio_warn_suspensions"
+                        id="warn_suspensions_0" /><label for="warn_suspensions_0">5 min</label>&nbsp;&nbsp;&nbsp;<input
+                        type="radio" name="warn_suspensions" value="1" class="radio_warn_suspensions"
+                        id="warn_suspensions_1" /><label for="warn_suspensions_1">30 min</label>&nbsp;&nbsp;&nbsp;<input
+                        type="radio" name="warn_suspensions" value="2" class="radio_warn_suspensions"
+                        id="warn_suspensions_2" /><label for="warn_suspensions_2">1 hour</label>&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr id="explanation_row">
+                <th>Explanation: </th>
+                <td><textarea id="warn_explanation" rows="8"
+                        cols="50">You are receiving this warning because... That behavior is not allowed on Mweor because...</textarea>
+                </td>
+            </tr>
+            <tr id="comment_row">
+                <th>Comment: </th>
+                <td><textarea id="warn_comment" rows="8" cols="50"></textarea></td>
+            </tr>
+            <tr id="close_row" class="hide">
+                <th>Note:</th>
+                <td><span class="bold_small">ONLY use this option to close excessive accounts. Check account history
+                        prior to closing an account to make sure no comments indicating that there are multiple players
+                        within the same household exist.</span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" class="button" id="warn_submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </div>
 
 
-        <div id="modtool_clear_dialog" class="hide" title="Resetter">
-            <div id="reset_response_box" class="hide"></div>
-            <table class="info_table" id="mod_resetter_table">
-                <tr>
-                    <th>Category: </th>
-                    <td><input type="radio" name="reset_category" value="0" checked="checked"
-                            class="radio_reset_category" id="reset_category_0" /><label
-                            for="reset_category_0">User</label>&nbsp;<input type="radio" name="reset_category" value="1"
-                            class="radio_reset_category" id="reset_category_1" /><label
-                            for="reset_category_1">Mweor</label>&nbsp;<input type="radio" name="reset_category"
-                            value="2" class="radio_reset_category" id="reset_category_2" /><label
-                            for="reset_category_2">Registry/Tribe</label>&nbsp;</td>
-                </tr>
-                <tr id="category_thing_row">
-                    <th><span id="category_label"></span> ID#: </th>
-                    <td><input type="text" id="thing_id" class="find_player" size="6" /> <span
-                            class="find_result"></span></td>
-                </tr>
-                <tr id="reset_row">
-                    <th>Reset: </th>
-                    <td id="reset_options">
-                        <div id="reset_holder_0" class="reset_holder">
-                            <div><input type="checkbox" name="user_reset_options" value="0"
-                                    id="user_reset_options_0" /><label for="user_reset_options_0">User Name</label>
-                            </div>
-                            <div><input type="checkbox" name="user_reset_options" value="7"
-                                    id="user_reset_options_7" /><label for="user_reset_options_7">User Avatar</label>
-                            </div>
-                            <div><input type="checkbox" name="user_reset_options" value="1"
-                                    id="user_reset_options_1" /><label for="user_reset_options_1">User Signature</label>
-                            </div>
-                            <div><input type="checkbox" name="user_reset_options" value="2"
-                                    id="user_reset_options_2" /><label for="user_reset_options_2">User Cattery
-                                    Name/Description</label></div>
-                            <div><input type="checkbox" name="user_reset_options" value="8"
-                                    id="user_reset_options_8" /><label for="user_reset_options_8">User Cattery
-                                    Tabs</label></div>
-                            <div><input type="checkbox" name="user_reset_options" value="3"
-                                    id="user_reset_options_3" /><label for="user_reset_options_3">User Shop</label>
-                            </div>
-                            <div><input type="checkbox" name="user_reset_options" value="4"
-                                    id="user_reset_options_4" /><label for="user_reset_options_4">All Owned
-                                    Mweors</label></div>
-                            <div><input type="checkbox" name="user_reset_options" value="5"
-                                    id="user_reset_options_5" /><label for="user_reset_options_5">All Owned Trade/Offer
-                                    Comments</label></div>
-                            <div><input type="checkbox" name="user_reset_options" value="6"
-                                    id="user_reset_options_6" /><label for="user_reset_options_6">User Newbie
-                                    Helper</label></div>
-                            <div></div>
+    <div id="modtool_clear_dialog" class="hide" title="Resetter">
+        <div id="reset_response_box" class="hide"></div>
+        <table class="info_table" id="mod_resetter_table">
+            <tr>
+                <th>Category: </th>
+                <td><input type="radio" name="reset_category" value="0" checked="checked" class="radio_reset_category"
+                        id="reset_category_0" /><label for="reset_category_0">User</label>&nbsp;<input type="radio"
+                        name="reset_category" value="1" class="radio_reset_category" id="reset_category_1" /><label
+                        for="reset_category_1">Mweor</label>&nbsp;<input type="radio" name="reset_category" value="2"
+                        class="radio_reset_category" id="reset_category_2" /><label
+                        for="reset_category_2">Registry/Tribe</label>&nbsp;</td>
+            </tr>
+            <tr id="category_thing_row">
+                <th><span id="category_label"></span> ID#: </th>
+                <td><input type="text" id="thing_id" class="find_player" size="6" /> <span class="find_result"></span>
+                </td>
+            </tr>
+            <tr id="reset_row">
+                <th>Reset: </th>
+                <td id="reset_options">
+                    <div id="reset_holder_0" class="reset_holder">
+                        <div><input type="checkbox" name="user_reset_options" value="0"
+                                id="user_reset_options_0" /><label for="user_reset_options_0">User Name</label></div>
+                        <div><input type="checkbox" name="user_reset_options" value="7"
+                                id="user_reset_options_7" /><label for="user_reset_options_7">User Avatar</label></div>
+                        <div><input type="checkbox" name="user_reset_options" value="1"
+                                id="user_reset_options_1" /><label for="user_reset_options_1">User Signature</label>
                         </div>
-                        <div id="reset_holder_1" class="reset_holder hide">
-                            <div><input type="checkbox" name="mweor_reset_options" value="0"
-                                    id="mweor_reset_options_0" /><label for="mweor_reset_options_0">Mweor Name</label>
-                            </div>
-                            <div><input type="checkbox" name="mweor_reset_options" value="1"
-                                    id="mweor_reset_options_1" /><label for="mweor_reset_options_1">Mweor
-                                    Description</label></div>
-                            <div><input type="checkbox" name="mweor_reset_options" value="2"
-                                    id="mweor_reset_options_2" /><label for="mweor_reset_options_2">Mweor
-                                    Personality/Background</label></div>
-                            <div></div>
+                        <div><input type="checkbox" name="user_reset_options" value="2"
+                                id="user_reset_options_2" /><label for="user_reset_options_2">User Cattery
+                                Name/Description</label></div>
+                        <div><input type="checkbox" name="user_reset_options" value="8"
+                                id="user_reset_options_8" /><label for="user_reset_options_8">User Cattery Tabs</label>
                         </div>
-                        <div id="reset_holder_2" class="reset_holder hide">
-                            <div><input type="checkbox" name="registry_reset_options" value="0"
-                                    id="registry_reset_options_0" /><label for="registry_reset_options_0">Registry
-                                    Name</label></div>
-                            <div><input type="checkbox" name="registry_reset_options" value="1"
-                                    id="registry_reset_options_1" /><label for="registry_reset_options_1">Registry
-                                    Descriptions</label></div>
-                            <div><input type="checkbox" name="registry_reset_options" value="2"
-                                    id="registry_reset_options_2" /><label for="registry_reset_options_2">Register
-                                    Questions</label></div>
-                            <div><input type="checkbox" name="registry_reset_options" value="3"
-                                    id="registry_reset_options_3" /><label for="registry_reset_options_3">Ranks</label>
-                            </div>
-                            <div></div>
+                        <div><input type="checkbox" name="user_reset_options" value="3"
+                                id="user_reset_options_3" /><label for="user_reset_options_3">User Shop</label></div>
+                        <div><input type="checkbox" name="user_reset_options" value="4"
+                                id="user_reset_options_4" /><label for="user_reset_options_4">All Owned Mweors</label>
                         </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" class="button" id="mod_reset" value="Reset Selected" /></td>
-                </tr>
-            </table>
-        </div>
-        <script type="text/javascript" src="https://mweor.com/js/modstuff.js?3"></script>
+                        <div><input type="checkbox" name="user_reset_options" value="5"
+                                id="user_reset_options_5" /><label for="user_reset_options_5">All Owned Trade/Offer
+                                Comments</label></div>
+                        <div><input type="checkbox" name="user_reset_options" value="6"
+                                id="user_reset_options_6" /><label for="user_reset_options_6">User Newbie Helper</label>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div id="reset_holder_1" class="reset_holder hide">
+                        <div><input type="checkbox" name="mweor_reset_options" value="0"
+                                id="mweor_reset_options_0" /><label for="mweor_reset_options_0">Mweor Name</label></div>
+                        <div><input type="checkbox" name="mweor_reset_options" value="1"
+                                id="mweor_reset_options_1" /><label for="mweor_reset_options_1">Mweor
+                                Description</label></div>
+                        <div><input type="checkbox" name="mweor_reset_options" value="2"
+                                id="mweor_reset_options_2" /><label for="mweor_reset_options_2">Mweor
+                                Personality/Background</label></div>
+                        <div></div>
+                    </div>
+                    <div id="reset_holder_2" class="reset_holder hide">
+                        <div><input type="checkbox" name="registry_reset_options" value="0"
+                                id="registry_reset_options_0" /><label for="registry_reset_options_0">Registry
+                                Name</label></div>
+                        <div><input type="checkbox" name="registry_reset_options" value="1"
+                                id="registry_reset_options_1" /><label for="registry_reset_options_1">Registry
+                                Descriptions</label></div>
+                        <div><input type="checkbox" name="registry_reset_options" value="2"
+                                id="registry_reset_options_2" /><label for="registry_reset_options_2">Register
+                                Questions</label></div>
+                        <div><input type="checkbox" name="registry_reset_options" value="3"
+                                id="registry_reset_options_3" /><label for="registry_reset_options_3">Ranks</label>
+                        </div>
+                        <div></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" class="button" id="mod_reset" value="Reset Selected" /></td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="/js/modstuff.js?3"></script>
 </body>
 
 </html>

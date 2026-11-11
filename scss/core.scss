@@ -1,0 +1,298 @@
+/******************************************************************
+	FILE	        :	core.css
+	AUTHOR	        :	#559
+	LAST UPDATED	:	2024/10/12
+
+	DESC	:
+	core stylesheet including debug testing
+	and base styles for all themes and layouts.
+
+	this file called in base CSS file for
+	theme/layout.
+
+	GITHUB	:
+	@import url("https://biwhaleshark.github.io/CSShiny/core.css");
+******************************************************************/
+
+@import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
+
+:root:has(#layout-toggle:checked) {
+    html,
+    body {
+        background: var(--html-background, #fff) !important;
+    }
+
+    html {
+        font-size: 18px;
+        box-sizing: border-box !important;
+    }
+
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        color: #000;
+        font-size: 1rem;
+        line-height: 1;
+        font-weight: 300;
+        font-family: var(--text-font);
+        text-rendering: optimizeLegibility;
+    }
+
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box !important;
+    }
+
+    .dev {
+        border: 2px dashed red !important;
+    }
+
+    #bodyi,
+    #topbanneri,
+    #titleimg,
+    .trans {
+        display: var(--image-display);
+    }
+
+    #content,
+    .sf-menu ul,
+    .ui-widget-header {
+        background-image: var(--bg-image-display);
+    }
+
+    #topbanner,
+    .sf-menu,
+    #menu_holder,
+    #footer {
+        display: var(--default-content);
+    }
+
+    .highlight_me,
+    .highlight_me td {
+        background: transparent !important;
+    }
+
+    #cattery_infobox .add_small_margins,
+    #cattery_menu li,
+    .ui-widget-content,
+    .ui-widget-header,
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    .mweorbox table tbody tr td div,
+    .tborder,
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover,
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus {
+        border-color: transparent !important;
+    }
+
+    #contentholder form center .tborder {
+        background-color: #fff;
+        display: flex;
+        width: 100% !important;
+    }
+
+    #contentholder form center .tborder tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .theader {
+        background-color: var(--settings-bg-color) !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .theader td {
+        color: var(--settings-text-color);
+    }
+
+    .trow1 {
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        color: #000;
+
+        td {
+            color: var(--text-dark);
+            background-color: #fff;
+            color: #000;
+        }
+    }
+
+    .trow1 td:nth-child(even) {
+        width: 80%;
+        text-align: left;
+    }
+
+    .trow1 td:nth-child(odd) {
+        width: 20%;
+        text-align: left;
+
+        input[type="text"],
+        textarea,
+        textarea,
+        input[type="text"],
+        input[type="password"],
+        select,
+        input.pretty_dropdown_text,
+        .pretty_dropdown_options {
+            width: 95%;
+            float: left;
+            background: #fff;
+            color: #000;
+        }
+    }
+
+    .csshiny-inactive {
+        display: none;
+    }
+
+    .csshiny-active {
+        display: block;
+    }
+}
+
+:root:has(#layout-toggle:not(:checked)) {
+    .csshiny-inactive {
+        display: block;
+    }
+
+    .csshiny-active {
+        display: none;
+    }
+}
+
+.csshiny-signature {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 2rem;
+    line-height: 1;
+    color: #fff;
+    z-index: 9999;
+    height: fit-content;
+    top: unset;
+    margin: unset;
+}
+
+:root:has(#credit-toggle:checked) .csshiny-credit {
+    display: flex !important;
+}
+
+#credit-toggle {
+    display: none !important;
+}
+
+.csshiny-credit {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    text-align: center;
+    /* Default to hidden */
+    display: none;
+    /* Overlay entire screen */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Translucent background */
+    background: rgba(0, 0, 0, 0.85);
+
+    .layout-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .csshiny-exit {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 10px;
+        transform: translateY(-40px);
+        font-size: 2rem;
+        line-height: 1;
+        color: #fff;
+        padding: 14px;
+        text-decoration: none !important;
+
+        &::before {
+            content: "";
+            font-family: FontAwesome;
+        }
+    }
+
+    .csshiny-toggle {
+        display: none;
+    }
+
+    span {
+        /* Full width and height */
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    input[type="checkbox"] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    input:checked + label {
+        background: #293573;
+
+        &:after {
+            left: calc(100% - 5px);
+            transform: translateX(-100%);
+        }
+    }
+
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 75px;
+        height: 35px;
+        background: #808080;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+
+        &:active:after {
+            width: 60px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 25px;
+            height: 25px;
+            background: #fff;
+            border-radius: 90px;
+            transition: 0.3s;
+        }
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}

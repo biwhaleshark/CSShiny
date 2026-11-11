@@ -24,3 +24,40 @@ Commands
 > ends watch script
 
 https://petrapixel.neocities.org/coding/git-tutorial#additional-commands
+
+
+# Framework Structure
+> Archive Folder
+All old content pulled in from prior versions of CSShiny to be reworked for current version.
+
+> Content Folder
+Duplicates of Mweor HTML files for the use of local layout testing and building.
+
+> Core Folder
+CSS files to be called within a layouts main file. Reduces redundant code and allows for ease of remote updates.
+core.css - Main resets file
+Blocks - resuable chunks of CSS to be used with their corresponding HTML block in Nunjucks
+Components - reusable chunks of CSS altering portions of out-of-the-box Cattery code.
+
+> Layouts Folder
+Compilation of SCSS/CSS, HTML, and images for use in player Catteries. Original SCSS and Nunjuck files are kept for updates, recompilation, and recovery purposes. Live layout assets; files are called when a layout is loaded.
+
+> Nunjucks Folder
+Reusable HTML content for testing and layout building purposes.
+Notifications - Local duplicates of Mweor notifications soley for the purpose of local testing.
+Blocks - reusable chunks of HTML providing functionality outside of Mweor's base HTML.
+descbox.njk - Main file to be compiled and pasted into the Cattery description box. All HTML and CSS goes through this file.
+starter.njk - Starter file for the Cattery Description box HTML.
+
+> Public Folder
+Compiled CSS files and HTML files for local testing purposes.
+
+> SCSS Folder
+Uncompiled SCSS for use of layout development. Files must be compiled by running them through the main.scss file before moving them to the Core folder.
+Blocks - resuable chunks of CSS to be used with their corresponding HTML block in Nunjucks
+Components - reusable chunks of CSS altering portions of out-of-the-box Cattery code.
+core.css - Main resets file
+starter.scss - Starter file for new Cattery Layouts
+
+> main.scss
+Main file in compiling SCSS files and layout testing; all SCSS goes through this file

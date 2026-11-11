@@ -1,0 +1,122 @@
+/************************************************
+	FILE:	mweorBox.css
+	BY:	#559
+
+	Restyles the default mweorbox
+************************************************/
+:root:has(#layout-toggle:checked) .mweorbox {
+	width: 200px;
+	height: fit-content !important;
+	border-radius: 0px !important;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table,
+:root:has(#layout-toggle:checked) .mweorbox table tbody {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	display: block;
+	position: relative;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) {
+	height: 225px;
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(3) {
+	background: #fff;
+	z-index: 1;
+	width: fit-content;
+	border-radius: 0 0px 5px 0px;
+	box-shadow: 2px 2px 4px #0014453b;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(3) .mweor_icon{
+	margin: 5px !important;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(2) {
+	top: 0;
+	width: 100% !important;
+	height: 150px;
+	position: absolute;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(2) div {
+	width: 100% !important;
+	height: 100% !important;
+	border: 0 solid transparent !important;
+}
+
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(2) div img {
+	width: 100%;
+	display: block;
+	height: auto;
+	border-radius: 5px;
+	transition: ease-in 0.2s;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox:hover table tbody tr:nth-child(1) td:nth-child(2) div img {
+	filter: grayscale(1);
+	transition: ease-in 0.2s;
+}
+
+:root:has(#layout-toggle:checked) .fv {
+	display: none;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(1) {
+	z-index: 2;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(1) td:nth-child(1) .mweor_icon {
+	margin: 5px;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	top: 140px;
+	z-index: 1;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td,
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) .highlight_me {
+	width: fit-content;
+	max-width: 175px;
+	background: #fff !important;
+	border-radius: 5px 0 0 0;
+	padding: 10px;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td * {
+	text-align: center !important;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) .highlight_me {
+	background: #fff !important;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td div {
+	text-align: end;
+	color: var(--fontColor) !important;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td .text_medium a {
+	font-size: 16px;
+	font-weight: bold;
+	color: var(--fontColor) !important;
+}
+
+:root:has(#layout-toggle:checked) .mweorbox table tbody tr:nth-child(2) td .text_medium a:hover {
+	text-decoration: underline;
+}
